@@ -1,0 +1,99 @@
+main_window:
+
+media_loader:
+  compose: main_window
+
+screen_info:
+  compose: main_window
+
+app_starter:
+  compose: 
+    - main_window
+    - mode_wrangler
+    - main_menu_mode
+    - debug_server
+    - game_master
+
+debug_server:
+
+mode_wrangler:
+  compose: main_window
+
+level_factory:
+  system_context: this_context
+  compose: debug_server, media_loader
+
+main_menu_mode:
+  compose: media_loader, main_window, game_master
+
+game_master:
+  compose: mode_wrangler, level_factory, game_config
+
+game_config:
+
++random_collection_level:
+  mode:
+    class: LevelMode
+
+  tractor_controller:
+    compose: mode, tractor
+
+  tractor:
+    compose: media_loader, screen_info
+
+  field_controller:
+    compose: 
+      - field_model
+      - mode
+      - tractor
+      - heads_up
+
+  field_model:
+    compose: media_loader
+
+  item_counter:
+    compose:
+      - screen_info
+      - media_loader
+
+  heads_up:
+    compose:
+      - mode
+      - media_loader
+      - screen_info
+      - item_counter
+
++workshop:
+  mode:
+    class: LevelMode
+
+  space_holder:
+
+  workshop_room:
+    compose:
+      - mode
+      - screen_info
+      - main_window
+      - space_holder
+
+#  ball_controller:
+#    compose:
+#      - mode
+#      - physical_factory
+
+  physical_factory:
+    compose:
+      - space_holder
+
+  truck_controller:
+    compose:
+      - mode
+      - physical_factory
+      - space_holder
+
+  rain_controller:
+    compose:
+      - mode
+      - space_holder
+
+

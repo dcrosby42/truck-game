@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+here = File.dirname(__FILE__)
+require File.expand_path("#{here}/../config/environment")
+load "#{here}/bootstrap.rb"

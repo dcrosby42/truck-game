@@ -1,0 +1,25 @@
+#!/usr/bin/ruby
+require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
+require 'drb'
+require 'irb'
+require 'gosu'
+
+include Gosu
+
+def game
+  begin
+    @game ||= DRb::DRbObject.new(nil, "druby://localhost:#{DEBUG_SERVER_PORT}")
+    @game.ping
+    return @game
+  rescue DRb::DRbError => ex
+    @game = nil
+    puts "Error connecting to debug server: #{ex.message}"
+  rescue Exception => ex
+    @game = nil
+    puts ex.class.name
+    puts ex.message
+    puts ex.backtrace
+  end
+end
+
+IRB.start
