@@ -49,28 +49,33 @@ class TruckController
 
   private
 
+  WheelLayer     = 1 << 0
+  TruckBodyLayer = 1 << 1
+
   def build_shapes
     wheel_opts = {
       :radius => 30, 
       :mass => 30,
-#      :group => :truck,
-      :layers => 2,
+      :layers => WheelLayer,
       :collision_type => :truck_tire
     }
     @front_wheel = @physical_factory.build_circle(wheel_opts)
     @back_wheel = @physical_factory.build_circle(wheel_opts)
 
-
     frame_size = 100.0
     @frame = @physical_factory.build_poly(
       :vertices => verts_for_rect(frame_size, 10),
       :mass => 10,
-      :layers => 1
-#      :group => :truck
+      :layers => TruckBodyLayer
     )
 
     @bucket = build_bucket
 
+#    @hinge = @physical_factory.build_circle(
+#      :radius => 10,
+#      :mass => 10,
+#      :layers => 1,
+      
     # Layout the parts and pin them together.
     # Pin joints have an anchor in either body.  The anchors will maintain their
     # distance from one another.  The distance is determined by the relative positions
@@ -164,13 +169,13 @@ class TruckController
   end
 
   def bucket_left
-#    @bucket.body.apply_impulse vec2(-500,0), ZeroVec2
-    @bucket.body.w -= 1
+    @bucket.body.apply_impulse vec2(-500,0), ZeroVec2
+#    @bucket.body.w -= 2
   end
 
   def bucket_right
-#    @bucket.body.apply_impulse vec2(500,0), vec2(0,-150)
-    @bucket.body.w += 1
+    @bucket.body.apply_impulse vec2(500,0), vec2(0,-150)
+#    @bucket.body.w += 1
   end
 
   class Bucket
@@ -238,13 +243,13 @@ class TruckController
       @body = Body.new(mass, moment)
       
       @gate = Shape::Poly.new(@body, @gate_verts, vec2(0,0))
-      @gate.layers = 1
+      @gate.layers = TruckBodyLayer
 #      @gate.group = :truck
       @bed = Shape::Poly.new(@body, @bed_verts, vec2(0,0))
-      @bed.layers = 1
+      @bed.layers = TruckBodyLayer
 #      @bed.group = :truck
       @front = Shape::Poly.new(@body, @front_verts, vec2(0,0))
-      @front.layers = 1
+      @front.layers = TruckBodyLayer
 #      @front.group = :truck
 
       @space.add_body(@body)
