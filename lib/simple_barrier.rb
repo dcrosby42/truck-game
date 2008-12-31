@@ -11,7 +11,7 @@ class SimpleBarrier
     :friction => 0.7,
     :elast => 0.1,
     :color => 0xffffffff,
-    :z_order => 1,
+    :z_order => ZOrder::Debug,
     :space => nil,
     :collision_tag => :barrier
   }
