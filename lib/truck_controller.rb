@@ -1,8 +1,8 @@
 def draw_cross(window, pt, color=0xffff0000)
   window.draw_line(pt.x,pt.y,color,
-                   pt.x,pt.y-5,color)
+                   pt.x,pt.y-5,color, ZOrder::Debug+1)
   window.draw_line(pt.x,pt.y,color,
-                   pt.x+5,pt.y,color)
+                   pt.x+5,pt.y,color, ZOrder::Debug+1)
 end
 
 class TruckController
@@ -94,7 +94,7 @@ class TruckController
     @space_holder.space.add_joint(bucket_pin)
 
     # Move the vehicle out where we can see it
-    move = vec2(300,300)
+    move = vec2(300,600)
     @front_wheel.body.p += move
     @back_wheel.body.p += move
     @frame.body.p += move
@@ -188,18 +188,22 @@ class TruckController
     end
 
     def draw(window)
-#      draw_poly window, @bed_verts
-#      draw_poly window, @gate_verts
-#      draw_poly window, @front_verts
+#      draw_polygons(window)
       draw_bucket_image
-#      draw_cross(window, pin_point, 0xffff0000)
+    end
+
+    def draw_polygons(window)
+      draw_poly window, @bed_verts
+      draw_poly window, @gate_verts
+      draw_poly window, @front_verts
+      draw_poly window, @top_verts
+      draw_cross(window, pin_point, 0xffff0000)
     end
 
     def draw_bucket_image
       ang = 270+ radians_to_gosu(@body.a)
       z = ZOrder::Truck
-      @bucket_image.draw_rot(@body.p.x, @body.p.y, z, ang,
-                            0.5,0.5, 0.66,0.66)
+      @bucket_image.draw_rot(@body.p.x, @body.p.y, z, ang)
     end
 
     def inner_pin_point
@@ -220,26 +224,33 @@ class TruckController
 
     def create_shapes
       @gate_verts = [
-        vec2(-50,25),
-        vec2(-45,25),
-        vec2(-45,0),
-        vec2(-50,0),
+        vec2(-50,15), # bottom left
+        vec2(-35,20), # bottom right
+        vec2(-65,-10), # top right
+        vec2(-75,-5), # top left
       ]
 
       @bed_verts = [
         vec2(-50,30),
-        vec2(50,30),
-        vec2(50,5),
-        vec2(-50,5),
+        vec2(30,30),
+        vec2(30,15),
+        vec2(-50,15),
       ]
 
       @pin_point = vec2(-30,30)
 
       @front_verts = [
-        vec2(45,25),
-        vec2(50,25),
-        vec2(50,-30),
-        vec2(45,-30),
+        vec2(0,15),    # bottom left
+        vec2(30,15),   # bottom right
+        vec2(60,-28),  # top right
+        vec2(30,-24),  # top left
+      ]
+
+      @top_verts = [
+        vec2(55,-10),    # bottom left
+        vec2(70,-10),   # bottom right
+        vec2(70,-28),  # top right
+        vec2(55,-28),  # top left
       ]
 
       center = vec2(0,0)
@@ -253,11 +264,14 @@ class TruckController
       @bed.layers = TruckBodyLayer
       @front = Shape::Poly.new(@body, @front_verts, vec2(0,0))
       @front.layers = TruckBodyLayer
+      @top = Shape::Poly.new(@body, @top_verts, vec2(0,0))
+      @top.layers = TruckBodyLayer
 
       @space.add_body(@body)
       @space.add_shape(@gate)
       @space.add_shape(@bed)
       @space.add_shape(@front)
+      @space.add_shape(@top)
     end
 
   end

@@ -7,6 +7,8 @@ class RainController
     @mode.on :update do |info|
       if info.button_down?(Button::KbSpace)
         add_block
+      elsif info.button_down?(Button::KbTab)
+        clear_blocks
       end
     end
 
@@ -26,6 +28,12 @@ class RainController
     @blocks << b
   end
 
+  def clear_blocks
+    while !@blocks.empty?
+      b = @blocks.shift
+      b.remove_from_space
+    end
+  end
 
   class Block
     attr_reader :body
