@@ -36,10 +36,9 @@ class TruckController
   def draw(window)
     draw_wheel(window, @front_wheel)
     draw_wheel(window, @back_wheel)
-    @frame.world_vertices.each_edge do |a,b|
-      window.draw_line(a.x,a.y, White,
-                       b.x,b.y, White)
-    end
+
+    draw_body(window)
+
     @bucket.draw(window)
 
 #    draw_cross(window, @frame.body.local2world(@back_axle))
@@ -79,7 +78,7 @@ class TruckController
 
     @front_axle = vec2(35,20)
     @back_axle = vec2(-35,20)
-    @bucket_hinge_point = vec2(-35, -10)
+    @bucket_hinge_point = vec2(-40, -10)
 
     @front_wheel.body.p = @front_axle
     front_pin = Joint::Pin.new(@front_wheel.body, @frame.body, ZeroVec2, @front_axle)
@@ -103,6 +102,7 @@ class TruckController
     @space_holder.space.resize_active_hash(100,100)
 
     @wheel_image = @media_loader.load_image("truck_tire.png")
+    @body_image = @media_loader.load_image("truck_cab.png")
   end
 
   def build_bucket
@@ -150,6 +150,16 @@ class TruckController
     }
   end
 
+  def draw_body(window)
+#    @frame.world_vertices.each_edge do |a,b|
+#      window.draw_line(a.x,a.y, White,
+#                       b.x,b.y, White, ZOrder::Debug)
+#    end
+    loc = @frame.body.p + vec2(3,-12)
+    angle = 270 + radians_to_gosu(@frame.body.a)
+    @body_image.draw_rot(loc.x, loc.y, ZOrder::Truck, angle)
+  end
+
   def drive_left
     @front_wheel.body.w -= 1
     @back_wheel.body.w -= 1
@@ -171,7 +181,7 @@ class TruckController
   end
 
   def bucket_right
-    @bucket.body.apply_impulse vec2(500,0), vec2(0,-150)
+    @bucket.body.apply_impulse vec2(100,0), vec2(0,-150)
 #    @bucket.body.w += 1
   end
 
@@ -195,6 +205,7 @@ class TruckController
     def draw_polygons(window)
       draw_poly window, @bed_verts
       draw_poly window, @gate_verts
+      draw_poly window, @gate_top_verts
       draw_poly window, @front_verts
       draw_poly window, @top_verts
       draw_cross(window, pin_point, 0xffff0000)
@@ -225,9 +236,15 @@ class TruckController
     def create_shapes
       @gate_verts = [
         vec2(-50,15), # bottom left
-        vec2(-35,20), # bottom right
-        vec2(-65,-10), # top right
+        vec2(-35,15), # bottom right
+        vec2(-60,-5), # top right
         vec2(-75,-5), # top left
+      ]
+      @gate_top_verts = [
+        vec2(-75,-5), # bottom left
+        vec2(-60,-5), # bottom right
+        vec2(-60,-15), # top right
+        vec2(-75,-15), # top left
       ]
 
       @bed_verts = [
@@ -253,25 +270,31 @@ class TruckController
         vec2(55,-28),  # top left
       ]
 
-      center = vec2(0,0)
       mass = 5
-      moment = moment_for_poly(mass, @bed_verts, center)
+      moment = moment_for_poly(mass, @bed_verts, ZeroVec2)
       @body = Body.new(mass, moment)
       
-      @gate = Shape::Poly.new(@body, @gate_verts, vec2(0,0))
-      @gate.layers = TruckBodyLayer
-      @bed = Shape::Poly.new(@body, @bed_verts, vec2(0,0))
-      @bed.layers = TruckBodyLayer
-      @front = Shape::Poly.new(@body, @front_verts, vec2(0,0))
-      @front.layers = TruckBodyLayer
-      @top = Shape::Poly.new(@body, @top_verts, vec2(0,0))
-      @top.layers = TruckBodyLayer
+      build_and_add_shapes(
+        @gate_verts,
+        @gate_top_verts,
+        @bed_verts,
+        @front_verts,
+        @top_verts
+      )
 
       @space.add_body(@body)
-      @space.add_shape(@gate)
-      @space.add_shape(@bed)
-      @space.add_shape(@front)
-      @space.add_shape(@top)
+    end
+
+    def build_and_add_shapes(*vert_lists)
+      vert_lists.each do |vl|
+        build_and_add_shape vl
+      end
+    end
+
+    def build_and_add_shape(verts)
+      shape = Shape::Poly.new(@body, verts, vec2(0,0))
+      shape.layers = TruckBodyLayer
+      @space.add_shape(shape)
     end
 
   end
