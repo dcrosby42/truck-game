@@ -56,6 +56,7 @@ class TruckController
     wheel_opts = {
       :radius => 30, 
       :mass => 30,
+      :friction => 1,
       :layers => WheelLayer,
       :collision_type => :truck_tire
     }
@@ -63,7 +64,7 @@ class TruckController
     @back_wheel = @physical_factory.build_circle(wheel_opts)
 
     @frame = @physical_factory.build_poly(
-      :vertices => verts_for_rect(100, 20),
+      :vertices => verts_for_rect(80, 20),
       :mass => 10,
       :layers => TruckBodyLayer
     )
@@ -76,9 +77,9 @@ class TruckController
     # of the anchors at the time the Pin is instantiated.
     @frame.body.p = ZeroVec2
 
-    @front_axle = vec2(45,20)
-    @back_axle = vec2(-45,20)
-    @bucket_hinge_point = vec2(-45, -10)
+    @front_axle = vec2(35,20)
+    @back_axle = vec2(-35,20)
+    @bucket_hinge_point = vec2(-35, -10)
 
     @front_wheel.body.p = @front_axle
     front_pin = Joint::Pin.new(@front_wheel.body, @frame.body, ZeroVec2, @front_axle)

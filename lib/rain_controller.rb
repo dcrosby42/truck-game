@@ -37,9 +37,13 @@ class RainController
       @image = image
       @color = 0xffffffff
       @mass = 1
-      moment_of_inertia = CP.moment_for_circle(@mass, 5,0, ZeroVec2)
+      @size = 6
+#      moment_of_inertia = CP.moment_for_circle(@mass, @size,0, ZeroVec2)
+      @bounds = [vec2(5,2), vec2(3,-5), vec2(-3,-5), vec2(-5,2), vec2(0,5)]
+      moment_of_inertia = CP.moment_for_poly(@mass, @bounds, ZeroVec2)
       @body = CP::Body.new(@mass, moment_of_inertia)
-      @shape = CP::Shape::Circle.new(@body, 5, ZeroVec2)
+#      @shape = CP::Shape::Circle.new(@body, @size, ZeroVec2)
+      @shape = CP::Shape::Poly.new(@body, @bounds, ZeroVec2)
       @shape.collision_type = :block
       @shape.body.p = ZeroVec2
       @shape.e = 0.0
@@ -47,7 +51,6 @@ class RainController
       @space.add_body(@body)
       @space.add_shape(@shape)
 
-      @bounds = [vec2(5,2), vec2(3,-5), vec2(-3,-5), vec2(-5,2), vec2(0,5)]
     end
 
     def remove_from_space
