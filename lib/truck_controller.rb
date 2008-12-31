@@ -11,7 +11,7 @@ class TruckController
 
   White = 0xffffffff
 
-  constructor :mode, :physical_factory, :space_holder do
+  constructor :mode, :physical_factory, :space_holder, :media_loader do
     build_shapes
 
     @mode.on :draw do |info| 
@@ -62,30 +62,23 @@ class TruckController
     @front_wheel = @physical_factory.build_circle(wheel_opts)
     @back_wheel = @physical_factory.build_circle(wheel_opts)
 
-    frame_size = 100.0
     @frame = @physical_factory.build_poly(
-      :vertices => verts_for_rect(frame_size, 10),
+      :vertices => verts_for_rect(100, 20),
       :mass => 10,
       :layers => TruckBodyLayer
     )
 
     @bucket = build_bucket
 
-#    @hinge = @physical_factory.build_circle(
-#      :radius => 10,
-#      :mass => 10,
-#      :layers => 1,
-      
     # Layout the parts and pin them together.
     # Pin joints have an anchor in either body.  The anchors will maintain their
     # distance from one another.  The distance is determined by the relative positions
     # of the anchors at the time the Pin is instantiated.
-    near_end = (frame_size / 2) - 5
-    @front_axle = vec2(near_end,0)
-    @back_axle = vec2(0-near_end,0)
-    @bucket_hinge_point = @back_axle + vec2(0,-5)
-
     @frame.body.p = ZeroVec2
+
+    @front_axle = vec2(45,20)
+    @back_axle = vec2(-45,20)
+    @bucket_hinge_point = vec2(-45, -10)
 
     @front_wheel.body.p = @front_axle
     front_pin = Joint::Pin.new(@front_wheel.body, @frame.body, ZeroVec2, @front_axle)
@@ -95,11 +88,7 @@ class TruckController
     back_pin = Joint::Pin.new(@back_wheel.body, @frame.body, ZeroVec2, @back_axle)
     @space_holder.space.add_joint(back_pin)
 
-    # @bucket_hinge_point is in frame-local coords, but since frame is sitting on world
-    # 0,0, it can also be used as world.  @bucket is NOT centered on world 0,0 so
-    # pay attention to it's anchor (local coords) versus its initial positioning 
-    # (world coords).
-    @bucket.body.p = @bucket_hinge_point + vec2(75,-45)*0.66 
+    @bucket.body.p = @bucket_hinge_point - @bucket.inner_pin_point
     bucket_pin = Joint::Pin.new(@bucket.body, @frame.body, @bucket.inner_pin_point, @bucket_hinge_point)
     @space_holder.space.add_joint(bucket_pin)
 
@@ -111,10 +100,12 @@ class TruckController
     @bucket.body.p += move
 
     @space_holder.space.resize_active_hash(100,100)
+
+    @wheel_image = @media_loader.load_image("truck_tire.png")
   end
 
   def build_bucket
-    Bucket.new(@space_holder.space)
+    Bucket.new(:space => @space_holder.space, :media_loader => @media_loader)
   end
 
   def verts_for_rect(width,height)
@@ -131,8 +122,14 @@ class TruckController
   end
 
   def draw_wheel(window,circle)
-    draw_circle(window, circle.body.p.x, circle.body.p.y, circle.body.a, circle.radius)
-    draw_radius(window, circle)
+    loc = circle.body.p
+    ang = radians_to_gosu(circle.body.a)
+    x = loc.x
+    y = loc.y
+#    draw_circle(window, x, y, ang, circle.radius)
+#    draw_radius(window, circle)
+
+    @wheel_image.draw_rot(x,y,ZOrder::TruckTire, ang)
   end
 
   def draw_radius(window,circle)
@@ -140,13 +137,12 @@ class TruckController
     loc = circle.body.p
     ex = loc.x + offset_x(angle, circle.radius)
     ey = loc.y + offset_y(angle, circle.radius)
-    window.draw_line(loc.x,loc.y,White, ex,ey,White)
+    window.draw_line(loc.x,loc.y,White, ex,ey,White, ZOrder::Debug)
   end
 
-  def draw_circle(window, x,y,ang,r,color=0xffffffff,z=0,mode=:default,circle_step=10)
-    ang = radians_to_gosu(ang)
+  def draw_circle(window, x,y,degrees,r,color=0xffffffff,z=ZOrder::Debug, mode=:default,circle_step=10)
     0.step(360, circle_step) { |a1| 
-      a1 += ang
+      a1 += degrees
       a2 = a1 + circle_step
       window.draw_line(x + offset_x(a1, r), y + offset_y(a1, r), color, 
                        x + offset_x(a2, r), y + offset_y(a2, r), color, z, mode)
@@ -183,17 +179,26 @@ class TruckController
     include CP
     attr_reader :body
 
-    def initialize(space)
-      @space = space
+    constructor :space, :media_loader
+
+    def setup
       create_shapes
+      @bucket_image = @media_loader.load_image("dump_bucket.png")
     end
 
     def draw(window)
-      draw_poly window, @bed_verts
-      draw_poly window, @gate_verts
-      draw_poly window, @front_verts
-
+#      draw_poly window, @bed_verts
+#      draw_poly window, @gate_verts
+#      draw_poly window, @front_verts
+      draw_bucket_image
 #      draw_cross(window, pin_point, 0xffff0000)
+    end
+
+    def draw_bucket_image
+      ang = 270+ radians_to_gosu(@body.a)
+      z = ZOrder::Truck
+      @bucket_image.draw_rot(@body.p.x, @body.p.y, z, ang,
+                            0.5,0.5, 0.66,0.66)
     end
 
     def inner_pin_point
@@ -208,49 +213,45 @@ class TruckController
     def draw_poly(window, local_verts)
       local_verts.map { |v| @body.local2world(v) }.each_edge do |a,b|
         window.draw_line(a.x,a.y, White,
-                         b.x,b.y, White)
+                         b.x,b.y, White, ZOrder::Debug)
       end
     end
 
     def create_shapes
       @gate_verts = [
-        vec2(-75,35),
-        vec2(-65,35),
-        vec2(-65,-45),
-        vec2(-75,-45),
-      ].map { |v| v * 0.66 }
+        vec2(-50,25),
+        vec2(-45,25),
+        vec2(-45,0),
+        vec2(-50,0),
+      ]
 
       @bed_verts = [
-        vec2(-75,45),
-        vec2(75,45),
-        vec2(75,35),
-        vec2(-75,35),
-      ].map { |v| v * 0.66 }
+        vec2(-50,30),
+        vec2(50,30),
+        vec2(50,5),
+        vec2(-50,5),
+      ]
 
-      @pin_point = @bed_verts[0]
+      @pin_point = vec2(-30,30)
 
       @front_verts = [
-        vec2(65,35),
-        vec2(75,35),
-        vec2(75,-45),
-        vec2(65,-45),
-      ].map { |v| v * 0.66 }
+        vec2(45,25),
+        vec2(50,25),
+        vec2(50,-30),
+        vec2(45,-30),
+      ]
 
       center = vec2(0,0)
       mass = 5
       moment = moment_for_poly(mass, @bed_verts, center)
-#      mass,moment = Float::Infinity, Float::Infinity
       @body = Body.new(mass, moment)
       
       @gate = Shape::Poly.new(@body, @gate_verts, vec2(0,0))
       @gate.layers = TruckBodyLayer
-#      @gate.group = :truck
       @bed = Shape::Poly.new(@body, @bed_verts, vec2(0,0))
       @bed.layers = TruckBodyLayer
-#      @bed.group = :truck
       @front = Shape::Poly.new(@body, @front_verts, vec2(0,0))
       @front.layers = TruckBodyLayer
-#      @front.group = :truck
 
       @space.add_body(@body)
       @space.add_shape(@gate)

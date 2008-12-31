@@ -20,7 +20,7 @@ class MainWindow < Gosu::Window
 
   def width; 1024; end
   def height; 768; end
-  def fullscreen; false; end
+  def fullscreen; true; end
 
   def update
     @mode.update(@update_info)

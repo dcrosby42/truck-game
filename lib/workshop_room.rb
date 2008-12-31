@@ -4,10 +4,11 @@ class WorkshopRoom
   constructor :mode, :screen_info, :main_window, :space_holder do
     build_floor
 
-    @mode.on :draw do
-      draw
+    @mode.on :draw do |info|
+      draw info.window
     end
 
+    # Level control
     @mode.on :button_down do |id,info|
       case id
       when Gosu::Button::KbEscape
@@ -17,6 +18,7 @@ class WorkshopRoom
       end
     end
 
+    # Physics simulation grinder
     substeps = 3
     dt = SpaceHolder::TICK / substeps
     @mode.on :update do |info|
@@ -26,9 +28,10 @@ class WorkshopRoom
     end
   end
 
-  def draw
+  def draw(window)
+    draw_background window
     @drawables.each do |d|
-      d.draw @main_window
+      d.draw window
     end
   end
 
@@ -67,5 +70,13 @@ class WorkshopRoom
 
   def create_barrier(opts)
     SimpleBarrier.new(opts)
+  end
+
+  def draw_background(window)
+    h = @screen_info.screen_height
+    w = @screen_info.screen_width
+    top_color = 0xFF9999DD
+    bottom_color = 0xFF000066
+    window.draw_quad(0,0,top_color, w,0,top_color, 0,h,bottom_color, w,h,bottom_color, ZOrder::Background)
   end
 end

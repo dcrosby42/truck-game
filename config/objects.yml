@@ -90,11 +90,10 @@ game_config:
       - mode
       - physical_factory
       - space_holder
+      - media_loader
 
   rain_controller:
     compose:
       - mode
       - space_holder
       - media_loader
-
-
