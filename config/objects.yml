@@ -37,6 +37,11 @@ game_config:
 
   space_holder:
 
+  simulation:
+    compose:
+      - mode
+      - space_holder
+
   workshop_room:
     compose:
       - mode
@@ -50,7 +55,7 @@ game_config:
 
   truck_controller:
     compose:
-      - mode
+      - simulation
       - truck_factory
 
   truck_factory:
@@ -58,14 +63,18 @@ game_config:
   
   rain_controller:
     compose:
-      - mode
+      - simulation
       - space_holder
       - media_loader
 
   +dump_truck:
+    truck_controls:
+
     truck:
       compose:
+        - simulation
         - main_window
         - space_holder
         - media_loader
         - physical_factory
+        - truck_controls

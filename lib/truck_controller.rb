@@ -1,26 +1,28 @@
 class TruckController
   include Gosu
 
-  constructor :mode, :truck_factory do
+  constructor :simulation, :truck_factory do
 
     @truck = @truck_factory.build_truck
+    @truck_controls = @truck.truck_controls
     @truck.cold_drop vec2(600,300)
 
-    @mode.on :draw do |info| 
+    @simulation.on :draw_frame do |info| 
       @truck.draw
     end
 
-    @mode.on :update do |info|
+    @simulation.on :update_frame do |info|
+      @truck_controls.clear
       if info.button_down?(Button::KbLeft)
-        @truck.drive_left
+        @truck_controls.drive_left = true
       elsif info.button_down?(Button::KbRight)
-        @truck.drive_right
+        @truck_controls.drive_right = true
       elsif info.button_down?(Button::KbDown)
-        @truck.brake
+        @truck_controls.brake = true
       elsif info.button_down?(Button::KbA)
-        @truck.open_bucket
+        @truck_controls.open_bucket = true
       elsif info.button_down?(Button::KbD)
-        @truck.close_bucket
+        @truck_controls.close_bucket = true
       end
     end
   end

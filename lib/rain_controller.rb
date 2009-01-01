@@ -1,10 +1,10 @@
 class RainController
   include Gosu
   include CP
-  constructor :mode, :space_holder, :media_loader do
+  constructor :simulation, :space_holder, :media_loader do
     @blocks = []
 
-    @mode.on :update do |info|
+    @simulation.on :update_space do |info|
       if info.button_down?(Button::KbSpace)
         add_block
       elsif info.button_down?(Button::KbTab)
@@ -12,7 +12,7 @@ class RainController
       end
     end
 
-    @mode.on :draw do |info|
+    @simulation.on :draw_frame do |info|
       @blocks.each do |b|
         b.draw(info.window)
       end

@@ -1,4 +1,6 @@
 class UpdateInfo
+  attr_accessor :dt
+
   def initialize(mw)
     @main_window = mw
   end
@@ -6,7 +8,7 @@ class UpdateInfo
   def window
     @main_window
   end
-  
+
   def button_down?(id)
     @main_window.button_down?(id)
   end
@@ -27,4 +29,5 @@ class UpdateInfo
   def milliseconds
     Gosu::milliseconds
   end
+
 end

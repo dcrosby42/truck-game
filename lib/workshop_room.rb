@@ -17,15 +17,6 @@ class WorkshopRoom
         @mode.complete_level
       end
     end
-
-    # Physics simulation grinder
-    substeps = 6
-    dt = SpaceHolder::TICK / substeps
-    @mode.on :update do |info|
-      substeps.times do 
-        @space_holder.step dt
-      end
-    end
   end
 
   def draw(window)
