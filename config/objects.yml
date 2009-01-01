@@ -31,38 +31,6 @@ game_master:
 
 game_config:
 
-+random_collection_level:
-  mode:
-    class: LevelMode
-
-  tractor_controller:
-    compose: mode, tractor
-
-  tractor:
-    compose: media_loader, screen_info
-
-  field_controller:
-    compose: 
-      - field_model
-      - mode
-      - tractor
-      - heads_up
-
-  field_model:
-    compose: media_loader
-
-  item_counter:
-    compose:
-      - screen_info
-      - media_loader
-
-  heads_up:
-    compose:
-      - mode
-      - media_loader
-      - screen_info
-      - item_counter
-
 +workshop:
   mode:
     class: LevelMode
@@ -76,11 +44,6 @@ game_config:
       - main_window
       - space_holder
 
-#  ball_controller:
-#    compose:
-#      - mode
-#      - physical_factory
-
   physical_factory:
     compose:
       - space_holder
@@ -88,12 +51,21 @@ game_config:
   truck_controller:
     compose:
       - mode
-      - physical_factory
-      - space_holder
-      - media_loader
+      - truck_factory
 
+  truck_factory:
+    object_context: this_context
+  
   rain_controller:
     compose:
       - mode
       - space_holder
       - media_loader
+
+  +dump_truck:
+    truck:
+      compose:
+        - main_window
+        - space_holder
+        - media_loader
+        - physical_factory

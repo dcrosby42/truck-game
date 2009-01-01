@@ -19,7 +19,7 @@ class WorkshopRoom
     end
 
     # Physics simulation grinder
-    substeps = 3
+    substeps = 6
     dt = SpaceHolder::TICK / substeps
     @mode.on :update do |info|
       substeps.times do 

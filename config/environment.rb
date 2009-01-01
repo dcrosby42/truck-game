@@ -38,6 +38,7 @@ require 'gosu_char_id_map'
 
 require 'array_ext'
 require 'chipmunk_numeric_ext'
+require 'debug_drawing'
 
 
 DEBUG_SERVER_PORT = 51515

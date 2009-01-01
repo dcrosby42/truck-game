@@ -1,16 +1,18 @@
 class PhysicalPoly
-  attr_reader :body, :mass
+  attr_reader :body, :shape, :mass
 
   Defaults = {
+    # Body stuff
     :location => ZeroVec2,
     :mass => 50,
+    :angle => 0.0,
+    # Shape stuff
+    :vertices => [],
     :friction => 0.7,
     :elast => 0.1,
     :z_order => 1,
     :radius => 10,
     :collision_type => :poly,
-    :vertices => [],
-    :angle => 0.0,
   }
 
   def initialize(opts)
@@ -18,7 +20,6 @@ class PhysicalPoly
     @vertices = opts[:vertices]
     @mass = opts[:mass]
     @group = opts[:group]
-
 
     moment_of_inertia = CP::moment_for_poly(@mass, @vertices, vec2(0,0))
     @body =  CP::Body.new(@mass, moment_of_inertia)
@@ -52,4 +53,9 @@ class PhysicalPoly
     end
   end
 
+  def cold_drop(loc)
+    @body.reset_forces
+    @body.p = loc
+    @body.a = 0
+  end
 end

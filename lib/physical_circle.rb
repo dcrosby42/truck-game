@@ -34,4 +34,9 @@ class PhysicalCircle
     space.add_shape(@shape)
   end
 
+  def cold_drop(loc)
+    @body.reset_forces
+    @body.p = loc
+    @body.a = 0
+  end
 end

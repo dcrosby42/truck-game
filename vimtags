@@ -4,323 +4,145 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.7	//
-Air	./vendor/gems/diy-1.0.3/test/files/non_singleton/air.rb	/^class Air$/;"	c
 AppStarter	./lib/app_starter.rb	/^class AppStarter$/;"	c
-AssertErrorTest	./vendor/gems/hardmock-1.3.6/test/functional/assert_error_test.rb	/^class AssertErrorTest < Test::Unit::TestCase$/;"	c
-Assertions	./vendor/gems/hardmock-1.3.6/lib/assert_error.rb	/^  module Assertions #:nodoc:#$/;"	m	class:Test
-AutoVerifyTest	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^class AutoVerifyTest < Test::Unit::TestCase$/;"	c
-Baby	./vendor/gems/constructor/specs/constructor_spec.rb	/^class Baby < Mama$/;"	c
-Bar	./vendor/gems/diy-1.0.3/test/files/donkey/foo.rb	/^	module Bar$/;"	m	class:DiyTesting
-Bar	./vendor/gems/diy-1.0.3/test/files/donkey/foo/bar/qux.rb	/^	module Bar$/;"	m	class:Foo
-Base	./vendor/gems/diy-1.0.3/test/files/goat/base.rb	/^class Base$/;"	c
+Array	./lib/array_ext.rb	/^class Array$/;"	c
+Ball	./lib/ball_controller.rb	/^  class Ball$/;"	c	class:BallController
+BallController	./lib/ball_controller.rb	/^class BallController$/;"	c
 BaseMode	./lib/base_mode.rb	/^class BaseMode$/;"	c
-Billy	./vendor/gems/publisher/test/publisher_test.rb	/^	class Billy < Grampa$/;"	c	class:PublisherTest
-BoomExp	./vendor/gems/hardmock-1.3.6/test/unit/mock_control_test.rb	/^  class BoomExp < MyExp$/;"	c	class:MockControlTest
+Block	./lib/rain_controller.rb	/^  class Block$/;"	c	class:RainController
 Box	./lib/debug_hail.rb	/^  class Box$/;"	c	class:DebugHail
-Box	./proto/MoreChipmunkAndRMagick.rb	/^class Box$/;"	c
-Box	./proto/chipmunk_learn.rb	/^class Box$/;"	c	class:BoxBuilder
-Box	./proto/one_triangle.rb	/^class Box$/;"	c
-BoxBuilder	./proto/chipmunk_learn.rb	/^class BoxBuilder$/;"	c
-Broken	./vendor/gems/publisher/test/publisher_test.rb	/^	class Broken$/;"	c	class:PublisherTest
-Can	./vendor/gems/diy-1.0.3/test/files/goat/can.rb	/^class Can < Base$/;"	c
-Cat	./vendor/gems/diy-1.0.3/test/files/cat/cat.rb	/^class Cat$/;"	c
+Bucket	./lib/truck_controller.rb	/^  class Bucket$/;"	c	class:TruckController
 Class	./vendor/gems/constructor/lib/constructor.rb	/^class Class #:nodoc:#$/;"	c
-Concrete	./vendor/gems/hardmock-1.3.6/test/functional/stubbing_test.rb	/^  class Concrete$/;"	c
-ConstructionError	./vendor/gems/diy-1.0.3/lib/diy.rb	/^	class ConstructionError < RuntimeError #:nodoc:#$/;"	c
+ConstructionError	./vendor/gems/diy/lib/diy.rb	/^	class ConstructionError < RuntimeError #:nodoc:#$/;"	c
 ConstructorArgumentError	./vendor/gems/constructor/lib/constructor.rb	/^class ConstructorArgumentError < RuntimeError #:nodoc:#$/;"	c
-Context	./vendor/gems/diy-1.0.3/lib/diy.rb	/^	class Context$/;"	c	class:DIY
-CoreModel	./vendor/gems/diy-1.0.3/test/files/yak/core_model.rb	/^class CoreModel$/;"	c
-CorePresenter	./vendor/gems/diy-1.0.3/test/files/yak/core_presenter.rb	/^class CorePresenter$/;"	c
-CoreView	./vendor/gems/diy-1.0.3/test/files/yak/core_view.rb	/^class CoreView; end$/;"	c
+Context	./vendor/gems/diy/lib/diy.rb	/^	class Context$/;"	c	class:DIY
+Context	./vendor/gems/diy/lib/diy/factory.rb	/^	class Context$/;"	c	class:DIY
+ControlAdapter	./lib/ball_controller.rb	/^  class ControlAdapter$/;"	c	class:BallController
 Corn	./lib/corn.rb	/^class Corn$/;"	c
-CustomerListHolder	./vendor/gems/publisher/sample_code/synopsis.rb	/^class CustomerListHolder$/;"	c
-DIY	./vendor/gems/diy-1.0.3/lib/diy.rb	/^module DIY #:nodoc:#$/;"	m
-DIYTest	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^class DIYTest < Test::Unit::TestCase$/;"	c
-Dad	./vendor/gems/publisher/test/publisher_test.rb	/^  class Dad < Grandfather$/;"	c	class:PublisherTest
-DataSource	./vendor/gems/diy-1.0.3/test/files/yak/data_source.rb	/^class DataSource; end$/;"	c
-Dave	./vendor/gems/publisher/test/publisher_test.rb	/^  class Dave < Dad$/;"	c	class:PublisherTest
+DIY	./vendor/gems/diy/lib/diy.rb	/^module DIY #:nodoc:#$/;"	m
+DIY	./vendor/gems/diy/lib/diy/factory.rb	/^module DIY #:nodoc:#$/;"	m
 DebugController	./lib/debug_controller.rb	/^class DebugController$/;"	c
+DebugDrawing	./lib/debug_drawing.rb	/^module DebugDrawing$/;"	m
 DebugHail	./lib/debug_hail.rb	/^class DebugHail$/;"	c
 DebugServer	./lib/debug_server.rb	/^class DebugServer$/;"	c
-DemoWindow	./proto/MoreChipmunkAndRMagick.rb	/^class DemoWindow < Gosu::Window$/;"	c
-DemoWindow	./proto/one_triangle.rb	/^class DemoWindow < Gosu::Window$/;"	c
-DeprecationError	./vendor/gems/hardmock-1.3.6/lib/hardmock/errors.rb	/^  class DeprecationError < StandardError #:nodoc:#$/;"	c	class:Hardmock
-DirectMockUsageTest	./vendor/gems/hardmock-1.3.6/test/functional/direct_mock_usage_test.rb	/^class DirectMockUsageTest < Test::Unit::TestCase$/;"	c
-DiyTesting	./vendor/gems/diy-1.0.3/test/files/donkey/foo.rb	/^module DiyTesting$/;"	m
-DogModel	./vendor/gems/diy-1.0.3/test/files/dog/dog_model.rb	/^class DogModel$/;"	c
-DogPresenter	./vendor/gems/diy-1.0.3/test/files/dog/dog_presenter.rb	/^class DogPresenter$/;"	c
-DogView	./vendor/gems/diy-1.0.3/test/files/dog/dog_view.rb	/^class DogView$/;"	c
-DummyTest	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^      class DummyTest < Test::Unit::TestCase$/;"	c
-DummyTest	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^      class DummyTest < Test::Unit::TestCase$/;"	c	class:write_and_execute_test
-Dynamo	./vendor/gems/publisher/test/publisher_test.rb	/^  class Dynamo$/;"	c	class:PublisherTest
-ExpBuilder	./vendor/gems/hardmock-1.3.6/test/unit/expector_test.rb	/^  class ExpBuilder$/;"	c	class:ExpectorTest
-ExpBuilder	./vendor/gems/hardmock-1.3.6/test/unit/trapper_test.rb	/^  class ExpBuilder$/;"	c	class:TrapperTest
-Expectation	./vendor/gems/hardmock-1.3.6/lib/hardmock/expectation.rb	/^  class Expectation$/;"	c	class:Hardmock
-ExpectationBuilder	./vendor/gems/hardmock-1.3.6/lib/hardmock/expectation_builder.rb	/^  class ExpectationBuilder #:nodoc:$/;"	c	class:Hardmock
-ExpectationBuilderTest	./vendor/gems/hardmock-1.3.6/test/unit/expectation_builder_test.rb	/^class ExpectationBuilderTest < Test::Unit::TestCase$/;"	c
-ExpectationError	./vendor/gems/hardmock-1.3.6/lib/hardmock/errors.rb	/^  class ExpectationError < StandardError #:nodoc:#$/;"	c	class:Hardmock
-ExpectationTest	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^class ExpectationTest < Test::Unit::TestCase$/;"	c
-Expector	./vendor/gems/hardmock-1.3.6/lib/hardmock/expector.rb	/^  class Expector #:nodoc:$/;"	c	class:Hardmock
-ExpectorTest	./vendor/gems/hardmock-1.3.6/test/unit/expector_test.rb	/^class ExpectorTest < Test::Unit::TestCase$/;"	c
-FatCat	./vendor/gems/diy-1.0.3/test/files/non_singleton/fat_cat.rb	/^class FatCat$/;"	c
+FactoryDef	./vendor/gems/diy/lib/diy/factory.rb	/^  class FactoryDef #:nodoc:$/;"	c	class:DIY
+FactoryFactory	./vendor/gems/diy/lib/diy/factory.rb	/^  class FactoryFactory$/;"	c	class:DIY
 FieldController	./lib/field_controller.rb	/^class FieldController$/;"	c
 FieldModel	./lib/field_model.rb	/^class FieldModel$/;"	c
-FileResolver	./vendor/gems/diy-1.0.3/test/files/dog/file_resolver.rb	/^class FileResolver$/;"	c
 Fixnum	./lib/gosu_char_id_map.rb	/^class Fixnum$/;"	c
-Foo	./vendor/gems/diy-1.0.3/test/files/donkey/foo.rb	/^		class Foo$/;"	c	class:DiyTesting.Bar
-Foo	./vendor/gems/diy-1.0.3/test/files/donkey/foo/bar/qux.rb	/^module Foo$/;"	m
-FringeModel	./vendor/gems/diy-1.0.3/test/files/yak/fringe_model.rb	/^class FringeModel$/;"	c
-FringePresenter	./vendor/gems/diy-1.0.3/test/files/yak/fringe_presenter.rb	/^class FringePresenter$/;"	c
-FringeView	./vendor/gems/diy-1.0.3/test/files/yak/fringe_view.rb	/^class FringeView; end$/;"	c
+Float	./lib/chipmunk_numeric_ext.rb	/^class Float$/;"	c
 GameConfig	./lib/game_config.rb	/^class GameConfig$/;"	c
 GameMaster	./lib/game_master.rb	/^class GameMaster $/;"	c
-GameWindow	./proto/ChipmunkIntegration.rb	/^class GameWindow < Gosu::Window$/;"	c
-GiantSquid	./vendor/gems/diy-1.0.3/test/files/yak/giant_squid.rb	/^class GiantSquid$/;"	c
-Goat	./vendor/gems/diy-1.0.3/test/files/goat/goat.rb	/^class Goat < Base$/;"	c
 GosuCharIdMap	./lib/gosu_char_id_map.rb	/^module GosuCharIdMap$/;"	m
-Grampa	./vendor/gems/publisher/test/publisher_test.rb	/^	class Grampa$/;"	c	class:PublisherTest
-Grandfather	./vendor/gems/publisher/test/publisher_test.rb	/^  class Grandfather $/;"	c	class:PublisherTest
-Grinder	./vendor/gems/hardmock-1.3.6/test/functional/hardmock_test.rb	/^  class Grinder$/;"	c
-Ground	./proto/chipmunk_learn.rb	/^class Ground$/;"	c	class:BoxBuilder
-Hardmock	./vendor/gems/hardmock-1.3.6/lib/hardmock.rb	/^module Hardmock$/;"	m
-Hardmock	./vendor/gems/hardmock-1.3.6/lib/hardmock/errors.rb	/^module Hardmock$/;"	m
-Hardmock	./vendor/gems/hardmock-1.3.6/lib/hardmock/expectation.rb	/^module Hardmock$/;"	m
-Hardmock	./vendor/gems/hardmock-1.3.6/lib/hardmock/expectation_builder.rb	/^module Hardmock$/;"	m
-Hardmock	./vendor/gems/hardmock-1.3.6/lib/hardmock/expector.rb	/^module Hardmock$/;"	m
-Hardmock	./vendor/gems/hardmock-1.3.6/lib/hardmock/method_cleanout.rb	/^module Hardmock #:nodoc:$/;"	m
-Hardmock	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock.rb	/^module Hardmock$/;"	m
-Hardmock	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock_control.rb	/^module Hardmock$/;"	m
-Hardmock	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^module Hardmock$/;"	m
-Hardmock	./vendor/gems/hardmock-1.3.6/lib/hardmock/trapper.rb	/^module Hardmock$/;"	m
-Hardmock	./vendor/gems/hardmock-1.3.6/lib/hardmock/utils.rb	/^module Hardmock$/;"	m
-HardmockTest	./vendor/gems/hardmock-1.3.6/test/functional/hardmock_test.rb	/^class HardmockTest < Test::Unit::TestCase$/;"	c
 Hay	./lib/hay.rb	/^class Hay$/;"	c
 HeadsUp	./lib/heads_up.rb	/^class HeadsUp$/;"	c
-Heritage	./vendor/gems/diy-1.0.3/test/files/cat/heritage.rb	/^class Heritage$/;"	c
-HolderThing	./vendor/gems/diy-1.0.3/test/files/horse/holder_thing.rb	/^class HolderThing$/;"	c
-Horse	./vendor/gems/constructor/homepage/sample_code.rb	/^class Horse$/;"	c
-HurtLocker	./vendor/gems/hardmock-1.3.6/test/functional/hardmock_test.rb	/^  class HurtLocker$/;"	c
-Infl	./vendor/gems/diy-1.0.3/lib/diy.rb	/^  module Infl #:nodoc:#$/;"	m
+Infl	./vendor/gems/diy/lib/diy.rb	/^  module Infl #:nodoc:#$/;"	m
+Initializer	./lib/initializer.rb	/^module Initializer$/;"	m
 InstanceMethods	./vendor/gems/publisher/lib/publisher.rb	/^	module InstanceMethods$/;"	m	class:Publisher
 ItemCounter	./lib/item_counter.rb	/^class ItemCounter$/;"	c
-Jug	./vendor/gems/hardmock-1.3.6/test/functional/stubbing_test.rb	/^  class Jug$/;"	c
-Krill	./vendor/gems/diy-1.0.3/test/files/yak/krill.rb	/^class Krill$/;"	c
 LevelFactory	./lib/level_factory.rb	/^class LevelFactory$/;"	c
 LevelMode	./lib/level_mode.rb	/^class LevelMode < Mode$/;"	c
-Llamma	./vendor/gems/constructor/specs/constructor_spec.rb	/^class Llamma$/;"	c
-Lookup	./vendor/gems/diy-1.0.3/lib/diy.rb	/^	class Lookup #:nodoc:$/;"	c
+Lookup	./vendor/gems/diy/lib/diy.rb	/^	class Lookup #:nodoc:$/;"	c
 MainMenuMode	./lib/main_menu_mode.rb	/^class MainMenuMode < BaseMode$/;"	c
 MainWindow	./lib/main_window.rb	/^class MainWindow < Gosu::Window$/;"	c
-MainWindow	./proto/chipmunk_learn.rb	/^class MainWindow < Gosu::Window$/;"	c
-Mama	./vendor/gems/constructor/specs/constructor_spec.rb	/^class Mama$/;"	c
-ManyEvents	./vendor/gems/publisher/test/publisher_test.rb	/^	class ManyEvents$/;"	c	class:PublisherTest
 MediaLoader	./lib/media_loader.rb	/^class MediaLoader$/;"	c
-MethodCleanout	./vendor/gems/hardmock-1.3.6/lib/hardmock/method_cleanout.rb	/^  module MethodCleanout #:nodoc:$/;"	m	class:Hardmock
-MethodCleanoutTest	./vendor/gems/hardmock-1.3.6/test/unit/method_cleanout_test.rb	/^class MethodCleanoutTest < Test::Unit::TestCase$/;"	c
-Mock	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock.rb	/^  class Mock$/;"	c	class:Hardmock
-MockControl	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock_control.rb	/^  class MockControl #:nodoc:$/;"	c	class:Hardmock
-MockControlTest	./vendor/gems/hardmock-1.3.6/test/unit/mock_control_test.rb	/^class MockControlTest < Test::Unit::TestCase$/;"	c
-MockTest	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^class MockTest < Test::Unit::TestCase$/;"	c
+MethodDef	./vendor/gems/diy/lib/diy.rb	/^  class MethodDef #:nodoc:$/;"	c
 Mode	./lib/mode.rb	/^class Mode < BaseMode$/;"	c
 ModeWrangler	./lib/mode_wrangler.rb	/^class ModeWrangler$/;"	c
 MoonTerrainController	./lib/moon_terrain_controller.rb	/^class MoonTerrainController$/;"	c
-MyControl	./vendor/gems/hardmock-1.3.6/test/unit/expector_test.rb	/^  class MyControl$/;"	c	class:ExpectorTest
-MyControl	./vendor/gems/hardmock-1.3.6/test/unit/trapper_test.rb	/^  class MyControl$/;"	c	class:TrapperTest
-MyExampleTest	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^    class MyExampleTest < Test::Unit::TestCase$/;"	c	class:generate_test_code
-MyExp	./vendor/gems/hardmock-1.3.6/test/unit/mock_control_test.rb	/^  class MyExp  $/;"	c	class:MockControlTest
-Namespace	./vendor/gems/diy-1.0.3/lib/diy.rb	/^  class Namespace #:nodoc:#$/;"	c
-NamespaceError	./vendor/gems/diy-1.0.3/lib/diy.rb	/^  class NamespaceError < RuntimeError #:nodoc:#$/;"	c
-Nobody	./vendor/gems/publisher/test/publisher_test.rb	/^	class Nobody$/;"	c	class:PublisherTest
+Namespace	./vendor/gems/diy/lib/diy.rb	/^  class Namespace #:nodoc:#$/;"	c
+NamespaceError	./vendor/gems/diy/lib/diy.rb	/^  class NamespaceError < RuntimeError #:nodoc:#$/;"	c
 Numeric	./lib/chipmunk_numeric_ext.rb	/^class Numeric $/;"	c
-Numeric	./proto/ChipmunkIntegration.rb	/^class Numeric $/;"	c
-Numeric	./proto/MoreChipmunkAndRMagick.rb	/^class Numeric $/;"	c
-Numeric	./proto/chipmunk_learn.rb	/^class Numeric $/;"	c	class:BoxBuilder.Ground
-Numeric	./proto/one_triangle.rb	/^class Numeric $/;"	c
-Object	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^class Object #:nodoc:#$/;"	c
-ObjectDef	./vendor/gems/diy-1.0.3/lib/diy.rb	/^	class ObjectDef #:nodoc:$/;"	c
-OtherMock	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  class OtherMock$/;"	c	class:ExpectationTest
-OtherThing	./vendor/gems/diy-1.0.3/test/files/dog/other_thing.rb	/^class OtherThing$/;"	c
-Papa	./vendor/gems/constructor/specs/constructor_spec.rb	/^class Papa$/;"	c
-Paper	./vendor/gems/diy-1.0.3/test/files/goat/paper.rb	/^class Paper < Base$/;"	c
-Pig	./vendor/gems/diy-1.0.3/test/files/non_singleton/pig.rb	/^class Pig$/;"	c
-Plane	./vendor/gems/diy-1.0.3/test/files/goat/plane.rb	/^class Plane < Base$/;"	c
-Player	./proto/ChipmunkIntegration.rb	/^class Player$/;"	c
+ObjectDef	./vendor/gems/diy/lib/diy.rb	/^	class ObjectDef #:nodoc:$/;"	c
+PhysicalCircle	./lib/physical_circle.rb	/^class PhysicalCircle$/;"	c
+PhysicalFactory	./lib/physical_factory.rb	/^class PhysicalFactory$/;"	c
+PhysicalPoly	./lib/physical_poly.rb	/^class PhysicalPoly$/;"	c
 PowerTractorController	./lib/power_tractor_controller.rb	/^class PowerTractorController$/;"	c
 Publisher	./vendor/gems/publisher/lib/publisher.rb	/^module Publisher$/;"	m
-PublisherTest	./vendor/gems/publisher/test/publisher_test.rb	/^class PublisherTest < Test::Unit::TestCase$/;"	c
-Qux	./vendor/gems/diy-1.0.3/test/files/donkey/foo/bar/qux.rb	/^		class Qux$/;"	c	class:Foo.Bar
-ReplacedMethod	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^  class ReplacedMethod #:nodoc:#$/;"	c	class:Hardmock
+RainController	./lib/rain_controller.rb	/^class RainController$/;"	c
 ScreenInfo	./lib/screen_info.rb	/^class ScreenInfo$/;"	c
-SeveralWays	./vendor/gems/publisher/test/publisher_test.rb	/^	class SeveralWays$/;"	c	class:PublisherTest
-Shirt	./vendor/gems/diy-1.0.3/test/files/goat/shirt.rb	/^class Shirt < Base$/;"	c
-Sissy	./vendor/gems/constructor/specs/constructor_spec.rb	/^class Sissy < Mama$/;"	c
-Somebody	./vendor/gems/publisher/test/publisher_test.rb	/^	class Somebody$/;"	c	class:PublisherTest
-Something	./vendor/gems/publisher/test/publisher_test.rb	/^	class Something$/;"	c	class:PublisherTest
-SomethingWatcher	./vendor/gems/publisher/test/publisher_test.rb	/^  class SomethingWatcher$/;"	c	class:PublisherTest
-SonOfDynamo	./vendor/gems/publisher/test/publisher_test.rb	/^  class SonOfDynamo < Dynamo$/;"	c	class:PublisherTest
-Sonny	./vendor/gems/constructor/specs/constructor_spec.rb	/^class Sonny < Papa$/;"	c
+SimpleBarrier	./lib/simple_barrier.rb	/^class SimpleBarrier$/;"	c
 SpaceHolder	./lib/space_holder.rb	/^class SpaceHolder$/;"	c
-Star	./proto/ChipmunkIntegration.rb	/^class Star$/;"	c
-StubbedMethod	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^  class StubbedMethod < ReplacedMethod #:nodoc:#$/;"	c	class:Hardmock
-Stubbing	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^  module Stubbing$/;"	m	class:Hardmock
-StubbingError	./vendor/gems/hardmock-1.3.6/lib/hardmock/errors.rb	/^  class StubbingError < StandardError #:nodoc:#$/;"	c	class:Hardmock
-StubbingTest	./vendor/gems/hardmock-1.3.6/test/functional/stubbing_test.rb	/^class StubbingTest < Test::Unit::TestCase$/;"	c
-SubclassOfTestingClass	./vendor/gems/constructor/specs/constructor_spec.rb	/^class SubclassOfTestingClass < TestingClass$/;"	c
-SubclassOfTestingClass2	./vendor/gems/constructor/specs/constructor_spec.rb	/^class SubclassOfTestingClass2 < TestingClass$/;"	c
-SubclassOfTestingClass3	./vendor/gems/constructor/specs/constructor_spec.rb	/^class SubclassOfTestingClass3 < TestingClass$/;"	c
-SuperDuperHoss	./vendor/gems/publisher/test/publisher_test.rb	/^	class SuperDuperHoss$/;"	c	class:PublisherTest
-SuperHoss	./vendor/gems/publisher/test/publisher_test.rb	/^	class SuperHoss$/;"	c	class:PublisherTest
 SvgRectangleLoader	./lib/svg_rectangle_loader.rb	/^class SvgRectangleLoader $/;"	c
 SystemContext	./lib/system_context.rb	/^class SystemContext$/;"	c
-Test	./vendor/gems/diy-1.0.3/test/test_helper.rb	/^class Test::Unit::TestCase$/;"	c
-Test	./vendor/gems/hardmock-1.3.6/lib/assert_error.rb	/^module Test::Unit #:nodoc:#$/;"	m
-Test	./vendor/gems/hardmock-1.3.6/lib/extend_test_unit.rb	/^class Test::Unit::TestCase $/;"	c
-Test	./vendor/gems/hardmock-1.3.6/lib/test_unit_before_after.rb	/^module Test #:nodoc:#$/;"	m
-Test	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^      class Test::Unit::TestCase $/;"	c
-Test	./vendor/gems/hardmock-1.3.6/test/test_helper.rb	/^class Test::Unit::TestCase$/;"	c
-Test	./vendor/gems/publisher/test/test_helper.rb	/^class Test::Unit::TestCase$/;"	c
-TestCase	./vendor/gems/hardmock-1.3.6/lib/test_unit_before_after.rb	/^    class TestCase$/;"	c	class:Test.Unit
-TestUnitBeforeAfter	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^class TestUnitBeforeAfter < Test::Unit::TestCase$/;"	c
-TestingAutoAccessors	./vendor/gems/constructor/specs/constructor_spec.rb	/^class TestingAutoAccessors$/;"	c
-TestingBlockYield	./vendor/gems/constructor/specs/constructor_spec.rb	/^class TestingBlockYield$/;"	c
-TestingBlockedAccessors	./vendor/gems/constructor/specs/constructor_spec.rb	/^class TestingBlockedAccessors$/;"	c
-TestingClass	./vendor/gems/constructor/specs/constructor_spec.rb	/^class TestingClass$/;"	c
-TestingStrictArgs	./vendor/gems/constructor/specs/constructor_spec.rb	/^class TestingStrictArgs$/;"	c
-TestingStrictArgs2	./vendor/gems/constructor/specs/constructor_spec.rb	/^class TestingStrictArgs2$/;"	c
-TestingStrictArgsDefault	./vendor/gems/constructor/specs/constructor_spec.rb	/^class TestingStrictArgsDefault$/;"	c
-TestingSuperConstructor	./vendor/gems/constructor/specs/constructor_spec.rb	/^class TestingSuperConstructor < TestingSuperConstructorBase$/;"	c
-TestingSuperConstructor2	./vendor/gems/constructor/specs/constructor_spec.rb	/^class TestingSuperConstructor2 < TestingSuperConstructorBase2$/;"	c
-TestingSuperConstructorBase	./vendor/gems/constructor/specs/constructor_spec.rb	/^class TestingSuperConstructorBase$/;"	c
-TestingSuperConstructorBase2	./vendor/gems/constructor/specs/constructor_spec.rb	/^class TestingSuperConstructorBase2$/;"	c
-TheCatLineage	./vendor/gems/diy-1.0.3/test/files/cat/the_cat_lineage.rb	/^class TheCatLineage; end$/;"	c
-TheMock	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  class TheMock$/;"	c	class:ExpectationTest
-ThingAmaJack	./vendor/gems/diy-1.0.3/test/files/fud/toy.rb	/^class ThingAmaJack$/;"	c
-Thinger	./vendor/gems/diy-1.0.3/test/files/gnu/thinger.rb	/^class Thinger$/;"	c
-ThreadSpinner	./vendor/gems/diy-1.0.3/test/files/non_singleton/thread_spinner.rb	/^class ThreadSpinner$/;"	c
-Tick	./vendor/gems/diy-1.0.3/test/files/non_singleton/tick.rb	/^class Tick$/;"	c
-Toy	./vendor/gems/diy-1.0.3/test/files/fud/toy.rb	/^class Toy$/;"	c
 Tractor	./lib/tractor.rb	/^class Tractor$/;"	c
 TractorController	./lib/tractor_controller.rb	/^class TractorController$/;"	c
-Trapper	./vendor/gems/hardmock-1.3.6/lib/hardmock/trapper.rb	/^  class Trapper #:nodoc:$/;"	c	class:Hardmock
-TrapperTest	./vendor/gems/hardmock-1.3.6/test/unit/trapper_test.rb	/^class TrapperTest < Test::Unit::TestCase$/;"	c
-Trinket	./vendor/gems/diy-1.0.3/test/files/fud/toy.rb	/^class Trinket$/;"	c
-Unit	./vendor/gems/hardmock-1.3.6/lib/test_unit_before_after.rb	/^  module Unit #:nodoc:#$/;"	m	class:Test
+Truck	./lib/truck.rb	/^class Truck$/;"	c
+TruckController	./lib/truck_controller.rb	/^class TruckController$/;"	c
+TruckFactory	./lib/truck_factory.rb	/^class TruckFactory$/;"	c
 UpdateInfo	./lib/update_info.rb	/^class UpdateInfo$/;"	c
-UserPresenter	./vendor/gems/hardmock-1.3.6/test/functional/hardmock_test.rb	/^  class UserPresenter$/;"	c
-UserPresenterBroken	./vendor/gems/hardmock-1.3.6/test/functional/hardmock_test.rb	/^  class UserPresenterBroken$/;"	c
-Utils	./vendor/gems/hardmock-1.3.6/lib/hardmock/utils.rb	/^  module Utils #:nodoc:$/;"	m	class:Hardmock
-VerifyError	./vendor/gems/hardmock-1.3.6/lib/hardmock/errors.rb	/^  class VerifyError < StandardError #:nodoc:#$/;"	c	class:Hardmock
-VerifyErrorTest	./vendor/gems/hardmock-1.3.6/test/unit/verify_error_test.rb	/^class VerifyErrorTest < Test::Unit::TestCase$/;"	c
-Victim	./vendor/gems/hardmock-1.3.6/test/unit/method_cleanout_test.rb	/^  class Victim$/;"	c	class:MethodCleanoutTest
+VehicleFactory	./lib/vehicle_factory.rb	/^class VehicleFactory$/;"	c
 Viewport	./lib/viewport.rb	/^class Viewport$/;"	c
 ViewportController	./lib/viewport_controller.rb	/^class ViewportController$/;"	c
-Widget	./vendor/gems/diy-1.0.3/test/files/fud/toy.rb	/^class Widget$/;"	c
-Wings	./vendor/gems/diy-1.0.3/test/files/goat/wings.rb	/^class Wings < Base$/;"	c
-Yard	./vendor/gems/diy-1.0.3/test/files/non_singleton/yard.rb	/^class Yard$/;"	c
+WorkshopRoom	./lib/workshop_room.rb	/^class WorkshopRoom$/;"	c
 YardController	./lib/yard_controller.rb	/^class YardController$/;"	c
 YardGround	./lib/yard_ground.rb	/^class YardGround$/;"	c
 ZOrder	./lib/z_order.rb	/^module ZOrder$/;"	m
-ZOrder	./proto/ChipmunkIntegration.rb	/^module ZOrder$/;"	m
-ZOrder	./proto/MoreChipmunkAndRMagick.rb	/^module ZOrder$/;"	m
-ZOrder	./proto/chipmunk_learn.rb	/^module ZOrder$/;"	m	class:BoxBuilder.Ground
-ZOrder	./proto/one_triangle.rb	/^module ZOrder$/;"	m
-_clear_mock	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def _clear_mock$/;"	f
-_control	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock.rb	/^    def _control #:nodoc:$/;"	f	class:Hardmock.Mock
-_is_mock?	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def _is_mock?$/;"	f
-_my_name	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def _my_name$/;"	f
-_name	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock.rb	/^    def _name #:nodoc:$/;"	f	class:Hardmock.Mock
-_name	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^    def _name; 'other_mock'; end$/;"	f	class:ExpectationTest.OtherMock
-_name	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^    def _name; 'the_mock'; end$/;"	f	class:ExpectationTest.TheMock
 _validate_constructor_args	./vendor/gems/constructor/lib/constructor.rb	/^        def _validate_constructor_args(args)$/;"	f	class:Class.constructor
-_verify	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock.rb	/^    def _verify$/;"	f	class:Hardmock.Mock
 abort_level	./lib/level_mode.rb	/^  def abort_level$/;"	f	class:LevelMode
 accelerate	./lib/tractor.rb	/^  def accelerate$/;"	f	class:Tractor
-accelerate	./proto/ChipmunkIntegration.rb	/^  def accelerate$/;"	f	class:Player
-add_customer	./vendor/gems/publisher/sample_code/synopsis.rb	/^  def add_customer(cust)$/;"	f	class:CustomerListHolder
-add_expectation	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock_control.rb	/^    def add_expectation(expectation)$/;"	f	class:Hardmock.MockControl
-add_expectation	./vendor/gems/hardmock-1.3.6/test/unit/expector_test.rb	/^    def add_expectation(expectation)$/;"	f	class:ExpectorTest.MyControl
-add_expectation	./vendor/gems/hardmock-1.3.6/test/unit/trapper_test.rb	/^    def add_expectation(expectation)$/;"	f	class:TrapperTest.MyControl
+add_block	./lib/rain_controller.rb	/^  def add_block$/;"	f	class:RainController
 add_item_if_needed	./lib/field_controller.rb	/^  def add_item_if_needed(info)$/;"	f
-add_rdoc_options	./vendor/gems/hardmock-1.3.6/rake_tasks/rdoc_options.rb	/^def add_rdoc_options(options)$/;"	f
 add_self_to_space	./lib/debug_hail.rb	/^    def add_self_to_space(space)$/;"	f	class:DebugHail.Box
 add_to_loadpath	./config/environment.rb	/^def add_to_loadpath(dir)$/;"	f
-after_teardown	./vendor/gems/hardmock-1.3.6/lib/test_unit_before_after.rb	/^        def after_teardown(&block)$/;"	f	class:Test.Unit.TestCase
-all_replaced_methods	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def all_replaced_methods$/;"	f
-anger	./vendor/gems/hardmock-1.3.6/lib/hardmock/expectation.rb	/^    def anger(msg, mock,mname,args)$/;"	f	class:Hardmock.Expectation
 angle_delta	./lib/tractor.rb	/^  def angle_delta$/;"	f	class:Tractor
-apply_method_call	./vendor/gems/hardmock-1.3.6/lib/hardmock/expectation.rb	/^    def apply_method_call(mock,mname,args,block) #:nodoc:$/;"	f	class:Hardmock.Expectation
-apply_method_call	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock_control.rb	/^    def apply_method_call(mock,mname,args,block)$/;"	f	class:Hardmock.MockControl
-apply_method_call	./vendor/gems/hardmock-1.3.6/test/unit/mock_control_test.rb	/^    def apply_method_call(mock, mname, args, block)$/;"	f	class:MockControlTest.BoomExp
-apply_method_call	./vendor/gems/hardmock-1.3.6/test/unit/mock_control_test.rb	/^    def apply_method_call(mock, mname, args, block)$/;"	f	class:MockControlTest.MyExp
 as_arrays_of_tuples	./lib/svg_rectangle_loader.rb	/^  def as_arrays_of_tuples(fname)$/;"	f	class:SvgRectangleLoader
-assert_error	./vendor/gems/hardmock-1.3.6/lib/assert_error.rb	/^    def assert_error(err_type,*patterns,&block)$/;"	f	class:Test.Assertions
-assert_mock_exists	./vendor/gems/hardmock-1.3.6/test/functional/hardmock_test.rb	/^  def assert_mock_exists(name)$/;"	f
-assert_output_contains	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^  def assert_output_contains(*patterns)$/;"	f
-assert_output_doesnt_contain	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^  def assert_output_doesnt_contain(*patterns)$/;"	f
-assert_results	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^  def assert_results(h)$/;"	f
-auxiliary_backtrace_filter	./vendor/gems/hardmock-1.3.6/lib/test_unit_before_after.rb	/^      def auxiliary_backtrace_filter(trace)$/;"	f	class:Test.Unit
 back_up	./lib/tractor.rb	/^  def back_up$/;"	f	class:Tractor
-before_setup	./vendor/gems/hardmock-1.3.6/lib/test_unit_before_after.rb	/^        def before_setup(&block)$/;"	f	class:Test.Unit.TestCase
-boost	./proto/ChipmunkIntegration.rb	/^  def boost$/;"	f	class:Player
-build_box	./proto/chipmunk_learn.rb	/^  def build_box$/;"	f	class:BoxBuilder
-build_boxes	./proto/chipmunk_learn.rb	/^  def build_boxes$/;"	f	class:MainWindow
+brake	./lib/truck.rb	/^  def brake$/;"	f	class:Truck
+brake	./lib/truck_controller.rb	/^  def brake$/;"	f	class:TruckController
+bucket_left	./lib/truck_controller.rb	/^  def bucket_left$/;"	f	class:TruckController
+bucket_right	./lib/truck_controller.rb	/^  def bucket_right$/;"	f	class:TruckController
+build_and_add_shape	./lib/truck_controller.rb	/^    def build_and_add_shape(verts)$/;"	f	class:TruckController.Bucket
+build_and_add_shapes	./lib/truck_controller.rb	/^    def build_and_add_shapes(*vert_lists)$/;"	f	class:TruckController.Bucket
+build_and_raise_construction_error	./vendor/gems/diy/lib/diy.rb	/^		def build_and_raise_construction_error(key, oops)$/;"	f
+build_bucket	./lib/truck_controller.rb	/^  def build_bucket$/;"	f	class:TruckController
 build_chassis	./lib/power_tractor_controller.rb	/^  def build_chassis(pos)$/;"	f	class:PowerTractorController
-build_classname	./vendor/gems/diy-1.0.3/lib/diy.rb	/^    def build_classname(name)$/;"	f	class:Namespace
-build_everything	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def build_everything$/;"	f
-build_expectation	./vendor/gems/hardmock-1.3.6/lib/hardmock/expectation_builder.rb	/^    def build_expectation(options)$/;"	f	class:Hardmock.ExpectationBuilder
-build_expectation	./vendor/gems/hardmock-1.3.6/test/unit/expector_test.rb	/^    def build_expectation(options)$/;"	f	class:ExpectorTest.ExpBuilder
-build_expectation	./vendor/gems/hardmock-1.3.6/test/unit/trapper_test.rb	/^    def build_expectation(options)$/;"	f	class:TrapperTest.ExpBuilder
+build_circle	./lib/physical_factory.rb	/^  def build_circle(opts)$/;"	f	class:PhysicalFactory
+build_classname	./vendor/gems/diy/lib/diy.rb	/^    def build_classname(name)$/;"	f	class:Namespace
+build_dump_truck	./lib/vehicle_factory.rb	/^  def build_dump_truck$/;"	f	class:VehicleFactory
+build_everything	./vendor/gems/diy/lib/diy.rb	/^		def build_everything$/;"	f
+build_floor	./lib/workshop_room.rb	/^  def build_floor$/;"	f	class:WorkshopRoom
 build_new_item	./lib/field_model.rb	/^  def build_new_item(x,y)$/;"	f	class:FieldModel
+build_parts	./lib/truck.rb	/^  def build_parts$/;"	f	class:Truck
+build_poly	./lib/physical_factory.rb	/^  def build_poly(opts)$/;"	f	class:PhysicalFactory
+build_shapes	./lib/truck_controller.rb	/^  def build_shapes$/;"	f	class:TruckController
 build_speed_and_location	./lib/debug_controller.rb	/^  def build_speed_and_location$/;"	f	class:DebugController
 build_static_shape	./lib/yard_ground.rb	/^  def build_static_shape(polygon_points)$/;"	f	class:YardGround
+build_truck	./lib/truck_factory.rb	/^  def build_truck$/;"	f	class:TruckFactory
 build_wheel	./lib/power_tractor_controller.rb	/^  def build_wheel(pos,wheel_radius)$/;"	f	class:PowerTractorController
 button_down	./lib/base_mode.rb	/^  def button_down(id,update_info); end$/;"	f	class:BaseMode
 button_down	./lib/main_menu_mode.rb	/^  def button_down(id,info)$/;"	f	class:MainMenuMode
 button_down	./lib/main_window.rb	/^  def button_down(id)$/;"	f	class:MainWindow
 button_down	./lib/mode.rb	/^  def button_down(id,update_info)$/;"	f	class:Mode
-button_down	./proto/ChipmunkIntegration.rb	/^  def button_down(id)$/;"	f	class:GameWindow
-button_down	./proto/MoreChipmunkAndRMagick.rb	/^   def button_down(id)$/;"	f	class:DemoWindow
-button_down	./proto/chipmunk_learn.rb	/^  def button_down(id)$/;"	f	class:MainWindow
-button_down	./proto/one_triangle.rb	/^   def button_down(id)$/;"	f	class:DemoWindow
 button_down?	./lib/update_info.rb	/^  def button_down?(id)$/;"	f	class:UpdateInfo
 button_up	./lib/base_mode.rb	/^  def button_up(id,update_info); end$/;"	f	class:BaseMode
 button_up	./lib/main_window.rb	/^  def button_up(id)$/;"	f	class:MainWindow
 button_up	./lib/mode.rb	/^  def button_up(id,update_info)$/;"	f	class:Mode
 caching	./lib/media_loader.rb	/^  def caching(filename)$/;"	f	class:MediaLoader
-camelize	./vendor/gems/diy-1.0.3/lib/diy.rb	/^    def self.camelize(lower_case_and_underscored_word) $/;"	F	class:Infl
+camelize	./vendor/gems/diy/lib/diy.rb	/^    def self.camelize(lower_case_and_underscored_word) $/;"	F	class:Infl
 center_viewport	./lib/power_tractor_controller.rb	/^  def center_viewport$/;"	f	class:PowerTractorController
-check_dog_objects	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def check_dog_objects(context)$/;"	f
 check_for_done	./lib/field_controller.rb	/^  def check_for_done$/;"	f
-check_off_screen	./proto/MoreChipmunkAndRMagick.rb	/^   def check_off_screen$/;"	f	class:Box
-check_off_screen	./proto/one_triangle.rb	/^   def check_off_screen$/;"	f	class:Box
-clear_expectations	./vendor/gems/hardmock-1.3.6/lib/hardmock.rb	/^  def clear_expectations$/;"	f	class:Hardmock
-clear_expectations	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock_control.rb	/^    def clear_expectations$/;"	f	class:Hardmock.MockControl
-clear_list	./vendor/gems/publisher/sample_code/synopsis.rb	/^  def clear_list$/;"	f	class:CustomerListHolder
+clear_blocks	./lib/rain_controller.rb	/^  def clear_blocks$/;"	f	class:RainController
+close_bucket	./lib/truck.rb	/^  def close_bucket$/;"	f	class:Truck
 collect_items_near_tractor	./lib/field_controller.rb	/^  def collect_items_near_tractor$/;"	f
-collect_object_and_subcontext_defs	./vendor/gems/diy-1.0.3/lib/diy.rb	/^    def collect_object_and_subcontext_defs(context_hash)$/;"	f
+collect_object_and_subcontext_defs	./vendor/gems/diy/lib/diy.rb	/^    def collect_object_and_subcontext_defs(context_hash)$/;"	f
 complete_level	./lib/level_mode.rb	/^  def complete_level$/;"	f	class:LevelMode
 construct_and_add	./lib/yard_ground.rb	/^  def construct_and_add(polygon_points)$/;"	f	class:YardGround
-construct_object	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def construct_object(key)$/;"	f
+construct_factory	./vendor/gems/diy/lib/diy/factory.rb	/^    def construct_factory(key)$/;"	f	class:DIY.Context
+construct_method	./vendor/gems/diy/lib/diy.rb	/^    def construct_method(key)$/;"	f
+construct_object	./vendor/gems/diy/lib/diy.rb	/^		def construct_object(key)$/;"	f
 constructor	./vendor/gems/constructor/lib/constructor.rb	/^  def constructor(*attrs, &block)$/;"	f	class:Class
 constructor_block	./vendor/gems/constructor/lib/constructor.rb	/^  def constructor_block #:nodoc:#$/;"	f	class:Class
 constructor_keys	./vendor/gems/constructor/lib/constructor.rb	/^  def constructor_keys; @_ctor_keys ||=[]; end$/;"	f	class:Class
-contains_object	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def contains_object(obj_name)$/;"	f
+contains_object	./vendor/gems/diy/lib/diy.rb	/^		def contains_object(obj_name)$/;"	f
 count_up	./lib/heads_up.rb	/^  def count_up$/;"	f	class:HeadsUp
-create_boxes	./proto/MoreChipmunkAndRMagick.rb	/^   def create_boxes(num)$/;"	f	class:DemoWindow
-create_boxes	./proto/one_triangle.rb	/^   def create_boxes(num)$/;"	f	class:DemoWindow
-create_mocks	./vendor/gems/hardmock-1.3.6/lib/hardmock.rb	/^  def create_mocks(*mock_names)$/;"	f	class:Hardmock
+create	./vendor/gems/diy/lib/diy/factory.rb	/^    def create *args$/;"	f	class:DIY.FactoryFactory
+create_barrier	./lib/workshop_room.rb	/^  def create_barrier(opts)$/;"	f	class:WorkshopRoom
+create_shape	./lib/simple_barrier.rb	/^  def create_shape$/;"	f	class:SimpleBarrier
+create_shapes	./lib/truck_controller.rb	/^    def create_shapes$/;"	f	class:TruckController.Bucket
 debug_cycle_image	./lib/tractor.rb	/^  def debug_cycle_image$/;"	f	class:Tractor
-describe	./vendor/gems/hardmock-1.3.6/test/functional/stubbing_test.rb	/^    def describe$/;"	f	class:Concrete
-describe	./vendor/gems/hardmock-1.3.6/test/functional/stubbing_test.rb	/^    def self.describe$/;"	F	class:Concrete
-disappointed?	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock_control.rb	/^    def disappointed?$/;"	f	class:Hardmock.MockControl
-do_boom	./vendor/gems/publisher/test/publisher_test.rb	/^		def do_boom$/;"	f	class:PublisherTest.Something
-do_cry	./vendor/gems/publisher/test/publisher_test.rb	/^		def do_cry$/;"	f	class:PublisherTest.SeveralWays
-do_employee	./vendor/gems/publisher/test/publisher_test.rb	/^		def do_employee$/;"	f	class:PublisherTest.SeveralWays
-do_eviction	./vendor/gems/publisher/test/publisher_test.rb	/^		def do_eviction$/;"	f	class:PublisherTest.SeveralWays
-do_pow	./vendor/gems/publisher/test/publisher_test.rb	/^		def do_pow$/;"	f	class:PublisherTest.Something
-do_the_thing	./vendor/gems/hardmock-1.3.6/test/functional/hardmock_test.rb	/^    def do_the_thing(area,data)$/;"	f	class:HurtLocker
-doit	./vendor/gems/publisher/test/publisher_test.rb	/^    def doit$/;"	f	class:PublisherTest.Dave
 drag_down_velocity	./lib/tractor.rb	/^  def drag_down_velocity$/;"	f	class:Tractor
+draw	./lib/ball_controller.rb	/^    def draw(window)$/;"	f	class:BallController.Ball
 draw	./lib/base_mode.rb	/^  def draw(update_info); end$/;"	f	class:BaseMode
 draw	./lib/corn.rb	/^  def draw$/;"	f	class:Corn
 draw	./lib/debug_hail.rb	/^    def draw$/;"	f	class:DebugHail.Box
@@ -329,161 +151,97 @@ draw	./lib/item_counter.rb	/^  def draw(count_string)$/;"	f	class:ItemCounter
 draw	./lib/main_menu_mode.rb	/^  def draw(info)$/;"	f	class:MainMenuMode
 draw	./lib/main_window.rb	/^  def draw$/;"	f	class:MainWindow
 draw	./lib/mode.rb	/^  def draw(update_info)$/;"	f	class:Mode
+draw	./lib/rain_controller.rb	/^    def draw(window)$/;"	f	class:RainController.Block
+draw	./lib/simple_barrier.rb	/^  def draw(window)$/;"	f	class:SimpleBarrier
 draw	./lib/tractor.rb	/^  def draw$/;"	f	class:Tractor
+draw	./lib/truck.rb	/^  def draw$/;"	f	class:Truck
+draw	./lib/truck_controller.rb	/^    def draw(window)$/;"	f	class:TruckController.Bucket
+draw	./lib/workshop_room.rb	/^  def draw(window)$/;"	f	class:WorkshopRoom
 draw	./lib/yard_ground.rb	/^  def draw$/;"	f	class:YardGround
-draw	./proto/ChipmunkIntegration.rb	/^  def draw  $/;"	f	class:Star
-draw	./proto/ChipmunkIntegration.rb	/^  def draw$/;"	f	class:GameWindow
-draw	./proto/ChipmunkIntegration.rb	/^  def draw$/;"	f	class:Player
-draw	./proto/MoreChipmunkAndRMagick.rb	/^   def draw$/;"	f	class:Box
-draw	./proto/MoreChipmunkAndRMagick.rb	/^   def draw$/;"	f	class:DemoWindow
-draw	./proto/chipmunk_learn.rb	/^  def draw$/;"	f	class:BoxBuilder.Box
-draw	./proto/chipmunk_learn.rb	/^  def draw$/;"	f	class:BoxBuilder.Ground
-draw	./proto/chipmunk_learn.rb	/^  def draw$/;"	f	class:MainWindow
-draw	./proto/one_triangle.rb	/^   def draw$/;"	f	class:Box
-draw	./proto/one_triangle.rb	/^   def draw$/;"	f	class:DemoWindow
+draw_background	./lib/workshop_room.rb	/^  def draw_background(window)$/;"	f	class:WorkshopRoom
+draw_body	./lib/truck_controller.rb	/^  def draw_body(window)$/;"	f	class:TruckController
+draw_bucket_image	./lib/truck_controller.rb	/^    def draw_bucket_image$/;"	f	class:TruckController.Bucket
 draw_chassis_and_wheels	./lib/power_tractor_controller.rb	/^  def draw_chassis_and_wheels$/;"	f	class:PowerTractorController
+draw_circle	./lib/ball_controller.rb	/^    def draw_circle(window, x,y,ang,r,color,z=0,mode=:default,circle_step=10)$/;"	f	class:BallController.Ball
+draw_circle	./lib/debug_drawing.rb	/^  def draw_circle(opts)$/;"	f	class:DebugDrawing
+draw_cross_at_vec2	./lib/debug_drawing.rb	/^  def draw_cross_at_vec2(window, pt, color=0xffff0000)$/;"	f	class:DebugDrawing
 draw_notice	./lib/heads_up.rb	/^  def draw_notice(info)$/;"	f	class:HeadsUp
+draw_poly	./lib/truck_controller.rb	/^    def draw_poly(window, local_verts)$/;"	f	class:TruckController.Bucket
+draw_polygons	./lib/truck_controller.rb	/^    def draw_polygons(window)$/;"	f	class:TruckController.Bucket
 draw_speed_and_location	./lib/debug_controller.rb	/^  def draw_speed_and_location$/;"	f	class:DebugController
 draw_terrain	./lib/moon_terrain_controller.rb	/^  def draw_terrain$/;"	f	class:MoonTerrainController
+draw_wheel	./lib/truck_controller.rb	/^  def draw_wheel(window,circle)$/;"	f	class:TruckController
+drive_left	./lib/truck.rb	/^  def drive_left$/;"	f	class:Truck
+drive_left	./lib/truck_controller.rb	/^  def drive_left$/;"	f	class:TruckController
+drive_right	./lib/truck.rb	/^  def drive_right$/;"	f	class:Truck
+drive_right	./lib/truck_controller.rb	/^  def drive_right$/;"	f	class:TruckController
+each_edge	./lib/array_ext.rb	/^  def each_edge$/;"	f	class:Array
 ensure_valid	./vendor/gems/publisher/lib/publisher.rb	/^		def ensure_valid(event) #:nodoc:#$/;"	f	class:Publisher.InstanceMethods
-execute_post_teardown_actions	./vendor/gems/hardmock-1.3.6/lib/test_unit_before_after.rb	/^      def execute_post_teardown_actions(test_instance)$/;"	f	class:Test.Unit
-execute_pre_setup_actions	./vendor/gems/hardmock-1.3.6/lib/test_unit_before_after.rb	/^      def execute_pre_setup_actions(test_instance)$/;"	f	class:Test.Unit
-expects	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock.rb	/^    def expects(*args, &block)$/;"	f	class:Hardmock.Mock
-expects!	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def expects!(method_name, *args, &block)$/;"	f	class:Hardmock
-expects!	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def expects!(mname, *args)$/;"	f
-extra_inputs_has	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def extra_inputs_has(key)$/;"	f
-fall_off	./vendor/gems/diy-1.0.3/test/files/goat/wings.rb	/^	def fall_off; end$/;"	f	class:Wings
+extra_inputs_has	./vendor/gems/diy/lib/diy.rb	/^		def extra_inputs_has(key)$/;"	f
 fire	./vendor/gems/publisher/lib/publisher.rb	/^		def fire(event, *args) #:nod$/;"	f	class:Publisher.InstanceMethods
-format_method_call_string	./vendor/gems/hardmock-1.3.6/lib/hardmock/utils.rb	/^    def format_method_call_string(mock,mname,args)$/;"	f	class:Hardmock.Utils
-formatted_test_output	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^  def formatted_test_output$/;"	f
-from_file	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def self.from_file(fname, extra_inputs={})$/;"	F
-from_yaml	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def self.from_yaml(io_or_string, extra_inputs={})$/;"	F
+from_file	./vendor/gems/diy/lib/diy.rb	/^		def self.from_file(fname, extra_inputs={})$/;"	F
+from_yaml	./vendor/gems/diy/lib/diy.rb	/^		def self.from_yaml(io_or_string, extra_inputs={})$/;"	F
 fullscreen	./lib/main_window.rb	/^  def fullscreen; false; end$/;"	f	class:MainWindow
 generate_debug_image	./lib/yard_ground.rb	/^  def generate_debug_image(polygon_points)$/;"	f	class:YardGround
-generate_failing_test	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def generate_failing_test(tname, opts={})$/;"	f
-generate_passing_test	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def generate_passing_test(tname)$/;"	f
-generate_test_code	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def generate_test_code(opts={})$/;"	f
 get_app_starter	./lib/system_context.rb	/^  def get_app_starter$/;"	f	class:SystemContext
-get_class_for_name_with_module_delimeters	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def get_class_for_name_with_module_delimeters(class_name)$/;"	f
-get_defs_from	./vendor/gems/diy-1.0.3/lib/diy.rb	/^    def get_defs_from(hash, namespace=nil)$/;"	f
-get_level1	./lib/level_factory.rb	/^  def get_level1$/;"	f	class:LevelFactory
-get_level2	./lib/level_factory.rb	/^  def get_level2$/;"	f	class:LevelFactory
-get_level3	./lib/level_factory.rb	/^  def get_level3$/;"	f	class:LevelFactory
-get_level4	./lib/level_factory.rb	/^  def get_level4$/;"	f	class:LevelFactory
+get_class_for_name_with_module_delimeters	./vendor/gems/diy/lib/diy.rb	/^		def get_class_for_name_with_module_delimeters(class_name)$/;"	f
+get_defs_from	./vendor/gems/diy/lib/diy.rb	/^    def get_defs_from(hash, namespace=nil)$/;"	f
 get_main_window	./lib/system_context.rb	/^  def get_main_window$/;"	f	class:SystemContext
-get_moon_buggy	./lib/level_factory.rb	/^  def get_moon_buggy$/;"	f	class:LevelFactory
-get_object	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def get_object(obj_name)$/;"	f
-get_sandbox	./lib/level_factory.rb	/^  def get_sandbox$/;"	f	class:LevelFactory
-go	./vendor/gems/publisher/test/publisher_test.rb	/^		def go$/;"	f	class:PublisherTest.Billy
-go	./vendor/gems/publisher/test/publisher_test.rb	/^		def go$/;"	f	class:PublisherTest.Broken
-go	./vendor/gems/publisher/test/publisher_test.rb	/^		def go(arg)$/;"	f	class:PublisherTest.SuperDuperHoss
-go	./vendor/gems/publisher/test/publisher_test.rb	/^		def go(arg)$/;"	f	class:PublisherTest.SuperHoss
-go	./vendor/gems/publisher/test/publisher_test.rb	/^		def go(food)$/;"	f	class:PublisherTest.Somebody
-go	./vendor/gems/publisher/test/publisher_test.rb	/^    def go$/;"	f	class:PublisherTest.Grandfather
-go	./vendor/gems/publisher/test/publisher_test.rb	/^    def go(sym)$/;"	f	class:PublisherTest.Dynamo
+get_object	./vendor/gems/diy/lib/diy.rb	/^		def get_object(obj_name)$/;"	f
+get_workshop	./lib/level_factory.rb	/^  def get_workshop$/;"	f	class:LevelFactory
 goal_description	./lib/field_model.rb	/^  def goal_description$/;"	f	class:FieldModel
 gosu_letter	./lib/gosu_char_id_map.rb	/^  def gosu_letter$/;"	f	class:Fixnum
-gosu_to_radians	./proto/ChipmunkIntegration.rb	/^  def gosu_to_radians$/;"	f	class:Numeric
-grind	./vendor/gems/hardmock-1.3.6/test/functional/hardmock_test.rb	/^    def grind(slot)$/;"	f	class:Grinder
-happy?	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock_control.rb	/^    def happy?$/;"	f	class:Hardmock.MockControl
 has_any_event	./vendor/gems/publisher/lib/publisher.rb	/^	def has_any_event$/;"	f	class:Publisher
 has_events	./vendor/gems/publisher/lib/publisher.rb	/^	def has_events(*args)$/;"	f	class:Publisher
-has_replaced_method?	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def has_replaced_method?(obj, method_name)$/;"	f
 height	./lib/main_window.rb	/^  def height; 768; end$/;"	f	class:MainWindow
-hit	./vendor/gems/hardmock-1.3.6/test/functional/stubbing_test.rb	/^    def hit$/;"	f	class:Concrete
-hm_meta_def	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^	def hm_meta_def(name, &blk) #:nodoc:#$/;"	f
-hm_meta_eval	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^	def hm_meta_eval(&blk) #:nodoc:#$/;"	f
-hm_metaclass	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^	def hm_metaclass #:nodoc:#$/;"	f	class:Object
 image_from_text	./lib/media_loader.rb	/^  def image_from_text(*args)$/;"	f	class:MediaLoader
-included	./vendor/gems/hardmock-1.3.6/lib/hardmock/method_cleanout.rb	/^    def self.included(base) #:nodoc:$/;"	F	class:Hardmock.MethodCleanout
+initialize	./lib/ball_controller.rb	/^    def initialize(circle)$/;"	f	class:BallController.Ball
+initialize	./lib/ball_controller.rb	/^    def initialize(map)$/;"	f	class:BallController.ControlAdapter
 initialize	./lib/corn.rb	/^  def initialize(media_loader)$/;"	f	class:Corn
 initialize	./lib/debug_hail.rb	/^    def initialize(media_loader, viewport)$/;"	f	class:DebugHail.Box
 initialize	./lib/game_config.rb	/^  def initialize$/;"	f	class:GameConfig
 initialize	./lib/hay.rb	/^  def initialize(media_loader)$/;"	f	class:Hay
 initialize	./lib/main_window.rb	/^  def initialize$/;"	f	class:MainWindow
+initialize	./lib/physical_circle.rb	/^  def initialize(opts)$/;"	f	class:PhysicalCircle
+initialize	./lib/physical_poly.rb	/^  def initialize(opts)$/;"	f	class:PhysicalPoly
+initialize	./lib/rain_controller.rb	/^    def initialize(space, image)$/;"	f	class:RainController.Block
+initialize	./lib/simple_barrier.rb	/^  def initialize(opts={})$/;"	f	class:SimpleBarrier
 initialize	./lib/space_holder.rb	/^  def initialize$/;"	f	class:SpaceHolder
 initialize	./lib/update_info.rb	/^  def initialize(mw)$/;"	f	class:UpdateInfo
 initialize	./lib/viewport.rb	/^  def initialize$/;"	f	class:Viewport
-initialize	./proto/ChipmunkIntegration.rb	/^  def initialize$/;"	f	class:GameWindow
-initialize	./proto/ChipmunkIntegration.rb	/^  def initialize(animation, shape)$/;"	f	class:Star
-initialize	./proto/ChipmunkIntegration.rb	/^  def initialize(window, shape)$/;"	f	class:Player
-initialize	./proto/MoreChipmunkAndRMagick.rb	/^   def initialize$/;"	f	class:DemoWindow
-initialize	./proto/MoreChipmunkAndRMagick.rb	/^   def initialize(image, body)$/;"	f	class:Box
-initialize	./proto/chipmunk_learn.rb	/^  def initialize$/;"	f	class:MainWindow
-initialize	./proto/chipmunk_learn.rb	/^  def initialize(image, body)$/;"	f	class:BoxBuilder.Box
-initialize	./proto/chipmunk_learn.rb	/^  def initialize(window, space)$/;"	f	class:BoxBuilder.Ground
-initialize	./proto/chipmunk_learn.rb	/^  def initialize(window,space)$/;"	f	class:BoxBuilder
-initialize	./proto/one_triangle.rb	/^   def initialize$/;"	f	class:DemoWindow
-initialize	./proto/one_triangle.rb	/^   def initialize(image, body)$/;"	f	class:Box
 initialize	./vendor/gems/constructor/lib/constructor.rb	/^      def initialize(args=nil)$/;"	f	class:Class.constructor
 initialize	./vendor/gems/constructor/lib/constructor.rb	/^  def initialize(missing,rejected=[])$/;"	f	class:ConstructorArgumentError
-initialize	./vendor/gems/constructor/specs/constructor_spec.rb	/^  def initialize$/;"	f	class:TestingSuperConstructorBase2
-initialize	./vendor/gems/constructor/specs/constructor_spec.rb	/^  def initialize(a,b)$/;"	f	class:TestingSuperConstructorBase
-initialize	./vendor/gems/constructor/specs/constructor_spec.rb	/^  def initialize(hash = nil)$/;"	f	class:SubclassOfTestingClass3
-initialize	./vendor/gems/constructor/specs/constructor_spec.rb	/^  def initialize; end$/;"	f	class:SubclassOfTestingClass2
-initialize	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def initialize(context_hash, extra_inputs={})$/;"	f	class:DIY
-initialize	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def initialize(obj_name)$/;"	f	class:Lookup
-initialize	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def initialize(object_name, cause=nil)$/;"	f	class:ConstructionError
-initialize	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def initialize(opts)$/;"	f	class:ObjectDef
-initialize	./vendor/gems/diy-1.0.3/lib/diy.rb	/^    def initialize(str)$/;"	f	class:Namespace
-initialize	./vendor/gems/diy-1.0.3/test/files/goat/can.rb	/^	def initialize$/;"	f	class:Can
-initialize	./vendor/gems/diy-1.0.3/test/files/goat/goat.rb	/^	def initialize$/;"	f	class:Goat
-initialize	./vendor/gems/diy-1.0.3/test/files/goat/paper.rb	/^	def initialize$/;"	f	class:Paper
-initialize	./vendor/gems/diy-1.0.3/test/files/goat/shirt.rb	/^	def initialize$/;"	f	class:Shirt
-initialize	./vendor/gems/diy-1.0.3/test/files/goat/wings.rb	/^	def initialize$/;"	f	class:Wings
-initialize	./vendor/gems/hardmock-1.3.6/lib/hardmock/errors.rb	/^    def initialize(msg,unmet_expectations)$/;"	f	class:Hardmock.VerifyError
-initialize	./vendor/gems/hardmock-1.3.6/lib/hardmock/expectation.rb	/^    def initialize(options) #:nodoc:$/;"	f	class:Hardmock.Expectation
-initialize	./vendor/gems/hardmock-1.3.6/lib/hardmock/expector.rb	/^    def initialize(mock,mock_control,expectation_builder)$/;"	f	class:Hardmock.Expector
-initialize	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock.rb	/^    def initialize(name, mock_control=nil)$/;"	f	class:Hardmock.Mock
-initialize	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock_control.rb	/^    def initialize$/;"	f	class:Hardmock.MockControl
-initialize	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def initialize(target, method_name)$/;"	f	class:Hardmock.ReplacedMethod
-initialize	./vendor/gems/hardmock-1.3.6/lib/hardmock/trapper.rb	/^    def initialize(mock,mock_control,expectation_builder)$/;"	f	class:Hardmock.Trapper
-initialize	./vendor/gems/hardmock-1.3.6/test/functional/hardmock_test.rb	/^    def initialize(args)$/;"	f	class:UserPresenter
-initialize	./vendor/gems/hardmock-1.3.6/test/functional/hardmock_test.rb	/^    def initialize(args)$/;"	f	class:UserPresenterBroken
-initialize	./vendor/gems/hardmock-1.3.6/test/functional/hardmock_test.rb	/^    def initialize(objects)$/;"	f	class:Grinder
-initialize	./vendor/gems/hardmock-1.3.6/test/functional/hardmock_test.rb	/^    def initialize(opts)$/;"	f	class:HurtLocker
-initialize	./vendor/gems/hardmock-1.3.6/test/functional/stubbing_test.rb	/^    def initialize; end$/;"	f	class:Concrete
-initialize	./vendor/gems/publisher/test/publisher_test.rb	/^		def initialize(ch)$/;"	f	class:PublisherTest.Grampa
-initialize	./vendor/gems/publisher/test/publisher_test.rb	/^    def initialize(something)$/;"	f	class:PublisherTest.SomethingWatcher
-inspect	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock.rb	/^    def inspect$/;"	f	class:Hardmock.Mock
-invoke	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def invoke(args)$/;"	f	class:Hardmock.StubbedMethod
-is_modern_test_unit?	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def is_modern_test_unit?$/;"	f
-it	./vendor/gems/hardmock-1.3.6/test/test_helper.rb	/^  def self.it(str, &block)$/;"	F	class:Test
+initialize	./vendor/gems/diy/lib/diy.rb	/^		def initialize(context_hash, extra_inputs={})$/;"	f	class:DIY
+initialize	./vendor/gems/diy/lib/diy.rb	/^		def initialize(obj_name)$/;"	f	class:Lookup
+initialize	./vendor/gems/diy/lib/diy.rb	/^		def initialize(object_name, cause=nil)$/;"	f	class:ConstructionError
+initialize	./vendor/gems/diy/lib/diy.rb	/^		def initialize(opts)$/;"	f	class:ObjectDef
+initialize	./vendor/gems/diy/lib/diy.rb	/^    def initialize(opts)$/;"	f	class:MethodDef
+initialize	./vendor/gems/diy/lib/diy.rb	/^    def initialize(str)$/;"	f	class:Namespace
+initialize	./vendor/gems/diy/lib/diy/factory.rb	/^    def initialize(clazz)$/;"	f	class:DIY.FactoryFactory
+initialize	./vendor/gems/diy/lib/diy/factory.rb	/^    def initialize(opts)$/;"	f	class:DIY.FactoryDef
+inner_pin_point	./lib/truck_controller.rb	/^    def inner_pin_point$/;"	f	class:TruckController.Bucket
 ivar	./lib/debug_controller.rb	/^  def ivar(obj, var_name)$/;"	f	class:DebugController
 join_wheels_to_chassis	./lib/power_tractor_controller.rb	/^  def join_wheels_to_chassis$/;"	f	class:PowerTractorController
-keys	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def keys$/;"	f
-kick_it	./vendor/gems/publisher/test/publisher_test.rb	/^    def kick_it(sym)$/;"	f	class:PublisherTest.SonOfDynamo
+keys	./vendor/gems/diy/lib/diy.rb	/^		def keys$/;"	f
 letter_down?	./lib/update_info.rb	/^  def letter_down?(str)$/;"	f	class:UpdateInfo
-lib_dir	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def lib_dir$/;"	f
-load_context	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def load_context(file_name)$/;"	f
 load_default_font	./lib/media_loader.rb	/^  def load_default_font(height)$/;"	f	class:MediaLoader
 load_graphics_and_sounds	./lib/tractor.rb	/^  def load_graphics_and_sounds$/;"	f	class:Tractor
-load_hash	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def load_hash(hash)$/;"	f
 load_image	./lib/media_loader.rb	/^  def load_image(filename,hard_edge=false)$/;"	f	class:MediaLoader
 load_rectangles_from_svg	./lib/yard_ground.rb	/^  def load_rectangles_from_svg$/;"	f	class:YardGround.build_static_shape
 load_sample	./lib/media_loader.rb	/^  def load_sample(filename)$/;"	f	class:MediaLoader
 load_song	./lib/media_loader.rb	/^  def load_song(filename)$/;"	f	class:MediaLoader
+local_vertices	./lib/physical_poly.rb	/^  def local_vertices$/;"	f	class:PhysicalPoly
 main_context	./lib/system_context.rb	/^	def main_context$/;"	f	class:SystemContext
-make_boxes	./proto/chipmunk_learn.rb	/^  def make_boxes$/;"	f	class:MainWindow
-make_test_case	./vendor/gems/hardmock-1.3.6/test/test_helper.rb	/^  def self.make_test_case(prefix, str, &block)$/;"	F	class:Test
-method_added	./vendor/gems/diy-1.0.3/test/test_helper.rb	/^	def self.method_added(msym)$/;"	F	class:Test
-method_added	./vendor/gems/publisher/test/test_helper.rb	/^	def self.method_added(method)$/;"	F	class:Test
-method_missing	./vendor/gems/hardmock-1.3.6/lib/hardmock/expector.rb	/^    def method_missing(mname, *args, &block)$/;"	f	class:Hardmock.Expector
-method_missing	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock.rb	/^    def method_missing(mname,*args) #:nodoc:$/;"	f	class:Hardmock.Mock
-method_missing	./vendor/gems/hardmock-1.3.6/lib/hardmock/trapper.rb	/^    def method_missing(mname, *args)$/;"	f	class:Hardmock.Trapper
 milliseconds	./lib/update_info.rb	/^  def milliseconds$/;"	f	class:UpdateInfo
 mode=	./lib/main_window.rb	/^  def mode=(mode)$/;"	f	class:MainWindow
 mode_wrangler=	./lib/base_mode.rb	/^  def mode_wrangler=(mode_wrangler)$/;"	f	class:BaseMode
 move	./lib/tractor.rb	/^  def move$/;"	f	class:Tractor
-my_helper	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^        def my_helper$/;"	f
-not_done	./vendor/gems/diy-1.0.3/test/test_helper.rb	/^	def not_done$/;"	f	class:Test
 offset_x	./lib/viewport.rb	/^  def offset_x(x)$/;"	f	class:Viewport
 offset_y	./lib/viewport.rb	/^  def offset_y(y)$/;"	f	class:Viewport
-parse_namespace	./vendor/gems/diy-1.0.3/lib/diy.rb	/^    def parse_namespace(str)$/;"	f
-passthrough_exception_types	./vendor/gems/hardmock-1.3.6/lib/test_unit_before_after.rb	/^      def passthrough_exception_types$/;"	f	class:Test.Unit
-path_to	./vendor/gems/diy-1.0.3/test/test_helper.rb	/^	def path_to(file)$/;"	f	class:Test
-path_to_test_file	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def path_to_test_file(fname)$/;"	f
+open_bucket	./lib/truck.rb	/^  def open_bucket$/;"	f	class:Truck
+parse_namespace	./vendor/gems/diy/lib/diy.rb	/^    def parse_namespace(str)$/;"	f
 perform_acceleration	./lib/tractor.rb	/^  def perform_acceleration$/;"	f	class:Tractor
+pin_point	./lib/truck_controller.rb	/^    def pin_point$/;"	f	class:TruckController.Bucket
 ping	./lib/debug_server.rb	/^  def ping$/;"	f	class:DebugServer
 place_cold	./lib/debug_hail.rb	/^    def place_cold(x,y)$/;"	f	class:DebugHail.Box
 place_in_screen_center	./lib/tractor.rb	/^  def place_in_screen_center$/;"	f	class:Tractor
@@ -492,285 +250,68 @@ play_bg_music	./lib/tractor.rb	/^  def play_bg_music$/;"	f	class:Tractor
 play_engine_sound	./lib/tractor.rb	/^  def play_engine_sound$/;"	f	class:Tractor
 play_levels	./lib/game_master.rb	/^  def play_levels(level_getter_names)$/;"	f	class:GameMaster
 play_through_levels	./lib/game_master.rb	/^  def play_through_levels$/;"	f	class:GameMaster
-poll	./vendor/gems/diy-1.0.3/test/test_helper.rb	/^	def poll(time_limit) $/;"	f	class:Test
-poll	./vendor/gems/hardmock-1.3.6/test/test_helper.rb	/^  def poll(time_limit) $/;"	f	class:Test
-polygon_body	./proto/chipmunk_learn.rb	/^  def polygon_body(vertices)$/;"	f	class:BoxBuilder.polygon_image
 polygon_body_and_shape	./lib/debug_hail.rb	/^    def polygon_body_and_shape(vertices)$/;"	f	class:DebugHail.Box.polygon_image
 polygon_image	./lib/debug_hail.rb	/^    def polygon_image(vertices, edge_size)$/;"	f	class:DebugHail.Box
-polygon_image	./proto/MoreChipmunkAndRMagick.rb	/^   def polygon_image(vertices)$/;"	f	class:DemoWindow
-polygon_image	./proto/chipmunk_learn.rb	/^  def polygon_image(vertices, edge_size, window)$/;"	f	class:BoxBuilder
-polygon_image	./proto/one_triangle.rb	/^   def polygon_image(vertices)$/;"	f	class:DemoWindow
 polygon_vertices	./lib/debug_hail.rb	/^    def polygon_vertices(sides, size)$/;"	f	class:DebugHail.Box
-polygon_vertices	./proto/MoreChipmunkAndRMagick.rb	/^   def polygon_vertices(sides, size)$/;"	f	class:DemoWindow
-polygon_vertices	./proto/chipmunk_learn.rb	/^  def polygon_vertices(sides, size)$/;"	f	class:BoxBuilder
-polygon_vertices	./proto/one_triangle.rb	/^   def polygon_vertices(sides, size)$/;"	f	class:DemoWindow
 pop	./lib/mode_wrangler.rb	/^  def pop$/;"	f	class:ModeWrangler
 pop_mode	./lib/base_mode.rb	/^  def pop_mode$/;"	f	class:BaseMode
-post_teardown_actions	./vendor/gems/hardmock-1.3.6/lib/test_unit_before_after.rb	/^        def post_teardown_actions$/;"	f	class:Test.Unit.TestCase
-pour	./vendor/gems/hardmock-1.3.6/test/functional/stubbing_test.rb	/^    def self.pour$/;"	F	class:Concrete
-pour	./vendor/gems/hardmock-1.3.6/test/functional/stubbing_test.rb	/^    def self.pour$/;"	F	class:Jug
-pre_setup_actions	./vendor/gems/hardmock-1.3.6/lib/test_unit_before_after.rb	/^        def pre_setup_actions$/;"	f	class:Test.Unit.TestCase
-prepare_hardmock_control	./vendor/gems/hardmock-1.3.6/lib/hardmock.rb	/^  def prepare_hardmock_control$/;"	f	class:Hardmock
 published_events	./vendor/gems/publisher/lib/publisher.rb	/^  def published_events$/;"	f	class:Publisher
 push	./lib/mode_wrangler.rb	/^  def push(mode)$/;"	f	class:ModeWrangler
 push_mode	./lib/base_mode.rb	/^  def push_mode(mode)$/;"	f	class:BaseMode
-radians_to_gosu	./lib/chipmunk_numeric_ext.rb	/^   def radians_to_gosu$/;"	f	class:Numeric
-radians_to_gosu	./proto/ChipmunkIntegration.rb	/^  def radians_to_gosu$/;"	f	class:Numeric
-radians_to_gosu	./proto/MoreChipmunkAndRMagick.rb	/^   def radians_to_gosu$/;"	f	class:Numeric
-radians_to_gosu	./proto/chipmunk_learn.rb	/^   def radians_to_gosu$/;"	f	class:BoxBuilder.Ground.Numeric
-radians_to_gosu	./proto/one_triangle.rb	/^   def radians_to_gosu$/;"	f	class:Numeric
-radians_to_vec2	./lib/chipmunk_numeric_ext.rb	/^   def radians_to_vec2$/;"	f	class:Numeric
-radians_to_vec2	./proto/ChipmunkIntegration.rb	/^  def radians_to_vec2$/;"	f	class:Numeric
-radians_to_vec2	./proto/MoreChipmunkAndRMagick.rb	/^   def radians_to_vec2$/;"	f	class:Numeric
-radians_to_vec2	./proto/chipmunk_learn.rb	/^   def radians_to_vec2$/;"	f	class:BoxBuilder.Ground.Numeric
-radians_to_vec2	./proto/one_triangle.rb	/^   def radians_to_vec2$/;"	f	class:Numeric
-raises	./vendor/gems/hardmock-1.3.6/lib/hardmock/expectation.rb	/^    def raises(err=nil)$/;"	f	class:Hardmock.Expectation
-raises	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def raises(err)$/;"	f	class:Hardmock.StubbedMethod
-relay	./vendor/gems/publisher/test/publisher_test.rb	/^		def relay(evt_sym)$/;"	f	class:PublisherTest.ManyEvents
-relocate	./proto/chipmunk_learn.rb	/^  def relocate(x,y,v=nil,a=nil,t=nil)$/;"	f	class:BoxBuilder.Box
-relocate_boxes	./proto/chipmunk_learn.rb	/^  def relocate_boxes$/;"	f	class:MainWindow
+radians_to_vec2	./lib/chipmunk_numeric_ext.rb	/^  def radians_to_vec2$/;"	f	class:Numeric
+remove_from_space	./lib/physical_poly.rb	/^  def remove_from_space$/;"	f	class:PhysicalPoly
+remove_from_space	./lib/rain_controller.rb	/^    def remove_from_space$/;"	f	class:RainController.Block
 remove_self_from_space	./lib/debug_hail.rb	/^    def remove_self_from_space$/;"	f	class:DebugHail.Box
-remove_temp_test_file	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^  def remove_temp_test_file$/;"	f
-remove_test	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def remove_test$/;"	f
 reposition	./lib/tractor.rb	/^  def reposition$/;"	f	class:Tractor
-reset_stubs	./vendor/gems/hardmock-1.3.6/lib/hardmock.rb	/^  def reset_stubs$/;"	f	class:Hardmock
-restore_all_replaced_methods	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def restore_all_replaced_methods$/;"	f
-returns	./vendor/gems/hardmock-1.3.6/lib/hardmock/expectation.rb	/^    def returns(val)$/;"	f	class:Hardmock.Expectation
-returns	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def returns(stubbed_return)$/;"	f	class:Hardmock.StubbedMethod
-reverse	./proto/ChipmunkIntegration.rb	/^  def reverse$/;"	f	class:Player
 rmagick_to_gosu_image	./lib/media_loader.rb	/^  def rmagick_to_gosu_image(rmagick_image, hard_edge=false)$/;"	f	class:MediaLoader
+roll_left	./lib/ball_controller.rb	/^    def roll_left$/;"	f	class:BallController.Ball
+roll_right	./lib/ball_controller.rb	/^    def roll_right$/;"	f	class:BallController.Ball
 run	./lib/app_starter.rb	/^  def run$/;"	f	class:AppStarter
-run	./vendor/gems/hardmock-1.3.6/lib/test_unit_before_after.rb	/^      def run(result)$/;"	f	class:Test.Unit
-run_test	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^  def run_test(tbody)$/;"	f
-run_test	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def run_test$/;"	f
 score	./lib/field_controller.rb	/^  def score$/;"	f
 screen_height	./lib/screen_info.rb	/^  def screen_height$/;"	f	class:ScreenInfo
 screen_height	./lib/update_info.rb	/^  def screen_height$/;"	f	class:UpdateInfo
 screen_width	./lib/screen_info.rb	/^  def screen_width$/;"	f	class:ScreenInfo
 screen_width	./lib/update_info.rb	/^  def screen_width$/;"	f	class:UpdateInfo
-see_in_no_particular_order	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def see_in_no_particular_order(*phrases)$/;"	f
-see_in_order	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def see_in_order(*phrases)$/;"	f
-see_no_results	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def see_no_results$/;"	f
-see_results	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def see_results(opts)$/;"	f
-see_strict_args_in_effect_for	./vendor/gems/constructor/specs/constructor_spec.rb	/^  def see_strict_args_in_effect_for(clazz)$/;"	f
-set_object	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def set_object(obj_name,obj)$/;"	f
-setup	./vendor/gems/constructor/specs/constructor_spec.rb	/^  def setup$/;"	f	class:Llamma
-setup	./vendor/gems/constructor/specs/constructor_spec.rb	/^  def setup$/;"	f	class:Mama
-setup	./vendor/gems/constructor/specs/constructor_spec.rb	/^  def setup$/;"	f	class:Sissy
-setup	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def setup$/;"	f	class:DIYTest
-setup	./vendor/gems/diy-1.0.3/test/files/goat/plane.rb	/^	def setup$/;"	f	class:Plane
-setup	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^  def setup$/;"	f	class:AutoVerifyTest
-setup	./vendor/gems/hardmock-1.3.6/test/functional/direct_mock_usage_test.rb	/^  def setup$/;"	f	class:DirectMockUsageTest
-setup	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def setup$/;"	f	class:ExpectationTest
-setup	./vendor/gems/hardmock-1.3.6/test/unit/method_cleanout_test.rb	/^  def setup$/;"	f	class:MethodCleanoutTest
-setup	./vendor/gems/hardmock-1.3.6/test/unit/mock_control_test.rb	/^  def setup$/;"	f	class:MockControlTest
-setup	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^      def setup$/;"	f	class:generate_test_code
-setup	./vendor/gems/hardmock-1.3.6/test/unit/trapper_test.rb	/^  def setup$/;"	f	class:TrapperTest
+set_instance_variables	./lib/initializer.rb	/^  def set_instance_variables(defaults, inputs, options={})$/;"	f	class:Initializer
+set_object	./vendor/gems/diy/lib/diy.rb	/^		def set_object(obj_name,obj)$/;"	f
+setup	./lib/truck_controller.rb	/^    def setup$/;"	f	class:TruckController.Bucket
 setup_art_and_body	./lib/yard_ground.rb	/^  def setup_art_and_body$/;"	f	class:YardGround
-setup_art_and_body	./proto/chipmunk_learn.rb	/^  def setup_art_and_body$/;"	f	class:BoxBuilder.Ground
 setup_boxes	./lib/debug_hail.rb	/^  def setup_boxes$/;"	f	class:DebugHail
 setup_chassis_and_wheels	./lib/power_tractor_controller.rb	/^  def setup_chassis_and_wheels$/;"	f	class:PowerTractorController
 setup_graph_paper	./lib/yard_ground.rb	/^  def setup_graph_paper$/;"	f	class:YardGround
 setup_terrain	./lib/moon_terrain_controller.rb	/^  def setup_terrain$/;"	f	class:MoonTerrainController
-setup_triangles	./proto/MoreChipmunkAndRMagick.rb	/^   def setup_triangles(background)$/;"	f	class:DemoWindow
-setup_triangles	./proto/one_triangle.rb	/^   def setup_triangles(background)$/;"	f	class:DemoWindow
-should	./vendor/gems/hardmock-1.3.6/test/test_helper.rb	/^  def self.should(str, &block)$/;"	F	class:Test
-should_passthru_exception	./vendor/gems/hardmock-1.3.6/lib/test_unit_before_after.rb	/^      def should_passthru_exception(ex)$/;"	f	class:Test.Unit
 show_notice	./lib/heads_up.rb	/^  def show_notice(text,time=3.0, &block)$/;"	f	class:HeadsUp
-show_output	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def show_output$/;"	f
-singleton?	./vendor/gems/diy-1.0.3/lib/diy.rb	/^    def singleton?$/;"	f	class:ObjectDef
+singleton?	./vendor/gems/diy/lib/diy.rb	/^    def singleton?$/;"	f	class:ObjectDef
 stamp_gosu_image	./lib/yard_ground.rb	/^  def stamp_gosu_image$/;"	f	class:YardGround
 start	./lib/base_mode.rb	/^  def start; end$/;"	f	class:BaseMode
 start	./lib/debug_server.rb	/^  def start$/;"	f	class:DebugServer
 start	./lib/mode.rb	/^  def start$/;"	f	class:Mode
 start_hail	./lib/debug_hail.rb	/^  def start_hail$/;"	f	class:DebugHail
 start_spread	./lib/debug_hail.rb	/^  def start_spread$/;"	f	class:DebugHail
-stay_on	./vendor/gems/diy-1.0.3/test/files/goat/wings.rb	/^	def stay_on; end$/;"	f	class:Wings
 step	./lib/space_holder.rb	/^  def step(dt=TICK)$/;"	f	class:SpaceHolder
 stop	./lib/base_mode.rb	/^  def stop; end$/;"	f	class:BaseMode
 stop	./lib/main_menu_mode.rb	/^  def stop$/;"	f	class:MainMenuMode
 stop	./lib/mode.rb	/^  def stop$/;"	f	class:Mode
 stop	./lib/tractor.rb	/^  def stop$/;"	f	class:Tractor
 stop_vehicle	./lib/power_tractor_controller.rb	/^  def stop_vehicle$/;"	f	class:PowerTractorController
-stubs!	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def stubs!(method_name)$/;"	f	class:Hardmock
-stubs!	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def stubs!(mname)$/;"	f
 subscribe	./vendor/gems/publisher/lib/publisher.rb	/^		def subscribe(event, &block)$/;"	f	class:Publisher.InstanceMethods
-teardown	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^        def teardown$/;"	f	class:Test
-teardown	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^      def teardown$/;"	f
-teardown	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^  def teardown$/;"	f	class:AutoVerifyTest
-teardown	./vendor/gems/hardmock-1.3.6/test/functional/direct_mock_usage_test.rb	/^  def teardown$/;"	f	class:DirectMockUsageTest
-teardown	./vendor/gems/hardmock-1.3.6/test/unit/mock_control_test.rb	/^  def teardown$/;"	f	class:MockControlTest
-teardown	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^        def teardown$/;"	f	class:generate_test_code
-teardown	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^      def teardown$/;"	f	class:generate_test_code
-teardown	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def teardown$/;"	f
-temp_test_file	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^  def temp_test_file$/;"	f
 terrain_data	./lib/moon_terrain_controller.rb	/^  def terrain_data$/;"	f	class:MoonTerrainController
-test_add_exepectation_and_apply_method_call	./vendor/gems/hardmock-1.3.6/test/unit/mock_control_test.rb	/^  def test_add_exepectation_and_apply_method_call$/;"	f	class:MockControlTest
-test_add_exepectation_and_apply_method_call_with_block	./vendor/gems/hardmock-1.3.6/test/unit/mock_control_test.rb	/^  def test_add_exepectation_and_apply_method_call_with_block$/;"	f	class:MockControlTest
-test_add_expectation_then_verify	./vendor/gems/hardmock-1.3.6/test/unit/mock_control_test.rb	/^  def test_add_expectation_then_verify$/;"	f	class:MockControlTest
-test_alternate_event_declarators	./vendor/gems/publisher/test/publisher_test.rb	/^	def test_alternate_event_declarators$/;"	f	class:PublisherTest
-test_alternate_subscribe_and_fire_methods	./vendor/gems/publisher/test/publisher_test.rb	/^	def test_alternate_subscribe_and_fire_methods$/;"	f	class:PublisherTest
-test_apply_method_call	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_apply_method_call$/;"	f	class:ExpectationTest
-test_apply_method_call_captures_block_value	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_apply_method_call_captures_block_value$/;"	f	class:ExpectationTest
-test_apply_method_call_fails_when_theres_no_expectation_block_to_handle_the_runtime_block	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_apply_method_call_fails_when_theres_no_expectation_block_to_handle_the_runtime_block$/;"	f	class:ExpectationTest
-test_apply_method_call_passes_runtime_block_as_last_argument_to_expectation_block	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_apply_method_call_passes_runtime_block_as_last_argument_to_expectation_block$/;"	f	class:ExpectationTest
-test_apply_method_call_should_call_proc_when_given	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_apply_method_call_should_call_proc_when_given$/;"	f	class:ExpectationTest
-test_basics	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_basics$/;"	f	class:MockTest
-test_build_everything	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_build_everything$/;"	f	class:DIYTest
-test_build_expectation	./vendor/gems/hardmock-1.3.6/test/unit/expectation_builder_test.rb	/^  def test_build_expectation$/;"	f	class:ExpectationBuilderTest
-test_build_with_control	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_build_with_control$/;"	f	class:MockTest
-test_can_fire_anything	./vendor/gems/publisher/test/publisher_test.rb	/^	def test_can_fire_anything$/;"	f	class:PublisherTest
-test_classname_inside_a_module	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_classname_inside_a_module$/;"	f	class:DIYTest
-test_classname_inside_a_module_derives_the_namespaced_classname_from_the_underscored_object_def_key	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_classname_inside_a_module_derives_the_namespaced_classname_from_the_underscored_object_def_key$/;"	f	class:DIYTest
-test_classname_inside_a_module_loads_from_directories_named_after_the_underscored_module_names	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_classname_inside_a_module_loads_from_directories_named_after_the_underscored_module_names$/;"	f	class:DIYTest
-test_conflicting_extra_inputs	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_conflicting_extra_inputs$/;"	f	class:DIYTest
-test_constructor_bad_extra_inputs	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_constructor_bad_extra_inputs$/;"	f	class:DIYTest
-test_constructor_no_hash	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_constructor_no_hash$/;"	f	class:DIYTest
-test_contains_object	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_contains_object$/;"	f	class:DIYTest
-test_contains_object_extra_inputs	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_contains_object_extra_inputs$/;"	f	class:DIYTest
-test_context_with_extra_inputs	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_context_with_extra_inputs$/;"	f	class:DIYTest
-test_disappointment_from_bad_calls	./vendor/gems/hardmock-1.3.6/test/unit/mock_control_test.rb	/^  def test_disappointment_from_bad_calls$/;"	f	class:MockControlTest
-test_disappointment_from_surprise_calls	./vendor/gems/hardmock-1.3.6/test/unit/mock_control_test.rb	/^  def test_disappointment_from_surprise_calls$/;"	f	class:MockControlTest
-test_disappointment_on_bad_verify	./vendor/gems/hardmock-1.3.6/test/unit/mock_control_test.rb	/^  def test_disappointment_on_bad_verify$/;"	f	class:MockControlTest
-test_empty_list_of_expectations	./vendor/gems/hardmock-1.3.6/test/unit/verify_error_test.rb	/^  def test_empty_list_of_expectations$/;"	f	class:VerifyErrorTest
-test_essential_use_case	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_essential_use_case$/;"	f	class:DIYTest
-test_expectation_explosion	./vendor/gems/hardmock-1.3.6/test/unit/mock_control_test.rb	/^  def test_expectation_explosion$/;"	f	class:MockControlTest
-test_expects	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_expects$/;"	f	class:MockTest
-test_expects_a_runtime_block	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_expects_a_runtime_block$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block
-test_expects_and_raise	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_expects_and_raise$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block
-test_expects_and_return	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_expects_and_return$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block
-test_expects_and_return_with_arguments	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_expects_and_return_with_arguments$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block
-test_expects_assigment_using_arguments_for_method_and_arguments	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_expects_assigment_using_arguments_for_method_and_arguments$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block
-test_expects_assigment_using_string_method_name	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_expects_assigment_using_string_method_name$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block
-test_expects_assignment	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_expects_assignment$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block
-test_expects_assignment_and_raise	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_expects_assignment_and_raise$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block
-test_expects_assignment_and_return_is_overruled_by_ruby_syntax	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_expects_assignment_and_return_is_overruled_by_ruby_syntax$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block
-test_expects_multiple	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_expects_multiple$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block
-test_expects_using_arguments_for_method_and_arguments	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_expects_using_arguments_for_method_and_arguments$/;"	f	class:MockTest
-test_expects_using_arguments_for_method_and_arguments_with_block	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_expects_using_arguments_for_method_and_arguments_with_block$/;"	f	class:MockTest
-test_expects_using_string_method_name	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_expects_using_string_method_name$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block
-test_explicit_return_overrides_proc_return	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_explicit_return_overrides_proc_return$/;"	f	class:ExpectationTest
-test_extending_publisher_doesnt_affect_normal_inheritance	./vendor/gems/publisher/test/publisher_test.rb	/^	def test_extending_publisher_doesnt_affect_normal_inheritance$/;"	f	class:PublisherTest
-test_filename	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def test_filename$/;"	f
-test_fire_is_not_public	./vendor/gems/publisher/test/publisher_test.rb	/^	def test_fire_is_not_public$/;"	f	class:PublisherTest
-test_fire_non_event	./vendor/gems/publisher/test/publisher_test.rb	/^	def test_fire_non_event$/;"	f	class:PublisherTest
-test_fire_when_nobodys_listening	./vendor/gems/publisher/test/publisher_test.rb	/^	def test_fire_when_nobodys_listening$/;"	f	class:PublisherTest
-test_fire_with_parameters	./vendor/gems/publisher/test/publisher_test.rb	/^	def test_fire_with_parameters$/;"	f	class:PublisherTest
-test_formatted_list_of_unmet_expectations	./vendor/gems/hardmock-1.3.6/test/unit/verify_error_test.rb	/^  def test_formatted_list_of_unmet_expectations$/;"	f	class:VerifyErrorTest
-test_from_file	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_from_file$/;"	f	class:DIYTest
-test_from_file_bad	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_from_file_bad$/;"	f	class:DIYTest
-test_from_file_extra_inputs	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_from_file_extra_inputs$/;"	f	class:DIYTest
-test_from_yaml	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_from_yaml$/;"	f	class:DIYTest
-test_from_yaml_extra_inputs	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_from_yaml_extra_inputs$/;"	f	class:DIYTest
-test_get_object	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_get_object$/;"	f	class:DIYTest
-test_get_object_construction_error	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_get_object_construction_error$/;"	f	class:DIYTest
-test_has_any_event	./vendor/gems/publisher/test/publisher_test.rb	/^	def test_has_any_event$/;"	f	class:PublisherTest
-test_hash_style_access	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_hash_style_access$/;"	f	class:DIYTest
-test_keys	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_keys$/;"	f	class:DIYTest
-test_method_missing	./vendor/gems/hardmock-1.3.6/test/unit/expector_test.rb	/^  def test_method_missing$/;"	f	class:ExpectorTest
-test_method_missing	./vendor/gems/hardmock-1.3.6/test/unit/trapper_test.rb	/^  def test_method_missing$/;"	f	class:TrapperTest
-test_methods_that_wont_trigger_method_missing	./vendor/gems/hardmock-1.3.6/test/unit/expector_test.rb	/^  def test_methods_that_wont_trigger_method_missing$/;"	f	class:ExpectorTest
-test_multiple_classes_in_one_file	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_multiple_classes_in_one_file$/;"	f	class:DIYTest
-test_multiple_subscriptions_for_same_event	./vendor/gems/publisher/test/publisher_test.rb	/^	def test_multiple_subscriptions_for_same_event$/;"	f	class:PublisherTest
-test_nil_expectation_list	./vendor/gems/hardmock-1.3.6/test/unit/verify_error_test.rb	/^  def test_nil_expectation_list$/;"	f	class:VerifyErrorTest
-test_objects_can_be_set_in_a_context_and_diy_will_not_attempt_to_build_it_as_a_dependency	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_objects_can_be_set_in_a_context_and_diy_will_not_attempt_to_build_it_as_a_dependency$/;"	f	class:DIYTest
-test_ok	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^        def test_ok$/;"	f
-test_output	./vendor/gems/diy-1.0.3/test/files/goat/base.rb	/^	def test_output(name)$/;"	f	class:Base
-test_parameter_mismatch_between_event_and_handler	./vendor/gems/publisher/test/publisher_test.rb	/^	def test_parameter_mismatch_between_event_and_handler$/;"	f	class:PublisherTest
-test_prepare_to_die	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^        def test_prepare_to_die$/;"	f	class:DummyTest
-test_proc_used_for_return	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_proc_used_for_return$/;"	f	class:ExpectationTest
-test_returns	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_returns$/;"	f	class:ExpectationTest
-test_setup_doomed_expectation	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^        def test_setup_doomed_expectation$/;"	f
-test_setup_doomed_expectation	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^        def test_setup_doomed_expectation$/;"	f	class:write_and_execute_test
-test_should_be_able_to_turn_off_auto_require_for_all_objects	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^	def test_should_be_able_to_turn_off_auto_require_for_all_objects$/;"	f	class:DIYTest
-test_should_cause_non_singletons_to_be_rebuilt_every_time_they_are_accessed	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_should_cause_non_singletons_to_be_rebuilt_every_time_they_are_accessed$/;"	f	class:DIYTest
-test_should_combine_a_given_class_name_with_the_namespace	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_should_combine_a_given_class_name_with_the_namespace$/;"	f	class:DIYTest
-test_should_handle_nonsingletons_in_sub_contexts	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_should_handle_nonsingletons_in_sub_contexts$/;"	f	class:DIYTest
-test_should_include_certain_important_methods_in_the_sacred_methods_list	./vendor/gems/hardmock-1.3.6/test/unit/method_cleanout_test.rb	/^  def test_should_include_certain_important_methods_in_the_sacred_methods_list$/;"	f	class:MethodCleanoutTest
-test_should_leave_the_sacred_methods_defined	./vendor/gems/hardmock-1.3.6/test/unit/method_cleanout_test.rb	/^  def test_should_leave_the_sacred_methods_defined$/;"	f	class:MethodCleanoutTest
-test_should_let_you_use_namespaces_in_subcontexts	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_should_let_you_use_namespaces_in_subcontexts$/;"	f	class:DIYTest
-test_should_not_allow_setting_of_an_object_which_has_already_been_loaded	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^	def test_should_not_allow_setting_of_an_object_which_has_already_been_loaded$/;"	f	class:DIYTest
-test_should_provide_syntax_for_using_namespace	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_should_provide_syntax_for_using_namespace$/;"	f	class:DIYTest
-test_should_raise_for_namespace_w_no_modules_named	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_should_raise_for_namespace_w_no_modules_named$/;"	f
-test_should_raise_for_namespace_whose_modules_dont_exist	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_should_raise_for_namespace_whose_modules_dont_exist$/;"	f
-test_should_remove_most_methods_from_a_class	./vendor/gems/hardmock-1.3.6/test/unit/method_cleanout_test.rb	/^  def test_should_remove_most_methods_from_a_class$/;"	f	class:MethodCleanoutTest
-test_sub_context	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_sub_context$/;"	f	class:DIYTest
-test_sub_sub_context	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_sub_sub_context$/;"	f	class:DIYTest
-test_subclasses_inherit_events	./vendor/gems/publisher/test/publisher_test.rb	/^  def test_subclasses_inherit_events$/;"	f	class:PublisherTest
-test_subclasses_inherit_wide_open_events	./vendor/gems/publisher/test/publisher_test.rb	/^  def test_subclasses_inherit_wide_open_events$/;"	f	class:PublisherTest
-test_subcontext_keys_should_include_parent_context_keys	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_subcontext_keys_should_include_parent_context_keys$/;"	f	class:DIYTest
-test_subscribe_and_fire	./vendor/gems/publisher/test/publisher_test.rb	/^	def test_subscribe_and_fire$/;"	f	class:PublisherTest
-test_subscribe_for_non_event	./vendor/gems/publisher/test/publisher_test.rb	/^	def test_subscribe_for_non_event$/;"	f	class:PublisherTest
-test_surprise_call	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_surprise_call$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block
-test_that_arguments_can_be_added_to_expectation	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_that_arguments_can_be_added_to_expectation$/;"	f	class:ExpectationTest
-test_this_context	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_this_context$/;"	f	class:DIYTest
-test_this_context_works_for_subcontexts	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_this_context_works_for_subcontexts$/;"	f	class:DIYTest
-test_to_s	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_to_s$/;"	f	class:ExpectationTest
-test_trap_arguments_and_block	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_trap_arguments_and_block$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block.test_expects_a_runtime_block
-test_trap_arguments_and_block_wrong_args	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_trap_arguments_and_block_wrong_args$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block.test_expects_a_runtime_block
-test_trap_arguments_and_block_wrong_num_args	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_trap_arguments_and_block_wrong_num_args$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block.test_expects_a_runtime_block
-test_trap_block	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_trap_block$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block.test_expects_a_runtime_block
-test_trap_is_not_leniant_about_arguments	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_trap_is_not_leniant_about_arguments$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block.test_expects_a_runtime_block
-test_trigger	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_trigger$/;"	f	class:ExpectationTest
-test_trigger_nil_block_value	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_trigger_nil_block_value$/;"	f	class:ExpectationTest
-test_trigger_non_proc_block_value	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_trigger_non_proc_block_value$/;"	f	class:ExpectationTest
-test_trigger_with_arguments	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_trigger_with_arguments$/;"	f	class:ExpectationTest
-test_unsubscribe_can_be_called_multiple_times	./vendor/gems/publisher/test/publisher_test.rb	/^  def test_unsubscribe_can_be_called_multiple_times$/;"	f	class:PublisherTest
-test_unsubscribe_only_unsubscribes_the_unsubscriber	./vendor/gems/publisher/test/publisher_test.rb	/^  def test_unsubscribe_only_unsubscribes_the_unsubscriber$/;"	f	class:PublisherTest
-test_unsubscribe_removes_all_subscriptions_for_the_event_being_listened_for	./vendor/gems/publisher/test/publisher_test.rb	/^  def test_unsubscribe_removes_all_subscriptions_for_the_event_being_listened_for$/;"	f	class:PublisherTest
-test_unsubscribe_will_not_care_if_no_previous_subscription_was_made	./vendor/gems/publisher/test/publisher_test.rb	/^  def test_unsubscribe_will_not_care_if_no_previous_subscription_was_made$/;"	f	class:PublisherTest
-test_unsubscribe_will_remove_subscription_for_correct_event	./vendor/gems/publisher/test/publisher_test.rb	/^  def test_unsubscribe_will_remove_subscription_for_correct_event$/;"	f	class:PublisherTest
-test_unsubsribe_will_raise_if_event_not_valid	./vendor/gems/publisher/test/publisher_test.rb	/^  def test_unsubsribe_will_raise_if_event_not_valid$/;"	f	class:PublisherTest
-test_use_class_directly	./vendor/gems/diy-1.0.3/test/diy_test.rb	/^  def test_use_class_directly$/;"	f	class:DIYTest
-test_wrong_arguments	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_wrong_arguments$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block
-test_wrong_call	./vendor/gems/hardmock-1.3.6/test/unit/mock_test.rb	/^  def test_wrong_call$/;"	f	class:MockTest.test_expects_using_arguments_for_method_and_arguments_with_block
-test_yields	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_yields$/;"	f	class:ExpectationTest
-test_yields_and_inner_block_explodes	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_yields_and_inner_block_explodes$/;"	f	class:ExpectationTest
-test_yields_bad_block_arity	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_yields_bad_block_arity$/;"	f	class:ExpectationTest
-test_yields_block_takes_no_arguments	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_yields_block_takes_no_arguments$/;"	f	class:ExpectationTest
-test_yields_params_to_block_takes_no_arguments	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_yields_params_to_block_takes_no_arguments$/;"	f	class:ExpectationTest
-test_yields_tuples	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_yields_tuples$/;"	f	class:ExpectationTest
-test_yields_tuples_size_mismatch	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_yields_tuples_size_mismatch$/;"	f	class:ExpectationTest
-test_yields_with_raises	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_yields_with_raises$/;"	f	class:ExpectationTest
-test_yields_with_returns	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_yields_with_returns$/;"	f	class:ExpectationTest
-test_yields_with_several_arrays	./vendor/gems/hardmock-1.3.6/test/unit/expectation_test.rb	/^  def test_yields_with_several_arrays$/;"	f	class:ExpectationTest
-to_pretty_pretty	./vendor/gems/constructor/specs/constructor_spec.rb	/^  def to_pretty_pretty$/;"	f	class:TestingAutoAccessors
-to_pretty_pretty	./vendor/gems/constructor/specs/constructor_spec.rb	/^  def to_pretty_pretty$/;"	f	class:TestingBlockedAccessors
-to_pretty_pretty	./vendor/gems/constructor/specs/constructor_spec.rb	/^  def to_pretty_pretty$/;"	f	class:TestingClass
-to_pretty_pretty	./vendor/gems/constructor/specs/constructor_spec.rb	/^  def to_pretty_pretty$/;"	f	class:TestingStrictArgs
-to_pretty_pretty	./vendor/gems/constructor/specs/constructor_spec.rb	/^  def to_pretty_pretty$/;"	f	class:TestingStrictArgsDefault
-to_s	./vendor/gems/hardmock-1.3.6/lib/hardmock/expectation.rb	/^    def to_s # :nodoc:$/;"	f	class:Hardmock.Expectation
-track_replaced_method	./vendor/gems/hardmock-1.3.6/lib/hardmock/stubbing.rb	/^    def track_replaced_method(replaced_method)$/;"	f
-trap	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock.rb	/^    def trap(*args)$/;"	f	class:Hardmock.Mock
-trigger	./vendor/gems/hardmock-1.3.6/lib/hardmock/expectation.rb	/^    def trigger(*block_arguments)$/;"	f	class:Hardmock.Expectation
-tripwire	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^        def tripwire$/;"	f
-try_it_with	./vendor/gems/hardmock-1.3.6/test/unit/expector_test.rb	/^  def try_it_with(method_name)$/;"	f	class:ExpectorTest
 turn_left	./lib/tractor.rb	/^  def turn_left$/;"	f	class:Tractor
-turn_left	./proto/ChipmunkIntegration.rb	/^  def turn_left$/;"	f	class:Player
 turn_right	./lib/tractor.rb	/^  def turn_right$/;"	f	class:Tractor
-turn_right	./proto/ChipmunkIntegration.rb	/^  def turn_right$/;"	f	class:Player
-underscore	./vendor/gems/diy-1.0.3/lib/diy.rb	/^    def self.underscore(camel_cased_word)$/;"	F	class:Infl
+underscore	./vendor/gems/diy/lib/diy.rb	/^    def self.underscore(camel_cased_word)$/;"	F	class:Infl
 unsubscribe	./vendor/gems/publisher/lib/publisher.rb	/^    def unsubscribe(event, listener)$/;"	f	class:Publisher.InstanceMethods
+update	./lib/ball_controller.rb	/^    def update(info)$/;"	f	class:BallController.ControlAdapter
 update	./lib/base_mode.rb	/^  def update(update_info); end$/;"	f	class:BaseMode
 update	./lib/main_menu_mode.rb	/^  def update(info)$/;"	f	class:MainMenuMode
 update	./lib/main_window.rb	/^  def update$/;"	f	class:MainWindow
 update	./lib/mode.rb	/^  def update(update_info)$/;"	f	class:Mode
-update	./proto/ChipmunkIntegration.rb	/^  def update$/;"	f	class:GameWindow
-update	./proto/MoreChipmunkAndRMagick.rb	/^   def update$/;"	f	class:DemoWindow
-update	./proto/chipmunk_learn.rb	/^  def update$/;"	f	class:MainWindow
-update	./proto/one_triangle.rb	/^   def update$/;"	f	class:DemoWindow
 update_velocity_vector	./lib/tractor.rb	/^  def update_velocity_vector$/;"	f	class:Tractor
 update_wheels	./lib/power_tractor_controller.rb	/^  def update_wheels(info)$/;"	f	class:PowerTractorController
-use_class_directly?	./vendor/gems/diy-1.0.3/lib/diy.rb	/^    def use_class_directly?$/;"	f	class:ObjectDef
-validate_position	./proto/ChipmunkIntegration.rb	/^  def validate_position$/;"	f	class:Player
-vec	./lib/chipmunk_conveniences.rb	/^def vec(x,y)$/;"	f
-verify	./vendor/gems/hardmock-1.3.6/lib/hardmock/mock_control.rb	/^    def verify$/;"	f	class:Hardmock.MockControl
-verify_mocks	./vendor/gems/hardmock-1.3.6/lib/hardmock.rb	/^  def verify_mocks(force=true)$/;"	f	class:Hardmock
-warp	./proto/ChipmunkIntegration.rb	/^  def warp(vect)$/;"	f	class:Player
+use_class_directly?	./vendor/gems/diy/lib/diy.rb	/^    def use_class_directly?$/;"	f	class:ObjectDef
+verts_for_rect	./lib/truck_controller.rb	/^  def verts_for_rect(width,height)$/;"	f	class:TruckController
 width	./lib/main_window.rb	/^  def width; 1024; end$/;"	f	class:MainWindow
-with	./vendor/gems/hardmock-1.3.6/lib/hardmock/expectation.rb	/^    def with(*args)$/;"	f	class:Hardmock.Expectation
-within	./vendor/gems/diy-1.0.3/lib/diy.rb	/^		def within(sub_context_name)$/;"	f
-write	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def write(fname, code)$/;"	f
-write_and_execute_test	./vendor/gems/hardmock-1.3.6/test/functional/auto_verify_test.rb	/^  def write_and_execute_test$/;"	f
-write_and_run_test	./vendor/gems/hardmock-1.3.6/test/unit/test_unit_before_after_test.rb	/^  def write_and_run_test(opts={})$/;"	f
-yields	./vendor/gems/hardmock-1.3.6/lib/hardmock/expectation.rb	/^    def yields(*items)$/;"	f	class:Hardmock.Expectation
+window	./lib/update_info.rb	/^  def window$/;"	f	class:UpdateInfo
+within	./vendor/gems/diy/lib/diy.rb	/^		def within(sub_context_name)$/;"	f
+world_vertices	./lib/physical_poly.rb	/^  def world_vertices$/;"	f	class:PhysicalPoly
+x	./lib/simple_barrier.rb	/^  def x$/;"	f	class:SimpleBarrier
+y	./lib/simple_barrier.rb	/^  def y$/;"	f	class:SimpleBarrier
