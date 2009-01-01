@@ -12,49 +12,27 @@ class Truck
     load_resources
 
     @simulation.on :update_space do |info|
+      power = 60 * info.dt
       if @truck_controls.drive_left
-        @front_wheel.body.w -= 0.3
-        @back_wheel.body.w -= 0.3
+        @front_wheel.body.w -= power
+        @back_wheel.body.w -= power
       end
       if @truck_controls.drive_right
-        @front_wheel.body.w += 0.3
-        @back_wheel.body.w += 0.3
+        @front_wheel.body.w += power
+        @back_wheel.body.w += power
       end
       if @truck_controls.brake
         @front_wheel.body.w = 0
         @back_wheel.body.w = 0
       end
       if @truck_controls.open_bucket
-        @bucket.body.apply_impulse vec2(-500/3.0,0), ZeroVec2
+        @bucket.body.apply_impulse vec2(-30_000*info.dt,0), ZeroVec2
       end
       if @truck_controls.close_bucket
-        @bucket.body.apply_impulse vec2(100/3.0,0), vec2(0,-150)
+        @bucket.body.apply_impulse vec2(10_000*info.dt,0), vec2(0,-150)
       end
     end
   end
-
-#  def drive_left
-#    @front_wheel.body.w -= 1
-#    @back_wheel.body.w -= 1
-#  end
-#
-#  def drive_right
-#    @front_wheel.body.w += 1
-#    @back_wheel.body.w += 1
-#  end
-
-#  def brake
-#    @front_wheel.body.w = 0
-#    @back_wheel.body.w = 0
-#  end
-#
-#  def open_bucket
-#    @bucket.body.apply_impulse vec2(-500,0), ZeroVec2
-#  end
-#
-#  def close_bucket
-#    @bucket.body.apply_impulse vec2(100,0), vec2(0,-150)
-#  end
 
   def cold_drop(point)
     layout_parts
