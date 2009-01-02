@@ -38,17 +38,19 @@ class SvgDocument
     # The bezier path object must have all its nodes turned "sharp",
     # or non-curve-handle-ish, or this parser will not work properly
     def vertices
-      verts = []
-      data = @path.attributes['d']
-      scanner = StringScanner.new(data)
-      pat = /[ML]\s+([0-9.,]+)\s*/
-      hit = scanner.scan(pat)
-      while hit
-        x,y = scanner[1].split(/,/).map { |s| s.to_f }
-        verts << vec2(x,y)
+      unless @verts
+        @verts = []
+        data = @path.attributes['d']
+        scanner = StringScanner.new(data)
+        pat = /[ML]\s+([-0-9.,]+)\s*/
         hit = scanner.scan(pat)
+        while hit
+          x,y = scanner[1].split(/,/).map { |s| s.to_f }
+          @verts << vec2(x,y)
+          hit = scanner.scan(pat)
+        end
       end
-      verts
+      @verts
     end
   end
 end

@@ -149,7 +149,11 @@ class WorkshopRoom
     dark_blue = 0xFF000066
     top_color = light_blue
     bottom_color = dark_blue
-    window.draw_quad(0,0,top_color, w,0,top_color, 0,800,bottom_color, w,800,bottom_color, ZOrder::Background)
+
+    @media_loader.load_image("sky.png").draw_as_quad(0,0,top_color, w,0,top_color, 0,800,top_color, w,800,top_color, ZOrder::Background)
+
+#    window.draw_quad(0,0,top_color, w,0,top_color, 0,800,bottom_color, w,800,bottom_color, ZOrder::Background)
+    #
 #    window.draw_quad(0,0,top_color, w,0,top_color, 0,h-50,bottom_color, w,h-50,bottom_color, ZOrder::Background)
 
 #    grass_green = 0xFF5EBD57 
