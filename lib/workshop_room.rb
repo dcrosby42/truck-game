@@ -1,6 +1,8 @@
 require 'simple_barrier'
 
 class WorkshopRoom
+  include Gosu
+
   constructor :mode, :screen_info, :main_window, :space_holder do
     build_floor
 
@@ -43,7 +45,7 @@ class WorkshopRoom
 #    @drawables << @floor
     @right_ramp = create_barrier(
       :location => vec2(win_width-50, win_height-50),
-      :angle => -45,
+      :angle => gosu_to_radians(45),
       :length => 200,
       :space => @space_holder.space
     )
@@ -51,19 +53,42 @@ class WorkshopRoom
 
     @left_ramp = create_barrier(
       :location => vec2(50, win_height-50),
-      :angle => 180,
+      :angle => gosu_to_radians(-45),
       :length => 200,
       :space => @space_holder.space
     )
     @drawables << @left_ramp
 
     @right_dock = create_barrier(
-      :location => vec2(50, win_height-50),
-      :angle => 180,
-      :length => 200,
+      :location => @right_ramp.world_end_point,
+      :angle => 0,
+      :length => 600,
       :space => @space_holder.space
     )
-    @drawables << @left_ramp
+    @drawables << @right_dock
+
+    @right_dock_end = create_barrier(
+      :location => @right_dock.world_end_point,
+      :angle => gosu_to_radians(0),
+      :length => 50,
+      :space => @space_holder.space
+    )
+    @drawables << @right_dock_end
+
+    @left_dock = create_barrier(
+      :location => @left_ramp.world_end_point,
+      :angle => gosu_to_radians(-90),
+      :length => 600,
+      :space => @space_holder.space
+    )
+    @drawables << @left_dock
+    @left_dock_end = create_barrier(
+      :location => @left_dock.world_end_point,
+      :angle => gosu_to_radians(0),
+      :length => 50,
+      :space => @space_holder.space
+    )
+    @drawables << @left_dock_end
 
   end
 

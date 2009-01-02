@@ -65,6 +65,7 @@ game_config:
     compose:
       - simulation
       - truck_factory
+      - viewport_controller
 
   truck_factory:
     object_context: this_context

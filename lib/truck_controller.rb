@@ -1,11 +1,14 @@
 class TruckController
   include Gosu
 
-  constructor :simulation, :truck_factory do
+  constructor :simulation, :truck_factory, :viewport_controller do
 
     @truck = @truck_factory.build_truck
     @truck_controls = @truck.truck_controls
     @truck.cold_drop vec2(600,300)
+
+    @viewport_controller.follow_target = @truck
+    @viewport_controller.follow_the_target
 
     @simulation.on :update_frame do |info|
       @truck_controls.clear

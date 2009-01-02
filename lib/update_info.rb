@@ -16,6 +16,14 @@ class UpdateInfo
     button_down? id
   end
 
+  def button_id_to_char(id)
+    @main_window.button_id_to_char(id)
+  end
+
+  def char_to_button_id(char)
+    @main_window.char_to_button_id(char)
+  end
+
   def screen_width
     @main_window.width
   end

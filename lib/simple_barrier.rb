@@ -39,6 +39,14 @@ class SimpleBarrier
     @body.local2world(@body_start).y
   end
 
+  def world_start_point
+    @body.local2world(@body_start)
+  end
+
+  def world_end_point
+    @body.local2world(@body_end)
+  end
+
   private
 
   def create_shape
