@@ -1,4 +1,7 @@
 main_window:
+  compose: viewport
+
+viewport:
 
 media_loader:
   compose: main_window
@@ -36,6 +39,11 @@ game_config:
     class: LevelMode
 
   space_holder:
+
+  viewport_controller:
+    compose:
+      - simulation
+      - viewport
 
   simulation:
     compose:

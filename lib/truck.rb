@@ -27,11 +27,23 @@ class Truck
       end
       if @truck_controls.open_bucket
         @bucket.body.apply_impulse vec2(-30_000*info.dt,0), ZeroVec2
-      end
-      if @truck_controls.close_bucket
+#        @bucket.body.apply_force vec2(-30_000*info.dt,0), ZeroVec2
+      elsif @truck_controls.close_bucket
         @bucket.body.apply_impulse vec2(10_000*info.dt,0), vec2(0,-150)
+#        @bucket.body.apply_force vec2(10_000*info.dt,0), vec2(0,-150)
+      else
+        @bucket.body.reset_forces
       end
+
     end
+
+    @simulation.on :draw_frame do |info|
+      draw info
+    end
+  end
+
+  def location
+    @frame.body.p
   end
 
   def cold_drop(point)
@@ -48,13 +60,13 @@ class Truck
     end
   end
 
-  def draw
-    draw_wheel @front_wheel
-    draw_wheel @back_wheel
+  def draw(info)
+    draw_wheel info, @front_wheel
+    draw_wheel info, @back_wheel
 
-    draw_body
+    draw_body info
 
-    @bucket.draw
+    @bucket.draw info
 
 #    draw_joints
   end
@@ -126,8 +138,8 @@ class Truck
     @body_image = @media_loader.load_image("truck_cab.png")
   end
 
-  def draw_body
-    loc = @frame.body.p + vec2(3,-12)
+  def draw_body(info)
+    loc = info.view_point(@frame.body.local2world(vec2(3,-12)))
     angle = 270 + radians_to_gosu(@frame.body.a)
     @body_image.draw_rot(loc.x, loc.y, ZOrder::Truck, angle)
     # Debugging outline:
@@ -143,8 +155,8 @@ class Truck
 #    draw_cross_at_vec2(@main_window, @frame.body.local2world(@bucket_hinge_point))
 #  end
 
-  def draw_wheel(wheel)
-    loc = wheel.body.p
+  def draw_wheel(info, wheel)
+    loc = info.view_point(wheel.body.p)
     ang = radians_to_gosu(wheel.body.a)
     x = loc.x
     y = loc.y
@@ -197,9 +209,9 @@ class Truck
       @bucket_image = @media_loader.load_image("dump_bucket.png")
     end
 
-    def draw
+    def draw(info)
 #      draw_polygons(window)
-      draw_bucket_image
+      draw_bucket_image info
     end
 
     def draw_polygons
@@ -211,10 +223,11 @@ class Truck
       draw_cross_at_vec2(@main_window, pin_point, 0xffff0000)
     end
 
-    def draw_bucket_image
+    def draw_bucket_image(info)
       ang = 270+ radians_to_gosu(@body.a)
       z = ZOrder::Truck
-      @bucket_image.draw_rot(@body.p.x, @body.p.y, z, ang)
+      loc = info.view_point(@body.p)
+      @bucket_image.draw_rot(loc.x, loc.y, z, ang)
     end
 
     def inner_pin_point
@@ -229,6 +242,8 @@ class Truck
       @body.reset_forces
       @body.p = loc
       @body.a = 0
+      @body.w = 0
+      @body.v = ZeroVec2
     end
 
     private

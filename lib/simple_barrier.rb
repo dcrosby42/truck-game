@@ -3,6 +3,8 @@ require 'initializer'
 class SimpleBarrier
   include Initializer
 
+  attr_reader :body
+
   Defaults = {
     :location => vec2(0,0),
     :angle => 0.0,
@@ -21,10 +23,10 @@ class SimpleBarrier
     create_shape 
   end
 
-  def draw(window)
-    a = @body.local2world(@body_start)
-    b = @body.local2world(@body_end)
-    window.draw_line(a.x, a.y, @color, 
+  def draw(info)
+    a = info.view_point(@body.local2world(@body_start))
+    b = info.view_point(@body.local2world(@body_end))
+    info.window.draw_line(a.x, a.y, @color, 
                       b.x, b.y, @color, 
                       @z_order, :default)
   end

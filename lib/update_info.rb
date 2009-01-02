@@ -1,9 +1,7 @@
 class UpdateInfo
-  attr_accessor :dt
+  constructor :main_window, :viewport
 
-  def initialize(mw)
-    @main_window = mw
-  end
+  attr_accessor :dt
 
   def window
     @main_window
@@ -28,6 +26,18 @@ class UpdateInfo
   
   def milliseconds
     Gosu::milliseconds
+  end
+
+  def view_x(x)
+    @viewport.offset_x(x)
+  end
+
+  def view_y(y)
+    @viewport.offset_y(y)
+  end
+
+  def view_point(pt)
+    @viewport.offset_point(pt)
   end
 
 end

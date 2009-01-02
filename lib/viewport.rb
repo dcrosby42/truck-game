@@ -1,5 +1,5 @@
 class Viewport
-  attr_accessor :x, :y
+  attr_accessor :x, :y, :width, :height
 
   def initialize
     @x = 0.0
@@ -15,5 +15,9 @@ class Viewport
     y - @y
   end
   alias_method :oy, :offset_y
+
+  def offset_point(pt)
+    pt - vec2(@x,@y)
+  end
 
 end

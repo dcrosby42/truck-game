@@ -1,16 +1,16 @@
 class ViewportController
-  constructor :mode, :viewport do 
-    @mode.on :update do |info|
-      if info.letter_down? 'd'
+  constructor :simulation, :viewport do 
+    @simulation.on :update_frame do |info|
+      if info.letter_down? 'p'
         @viewport.x += 10
       end
-      if info.letter_down? 'a'
+      if info.letter_down? 'o'
         @viewport.x -= 10
       end
-      if info.letter_down? 's'
+      if info.letter_down? 'i'
         @viewport.y += 10
       end
-      if info.letter_down? 'w'
+      if info.letter_down? 'u'
         @viewport.y -= 10
       end
     end

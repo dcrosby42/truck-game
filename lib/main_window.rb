@@ -2,6 +2,7 @@ require 'gosu'
 require 'update_info'
 
 class MainWindow < Gosu::Window
+
   FRAMERATE = 60.0 # gosu default
   TICK = 1.0 / FRAMERATE # amount of time accounted for by a single Gosu update
 
@@ -12,11 +13,17 @@ class MainWindow < Gosu::Window
     alias :to_s :inspect
   end
 
-  def initialize
+  def initialize(opts)
+    @viewport = opts[:viewport]
+
     super width,height, fullscreen
+
     @stub_mode = BaseMode.new
     @mode = @stub_mode
-    @update_info = UpdateInfo.new(self)
+    
+    @viewport.width = width
+    @viewport.height = height
+    @update_info = UpdateInfo.new(:main_window => self, :viewport => @viewport)
 
     @no_time = Instantaneous.new
     @update_info.dt = @no_time

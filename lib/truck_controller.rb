@@ -7,24 +7,32 @@ class TruckController
     @truck_controls = @truck.truck_controls
     @truck.cold_drop vec2(600,300)
 
-    @simulation.on :draw_frame do |info| 
-      @truck.draw
-    end
-
     @simulation.on :update_frame do |info|
       @truck_controls.clear
       if info.button_down?(Button::KbLeft)
         @truck_controls.drive_left = true
-      elsif info.button_down?(Button::KbRight)
+      end
+      if info.button_down?(Button::KbRight)
         @truck_controls.drive_right = true
-      elsif info.button_down?(Button::KbDown)
+      end
+      if info.button_down?(Button::KbDown)
         @truck_controls.brake = true
-      elsif info.button_down?(Button::KbA)
+      end
+      if info.button_down?(Button::KbA)
         @truck_controls.open_bucket = true
-      elsif info.button_down?(Button::KbD)
+      end
+      if info.button_down?(Button::KbD)
         @truck_controls.close_bucket = true
       end
     end
+
+    @simulation.on :button_down do |id,info|
+      case id
+      when Button::KbTab
+        @truck.cold_drop @truck.location + vec2(0,-100)
+      end
+    end
+
   end
 
 end

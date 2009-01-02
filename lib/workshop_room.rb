@@ -5,7 +5,7 @@ class WorkshopRoom
     build_floor
 
     @mode.on :draw do |info|
-      draw info.window
+      draw info
     end
 
     # Level control
@@ -19,10 +19,10 @@ class WorkshopRoom
     end
   end
 
-  def draw(window)
-    draw_background window
+  def draw(info)
+    draw_background info
     @drawables.each do |d|
-      d.draw window
+      d.draw info
     end
   end
 
@@ -57,15 +57,24 @@ class WorkshopRoom
     )
     @drawables << @left_ramp
 
+    @right_dock = create_barrier(
+      :location => vec2(50, win_height-50),
+      :angle => 180,
+      :length => 200,
+      :space => @space_holder.space
+    )
+    @drawables << @left_ramp
+
   end
 
   def create_barrier(opts)
     SimpleBarrier.new(opts)
   end
 
-  def draw_background(window)
-    h = @screen_info.screen_height
-    w = @screen_info.screen_width
+  def draw_background(info)
+    window = info.window
+    h = info.screen_height
+    w = info.screen_width
     light_blue = 0xFF9999DD
     dark_blue = 0xFF000066
     top_color = light_blue
@@ -76,6 +85,16 @@ class WorkshopRoom
     dirt_brown = 0xFF4A4431
     top_color = dirt_brown
     bottom_color = grass_green
-    window.draw_quad(0,h-50,top_color, w,h-50,top_color, 0,h,bottom_color, w,h,bottom_color, ZOrder::Background)
+
+    left = info.view_x(0)
+    right = info.view_x(w)
+    top = info.view_y(h-50)
+    bottom = info.view_y(h)
+
+    window.draw_quad(left,top, top_color, 
+                     right,top, top_color, 
+                     left,bottom, bottom_color, 
+                     right,bottom, bottom_color, 
+                     ZOrder::Background)
   end
 end

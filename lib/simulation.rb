@@ -19,7 +19,7 @@
 #
 class Simulation
   extend Publisher
-  can_fire :update_frame, :draw_frame, :update_space
+  can_fire :update_frame, :draw_frame, :update_space, :button_down, :button_up
 
   GRAVITY = 900
   DAMPING = 0.7 
@@ -37,6 +37,15 @@ class Simulation
     @mode.on :draw do |info|
       fire :draw_frame, info
     end
+
+    @mode.on :button_down do |id, info|
+      fire :button_down, id, info
+    end
+
+    @mode.on :button_up do |id, info|
+      fire :button_up, id, info
+    end
+
   end
 
   private

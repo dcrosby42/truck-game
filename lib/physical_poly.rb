@@ -57,5 +57,7 @@ class PhysicalPoly
     @body.reset_forces
     @body.p = loc
     @body.a = 0
+    @body.w = 0
+    @body.v = ZeroVec2
   end
 end

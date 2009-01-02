@@ -14,7 +14,7 @@ class RainController
 
     @simulation.on :draw_frame do |info|
       @blocks.each do |b|
-        b.draw(info.window)
+        b.draw(info)
       end
     end
   end
@@ -66,8 +66,9 @@ class RainController
       @space.remove_shape(@shape)
     end
 
-    def draw(window)
-      @image.draw_rot(@body.p.x, @body.p.y, 1, @body.a.radians_to_gosu)
+    def draw(info)
+      loc = info.view_point(@body.p)
+      @image.draw_rot(loc.x, loc.y, 1, radians_to_gosu(@body.a))
 #      @bounds.map { |v| @body.local2world(v) }.each_edge do |a,b|
 #        window.draw_line(a.x,a.y,@color,
 #                         b.x,b.y,@color)
