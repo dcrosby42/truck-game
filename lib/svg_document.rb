@@ -27,10 +27,15 @@ class SvgDocument
         nil
       end
     end
+
+    def rects
+      XPath.match(@group, "rect").map { |r| Rect.new(r) }
+    end
   end
 
   class Path
     include REXML
+
     def initialize(node)
       @path = node
     end
@@ -51,6 +56,17 @@ class SvgDocument
         end
       end
       @verts
+    end
+  end
+
+  class Rect
+    attr_reader :node, :x, :y, :width, :height
+    def initialize(node)
+      @node = node
+      @x = node.attributes["x"].to_f
+      @y = node.attributes["y"].to_f
+      @width = node.attributes["width"].to_f
+      @height = node.attributes["height"].to_f
     end
   end
 end

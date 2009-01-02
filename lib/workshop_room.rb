@@ -4,7 +4,7 @@ class WorkshopRoom
   include Gosu
   include CP
 
-  constructor :mode, :screen_info, :main_window, :space_holder, :media_loader do
+  constructor :mode, :screen_info, :main_window, :space_holder, :media_loader, :workshop_svg_holder do
 #    build_floor
     build_terrain
 
@@ -100,8 +100,7 @@ class WorkshopRoom
   end
 
   def build_terrain
-    svg = @media_loader.load_svg_document("terrain_proto.svg")
-    g = svg.find_group_by_label("ground")
+    g = @workshop_svg_holder.get_layer("ground")
     @terrain_verts = g.path.vertices
     
     moment_of_inertia,mass = Float::Infinity,Float::Infinity

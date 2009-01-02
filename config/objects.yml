@@ -57,6 +57,17 @@ game_config:
       - main_window
       - space_holder
       - media_loader
+      - workshop_svg_holder
+
+  workshop_zones_controller:
+    compose:
+      - simulation
+      - media_loader
+      - workshop_svg_holder
+
+  workshop_svg_holder:
+    compose:
+      - media_loader
 
   physical_factory:
     compose:
@@ -67,6 +78,7 @@ game_config:
       - simulation
       - truck_factory
       - viewport_controller
+      - workshop_zones_controller
 
   truck_factory:
     object_context: this_context

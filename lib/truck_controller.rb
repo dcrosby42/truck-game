@@ -1,7 +1,7 @@
 class TruckController
   include Gosu
 
-  constructor :simulation, :truck_factory, :viewport_controller do
+  constructor :simulation, :truck_factory, :viewport_controller, :workshop_zones_controller do
 
     @truck = @truck_factory.build_truck
     @truck_controls = @truck.truck_controls
@@ -9,6 +9,8 @@ class TruckController
 
     @viewport_controller.follow_target = @truck
     @viewport_controller.follow_the_target
+
+    @workshop_zones_controller.watch(@truck)
 
     @simulation.on :update_frame do |info|
       @truck_controls.clear
