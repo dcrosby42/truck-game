@@ -1,10 +1,14 @@
 require 'enumerator'
 
 class Array
-  def each_edge
+  def each_segment(&block)
     self.each_cons(2) do |a,b|
-      yield a,b
+      block.call a,b
     end
-    yield self[-1],self[0]
+  end
+
+  def each_edge(&block)
+    each_segment(&block)
+    block.call self[-1],self[0]
   end
 end

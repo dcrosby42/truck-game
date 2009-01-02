@@ -2,9 +2,11 @@ require 'simple_barrier'
 
 class WorkshopRoom
   include Gosu
+  include CP
 
-  constructor :mode, :screen_info, :main_window, :space_holder do
-    build_floor
+  constructor :mode, :screen_info, :main_window, :space_holder, :media_loader do
+#    build_floor
+    build_terrain
 
     @mode.on :draw do |info|
       draw info
@@ -23,9 +25,10 @@ class WorkshopRoom
 
   def draw(info)
     draw_background info
-    @drawables.each do |d|
-      d.draw info
-    end
+#    @drawables.each do |d|
+#      d.draw info
+#    end
+    draw_terrain(info)
   end
 
   private
@@ -96,6 +99,48 @@ class WorkshopRoom
     SimpleBarrier.new(opts)
   end
 
+  def build_terrain
+    svg = @media_loader.load_svg_document("terrain_proto.svg")
+    g = svg.find_group_by_label("ground")
+    @terrain_verts = g.path.vertices
+    
+    moment_of_inertia,mass = Float::Infinity,Float::Infinity
+    elasticity = 0.1
+    friction = 0.7
+    thickness = 0.5
+    @terrain_body = Body.new(mass,moment_of_inertia)
+    @terrain_verts.each_segment do |a,b|
+      seg = Shape::Segment.new(@terrain_body, a,b, thickness)
+      seg.collision_type = :terrain
+      seg.e = elasticity
+      seg.u = friction
+      @space_holder.space.add_shape(seg)
+    end
+  end
+
+  def draw_terrain(info)
+    color = 0xff336633
+    top_color = color
+    bottom_color = 0xff333300
+
+    bottom = 800
+    @terrain_verts.each_segment do |a,b|
+      a = info.view_point(a)
+      b = info.view_point(b)
+
+#      info.window.draw_line(
+#        a.x, a.y, color, 
+#        b.x, b.y, color, 
+#        ZOrder::Debug)
+      info.window.draw_quad(
+        a.x,a.y, top_color,
+        b.x,b.y, top_color,
+        a.x,bottom, bottom_color, 
+        b.x,bottom, bottom_color, 
+        ZOrder::Background)
+    end
+  end
+
   def draw_background(info)
     window = info.window
     h = info.screen_height
@@ -104,22 +149,23 @@ class WorkshopRoom
     dark_blue = 0xFF000066
     top_color = light_blue
     bottom_color = dark_blue
-    window.draw_quad(0,0,top_color, w,0,top_color, 0,h-50,bottom_color, w,h-50,bottom_color, ZOrder::Background)
+    window.draw_quad(0,0,top_color, w,0,top_color, 0,800,bottom_color, w,800,bottom_color, ZOrder::Background)
+#    window.draw_quad(0,0,top_color, w,0,top_color, 0,h-50,bottom_color, w,h-50,bottom_color, ZOrder::Background)
 
-    grass_green = 0xFF5EBD57 
-    dirt_brown = 0xFF4A4431
-    top_color = dirt_brown
-    bottom_color = grass_green
+#    grass_green = 0xFF5EBD57 
+#    dirt_brown = 0xFF4A4431
+#    top_color = dirt_brown
+#    bottom_color = grass_green
 
-    left = info.view_x(0)
-    right = info.view_x(w)
-    top = info.view_y(h-50)
-    bottom = info.view_y(h)
-
-    window.draw_quad(left,top, top_color, 
-                     right,top, top_color, 
-                     left,bottom, bottom_color, 
-                     right,bottom, bottom_color, 
-                     ZOrder::Background)
+#    left = info.view_x(0)
+#    right = info.view_x(w)
+#    top = info.view_y(h-50)
+#    bottom = info.view_y(h)
+#
+#    window.draw_quad(left,top, top_color, 
+#                     right,top, top_color, 
+#                     left,bottom, bottom_color, 
+#                     right,bottom, bottom_color, 
+#                     ZOrder::Background)
   end
 end

@@ -56,6 +56,7 @@ game_config:
       - screen_info
       - main_window
       - space_holder
+      - media_loader
 
   physical_factory:
     compose:

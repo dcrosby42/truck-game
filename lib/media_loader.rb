@@ -1,3 +1,5 @@
+require 'svg_document'
+
 class MediaLoader
   constructor :main_window
 
@@ -29,6 +31,12 @@ class MediaLoader
 
   def rmagick_to_gosu_image(rmagick_image, hard_edge=false)
     Gosu::Image.new(@main_window, rmagick_image, hard_edge)
+  end
+
+  def load_svg_document(filename)
+    caching filename do |f|
+      SvgDocument.new(File.read(f))
+    end
   end
 
   private 
