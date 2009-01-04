@@ -94,11 +94,11 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="651.14003"
-     inkscape:cy="554.7539"
+     inkscape:zoom="0.1767767"
+     inkscape:cx="5971.4741"
+     inkscape:cy="547.87868"
      inkscape:document-units="px"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer7"
      showgrid="false"
      inkscape:window-width="1370"
      inkscape:window-height="733"
@@ -120,19 +120,34 @@
      inkscape:label="ground"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:none">
+     style="display:inline">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#008600;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M -122.85714,124 L 32.857142,125.42857 L 30.023412,520.2998 L 58.665089,494.54357 L 126.44975,438.19805 L 206.16684,382.64804 L 270.60579,359.27829 L 315.63304,360.00707 L 393.63682,359.71634 L 490.42884,359.45241 L 591.82079,360.26159 L 675.43921,359.53409 L 779.64622,358.22254 L 872.03873,358.7769 L 936.86647,372.20505 L 995.32859,397.49554 L 1078.5178,428.15436 L 1166.4306,457.1533 L 1246.9114,481.49715 L 1336.1402,498.10864 L 1410.5433,512.31704 L 1461.5041,522.22989 L 1480.4059,525.95472 L 1565.7143,530.85714 L 1647.2651,499.41016 L 1725.4103,462.77729 L 1806.3503,425.61291 L 1896.2857,392.57143 L 2000.5893,362.98214 L 2114.7143,335 L 2229.9821,311.51786 L 2337.7143,295.42857 L 2443.486,288.24695 L 2549.2959,288.18235 L 2641.1007,293.16942 L 2704.8572,301.14286 L 2754.5963,308.1738 L 2808.7055,313.82815 L 2859.6763,321.28271 L 2900,333.71429 L 3006.5152,391.78092 L 3055.0371,432.74998 L 3105.5141,471.10297 L 3165.7143,493.71428 L 3226.7915,502.2517 L 3286.4242,506.2482 L 3336.6583,503.04145 L 3380.0085,491.72491 L 3552.4601,423.3051 L 3723.2973,352.57786 L 3892.8571,317.71428 L 4104.4465,344.64588 L 4371.0598,407.9773 L 4588.7457,472.31292 L 4677.2299,464.15646 L 4780.0435,444.36395 L 4853.7244,432.95489 L 4918.3425,415.64268 L 4999.3301,392.41963 L 5090.596,366.35439 L 5182.252,340.40988 L 5265.9697,318.03185 L 5343.3237,302.25538 L 5426.1095,296.07077 L 5506.0285,304.43198 L 5607.9586,326.9518 L 5726.3845,358.90272 L 5848.1253,395.59079 L 5960.3549,432.32055 L 6059.9004,464.3542 L 6147.4218,486.93717 L 6233.7999,495.27007 L 6302.6072,490.43616 L 6375.2429,478.16886 L 6452.2525,460.93797 L 6526.5162,441.24691 L 6591.2686,421.59753 L 6649.3978,404.44938 L 6707.6248,392.24521 L 6782.8912,387.383 L 6856.5355,391.28455 L 6941.9281,401.89146 L 7036.9841,416.67533 L 7131.9527,433.14132 L 7217.4171,449.435 L 7293.6416,462.80372 L 7364.7476,469.72909 L 7445.1197,465.364 L 7506.0827,451.60122 L 7557.5201,429.76319 L 7604.3046,402.86684 L 7643.6115,374.92563 L 7673.3158,348.63632 L 7700.3291,327.16058 L 7734.9582,314.65096 L 7796.8999,316.49651 L 7878.31,323.88227 L 7993.0672,330.41582 L 8131.8301,337.0054 L 8278.2146,343.63188 L 8415.8887,349.40427 L 8537.958,355.84594 L 8641.4232,366.01837 L 8733.4141,386.07429 L 8812.5278,406.61623 L 8913.1609,427.54331 L 9029.6703,448.66672 L 9148.8158,467.47917 L 9258.5328,483.01869 L 9354.3546,495.06002 L 9434.4205,502.78895 L 9504.5359,505.3577 L 9549.4431,493.42854 L 9586.0712,462.16315 L 9618.1987,417.68337 L 9643.8548,366.13618 L 9665,312.44113 L 9685.9478,263.12109 L 9709.6945,226.72178 L 9739.2361,211.78891 L 9988.5714,201.71429"
+       d="M -2258.8571,-608 L -2147.9285,-610.64286 L -2109,-157.28571 L -1906.0714,-159.92857 L -1787.2507,-133.45507 L -1663.1804,-98.254289 L -1535.3719,-55.742489 L -1405.3366,-7.335936 L -1274.5858,45.549107 L -1144.6308,101.49637 L -1016.983,159.0896 L -893.15371,216.91253 L -775.13114,273.50729 L -664.63102,327.43981 L -562.75592,377.32946 L -470.60845,421.79564 L -390.10622,459.38664 L -322.08014,488.74555 L -270.89292,508.20741 L -221.34655,517.81331 L -127.56861,522.30062 L -59.082284,496.04963 L -0.8811282,456.02942 L 66.44975,402.19805 L 154.4275,455.95984 L 270.03656,514.89372 L 391.91745,575.50673 L 538.71073,610.3059 L 542.61343,630.45407 L 546.51612,650.60224 L 550.41882,670.75041 L 554.32151,690.89858 L 580.99376,695.8838 L 607.666,700.86902 L 634.33825,705.85424 L 661.0105,710.83946 L 671.08539,700.69363 L 695.45597,677.52451 L 724.65171,652.49972 L 751.95937,635.72652 L 775.51278,632.6835 L 807.18976,633.86127 L 839.02326,635.13732 L 876.07981,628.01054 L 919.04789,603.24438 L 970.49007,563.27784 L 1019.5459,523.59721 L 1066.9353,495.41737 L 1107.2277,481.72869 L 1154.0704,469.13209 L 1197.2483,458.99656 L 1235.6832,453.0151 L 1350.431,454.61284 L 1465.1789,456.21057 L 1604.1874,461.53276 L 1725.7725,482.60292 L 1832.2505,514.3485 L 1925.9381,551.69696 L 2009.1516,589.57575 L 2084.2076,622.91232 L 2153.4226,646.63413 L 2219.113,655.66863 L 2310.7229,656.03567 L 2337.2789,741.25552 L 2451.5163,744.45098 L 2473.2796,658.36747 L 2992.8461,657.13678 L 3336.6583,503.04145 L 3380.0085,491.72491 L 3552.4601,423.3051 L 3723.2973,352.57786 L 3892.8571,317.71428 L 4104.4465,344.64588 L 4355.0598,415.9773 L 4385.4813,512.0612 L 4536.3242,524.22901 L 4584.7457,448.31292 L 4675.2299,450.15646 L 4780.0435,444.36395 L 4853.7244,432.95489 L 4918.3425,415.64268 L 4999.3301,392.41963 L 5090.596,366.35439 L 5607.9586,366.9518 L 5726.3845,374.90272 L 5848.1253,395.59079 L 5960.3549,432.32055 L 6059.9004,464.3542 L 6147.4218,486.93717 L 6233.7999,495.27007 L 6302.6072,490.43616 L 6375.2429,478.16886 L 6452.2525,460.93797 L 6526.5162,441.24691 L 6591.2686,421.59753 L 6649.3978,404.44938 L 6707.6248,392.24521 L 6782.8912,387.383 L 6856.5355,391.28455 L 6941.9281,401.89146 L 7036.9841,416.67533 L 7131.9527,433.14132 L 7217.4171,449.435 L 7293.6416,462.80372 L 7364.7476,469.72909 L 7445.1197,465.364 L 7506.0827,451.60122 L 7557.5201,429.76319 L 7604.3046,402.86684 L 7643.6115,374.92563 L 7673.3158,348.63632 L 7700.3291,327.16058 L 7734.9582,314.65096 L 7796.8999,316.49651 L 7878.31,323.88227 L 7993.0672,330.41582 L 8131.8301,337.0054 L 8278.2146,343.63188 L 8415.8887,349.40427 L 8537.958,355.84594 L 8641.4232,366.01837 L 8733.4141,386.07429 L 8812.5278,406.61623 L 8913.1609,427.54331 L 9029.6703,448.66672 L 9148.8158,467.47917 L 9258.5328,483.01869 L 9354.3546,495.06002 L 9434.4205,502.78895 L 9504.5359,505.3577 L 9549.4431,493.42854 L 9586.0712,462.16315 L 9618.1987,417.68337 L 9643.8548,366.13618 L 9665,312.44113 L 9685.9478,263.12109 L 9709.6945,226.72178 L 9739.2361,211.78891 L 9988.5714,201.71429"
        id="path2410"
        inkscape:label=""
-       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccz" />
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccz" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7"
+     inkscape:label="positions">
+    <image
+       style="display:inline"
+       y="165.67746"
+       x="7808.9438"
+       id="image6192"
+       height="123"
+       width="165"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/art/truck_placeholder.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/art/truck_placeholder.png"
+       game:handle="truck_start" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="zones"
-     style="display:none">
+     style="display:inline">
     <rect
        inkscape:label="bounds"
        y="306.02182"
@@ -146,42 +161,12 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="proto"
-     style="display:inline">
-    <image
-       y="238.9178"
-       x="296.54187"
-       id="image2540"
-       height="123"
-       width="165"
-       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/art/truck_placeholder.png"
-       xlink:href="/Users/crosby/svn/crosby/gosu/truck/art/truck_placeholder.png" />
-    <g
-       id="g6187"
-       game:handle="two_boxes"
-       transform="translate(166,-42)">
-      <rect
-         y="239.08412"
-         x="511.94531"
-         height="35.355339"
-         width="186.67619"
-         id="rect6183"
-         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         game:handle="top_box" />
-      <rect
-         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-         id="rect6185"
-         width="186.67619"
-         height="35.355339"
-         x="524.67322"
-         y="267.36838"
-         game:handle="bottom_box" />
-    </g>
-  </g>
+     style="display:inline" />
   <g
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="fruits"
-     style="display:none">
+     style="display:inline">
     <g
        id="g5992"
        game:class="fruit"
@@ -248,7 +233,7 @@
        id="g2578"
        game:class="crate"
        game:handle="apple"
-       transform="translate(0,-60)">
+       transform="translate(5028,-32)">
       <image
          xlink:href="wood_box.png"
          sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box.png"
@@ -272,7 +257,7 @@
        id="g2584"
        game:class="crate"
        game:handle="banana"
-       transform="translate(0,-60)">
+       transform="translate(854.18499,44.651804)">
       <image
          xlink:href="wood_box.png"
          sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box.png"
@@ -296,7 +281,7 @@
        id="g2590"
        game:class="crate"
        game:handle="strawberry"
-       transform="translate(0,-60)">
+       transform="translate(2107.1782,212.8671)">
       <image
          y="11.53457"
          x="700.71228"

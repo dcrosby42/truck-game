@@ -79,6 +79,7 @@ game_config:
       - truck_factory
       - viewport_controller
       - workshop_zones_controller
+      - workshop_svg_holder
 
   truck_factory:
     object_context: this_context

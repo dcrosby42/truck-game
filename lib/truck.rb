@@ -169,11 +169,6 @@ class Truck
     loc = info.view_point(@frame.body.local2world(vec2(3,-12)))
     angle = -90 + radians_to_gosu(@frame.body.a)
     @body_image.draw_rot(loc.x, loc.y, ZOrder::Truck, angle)
-    # Debugging outline:
-#    @frame.world_vertices.each_edge do |a,b|
-#      @main_window.draw_line(a.x,a.y, White,
-#                       b.x,b.y, White, ZOrder::Debug)
-#    end
   end
 
 #  def draw_joints

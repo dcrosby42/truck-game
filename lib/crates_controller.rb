@@ -5,7 +5,7 @@ class CratesController
     
     @simulation.on :button_down do |id,info|
       case id
-      when Gosu::Button::KbTab
+      when Gosu::Button::Kb1
         clear_fruits
       end
     end

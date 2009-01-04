@@ -43,10 +43,6 @@ class PhysicalPoly
     @space.remove_body(@body)
   end
 
-  def local_vertices
-    @vertices
-  end
-
   def world_vertices
     @vertices.map do |v|
       @body.local2world(v)
