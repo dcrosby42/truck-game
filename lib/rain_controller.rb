@@ -6,7 +6,7 @@ class RainController
 
     @simulation.on :update_space do |info|
       if info.button_down?(Button::KbSpace)
-        add_block
+#        add_block 500,300
       elsif info.button_down?(Button::KbTab)
         clear_blocks
       end
@@ -19,12 +19,11 @@ class RainController
     end
   end
 
-  def add_block
+  def add_block(point)
     image = @media_loader.load_image('small_rock.png')
     b = Block.new(@space_holder.space, image)
-    x = 500 + (rand(20)-10)
-    y = 300
-    b.body.p = vec2(x,y)
+    point.x += (rand(20)-10)
+    b.body.p = point
     @blocks << b
   end
 

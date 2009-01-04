@@ -1,3 +1,3 @@
 module ZOrder
-  Background, Collectibles, Truck, TruckTire, GuiWidgets, GuiText, Debug = *(0..100)
+  Background, Collectibles, Truck, TruckTire, Crate, CrateIcon, GuiWidgets, GuiText, Debug = *(0..100)
 end

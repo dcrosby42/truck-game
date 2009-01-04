@@ -42,3 +42,18 @@ require 'debug_drawing'
 
 
 DEBUG_SERVER_PORT = 51515
+
+
+if ENV['TRUCK_DEBUG'] == "on"
+  puts "Enabling ruby-debug..."
+  require 'rubygems'
+  begin
+    require 'ruby-debug'
+    Debugger.start
+  rescue LoadError
+    def debugger
+      puts "(!! DEBUGGER NOT AVAILABLE !!)"
+    end
+  end
+  puts "ruby-debug enabled."
+end

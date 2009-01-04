@@ -5,5 +5,7 @@ class WorkshopSvgHolder
 
   def get_layer(label)
     g = @svg.find_group_by_label(label)
+    raise "Can't find SVG layer '#{label}'" if g.nil?
+    g
   end
 end

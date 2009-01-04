@@ -27,21 +27,22 @@ class WorkshopZonesController
   end
 
   def update_zone_inclusions
-    @zones.each do |z|
-      @watched.each do |obj|
-        if z.contains_point?(obj.location)
-          puts "IN ZONE #{z.object_id}"
-        end
-      end
-    end
+#    @zones.each do |z|
+#      @watched.each do |obj|
+#        if z.contains_point?(obj.location)
+##          puts "IN ZONE #{z.object_id}"
+#        end
+#      end
+#    end
   end
 
   class Zone
     def initialize(rect)
       @rect = rect
-      @center_x = @rect.x + (@rect.width / 2.0)
-      @center_y = @rect.y + (@rect.height / 2.0)
-      @radius = @rect.width / 2.0
+      @bounds = @rect.bounds
+      @center_x = @bounds.x + (@bounds.width / 2.0)
+      @center_y = @bounds.y + (@bounds.height / 2.0)
+      @radius = @bounds.width / 2.0
     end
 
     def contains_point?(loc)
@@ -49,10 +50,10 @@ class WorkshopZonesController
     end
 
     def draw(info)
-      top = info.view_y(@rect.y)
-      bottom = top + @rect.height
-      left = info.view_x(@rect.x)
-      right = left + @rect.width
+      top = info.view_y(@bounds.y)
+      bottom = top + @bounds.height
+      left = info.view_x(@bounds.x)
+      right = left + @bounds.width
       color = 0x660000ff
       info.window.draw_quad(left,top,color,
                             right,top,color,

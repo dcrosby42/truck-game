@@ -89,6 +89,22 @@ game_config:
       - space_holder
       - media_loader
 
+  crates_controller:
+    compose:
+      - simulation
+      - workshop_svg_holder
+      - media_loader
+      - rain_controller
+      - crate_factory
+
+  crate_factory:
+    compose:
+      - picture_factory
+
+  picture_factory:
+    compose:
+      - media_loader
+
   +dump_truck:
     truck_controls:
 
