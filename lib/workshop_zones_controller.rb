@@ -4,9 +4,9 @@ class WorkshopZonesController
     @watched = []
 
     @simulation.on :draw_frame do |info|
-      @zones.each do |z|
-        z.draw(info)
-      end
+#      @zones.each do |z|
+#        z.draw(info)
+#      end
     end
 
     @simulation.on :update_frame do |info|

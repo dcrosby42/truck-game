@@ -93,9 +93,9 @@ game_config:
     compose:
       - simulation
       - workshop_svg_holder
-      - media_loader
-      - rain_controller
       - crate_factory
+      - fruit_factory
+
 
   crate_factory:
     compose:
@@ -104,6 +104,12 @@ game_config:
   picture_factory:
     compose:
       - media_loader
+
+  fruit_factory:
+    compose:
+      - space_holder
+      - media_loader
+      - workshop_svg_holder
 
   +dump_truck:
     truck_controls:

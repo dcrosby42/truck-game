@@ -42,6 +42,7 @@ class CrateFactory
     def get(handle)
       @hash[handle]
     end
+    alias :[] :get
     
     def each(&block)
       @array.each &block

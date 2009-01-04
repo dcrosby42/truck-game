@@ -140,7 +140,7 @@ class Truck
 
   def draw_body(info)
     loc = info.view_point(@frame.body.local2world(vec2(3,-12)))
-    angle = 270 + radians_to_gosu(@frame.body.a)
+    angle = -90 + radians_to_gosu(@frame.body.a)
     @body_image.draw_rot(loc.x, loc.y, ZOrder::Truck, angle)
     # Debugging outline:
 #    @frame.world_vertices.each_edge do |a,b|

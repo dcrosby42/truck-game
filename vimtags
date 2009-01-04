@@ -8,10 +8,12 @@ AppStarter	./lib/app_starter.rb	/^class AppStarter$/;"	c
 Array	./lib/array_ext.rb	/^class Array$/;"	c
 Ball	./lib/ball_controller.rb	/^  class Ball$/;"	c	class:BallController
 BallController	./lib/ball_controller.rb	/^class BallController$/;"	c
+Base	./lib/svg_document.rb	/^  class Base$/;"	c	class:SvgDocument
 BaseMode	./lib/base_mode.rb	/^class BaseMode$/;"	c
 Block	./lib/rain_controller.rb	/^  class Block$/;"	c	class:RainController
+Bounds	./lib/svg_document.rb	/^  class Bounds$/;"	c	class:SvgDocument
 Box	./lib/debug_hail.rb	/^  class Box$/;"	c	class:DebugHail
-Bucket	./lib/truck_controller.rb	/^  class Bucket$/;"	c	class:TruckController
+Bucket	./lib/truck.rb	/^  class Bucket$/;"	c	class:Truck
 Class	./vendor/gems/constructor/lib/constructor.rb	/^class Class #:nodoc:#$/;"	c
 ConstructionError	./vendor/gems/diy/lib/diy.rb	/^	class ConstructionError < RuntimeError #:nodoc:#$/;"	c
 ConstructorArgumentError	./vendor/gems/constructor/lib/constructor.rb	/^class ConstructorArgumentError < RuntimeError #:nodoc:#$/;"	c
@@ -19,6 +21,10 @@ Context	./vendor/gems/diy/lib/diy.rb	/^	class Context$/;"	c	class:DIY
 Context	./vendor/gems/diy/lib/diy/factory.rb	/^	class Context$/;"	c	class:DIY
 ControlAdapter	./lib/ball_controller.rb	/^  class ControlAdapter$/;"	c	class:BallController
 Corn	./lib/corn.rb	/^class Corn$/;"	c
+Crate	./lib/crate.rb	/^class Crate$/;"	c
+CrateFactory	./lib/crate_factory.rb	/^class CrateFactory$/;"	c
+CrateSet	./lib/crate_factory.rb	/^  class CrateSet$/;"	c
+CratesController	./lib/crates_controller.rb	/^class CratesController$/;"	c
 DIY	./vendor/gems/diy/lib/diy.rb	/^module DIY #:nodoc:#$/;"	m
 DIY	./vendor/gems/diy/lib/diy/factory.rb	/^module DIY #:nodoc:#$/;"	m
 DebugController	./lib/debug_controller.rb	/^class DebugController$/;"	c
@@ -34,11 +40,16 @@ Float	./lib/chipmunk_numeric_ext.rb	/^class Float$/;"	c
 GameConfig	./lib/game_config.rb	/^class GameConfig$/;"	c
 GameMaster	./lib/game_master.rb	/^class GameMaster $/;"	c
 GosuCharIdMap	./lib/gosu_char_id_map.rb	/^module GosuCharIdMap$/;"	m
+Group	./lib/svg_document.rb	/^  class Group < Base$/;"	c	class:SvgDocument
+HasBounds	./lib/svg_document.rb	/^  module HasBounds$/;"	m	class:SvgDocument
+HasTranslation	./lib/svg_document.rb	/^  module HasTranslation$/;"	m	class:SvgDocument
 Hay	./lib/hay.rb	/^class Hay$/;"	c
 HeadsUp	./lib/heads_up.rb	/^class HeadsUp$/;"	c
+Image	./lib/svg_document.rb	/^  class Image < Rect$/;"	c	class:SvgDocument
 Infl	./vendor/gems/diy/lib/diy.rb	/^  module Infl #:nodoc:#$/;"	m
 Initializer	./lib/initializer.rb	/^module Initializer$/;"	m
 InstanceMethods	./vendor/gems/publisher/lib/publisher.rb	/^	module InstanceMethods$/;"	m	class:Publisher
+Instantaneous	./lib/main_window.rb	/^  class Instantaneous$/;"	c	class:MainWindow
 ItemCounter	./lib/item_counter.rb	/^class ItemCounter$/;"	c
 LevelFactory	./lib/level_factory.rb	/^class LevelFactory$/;"	c
 LevelMode	./lib/level_mode.rb	/^class LevelMode < Mode$/;"	c
@@ -54,60 +65,70 @@ Namespace	./vendor/gems/diy/lib/diy.rb	/^  class Namespace #:nodoc:#$/;"	c
 NamespaceError	./vendor/gems/diy/lib/diy.rb	/^  class NamespaceError < RuntimeError #:nodoc:#$/;"	c
 Numeric	./lib/chipmunk_numeric_ext.rb	/^class Numeric $/;"	c
 ObjectDef	./vendor/gems/diy/lib/diy.rb	/^	class ObjectDef #:nodoc:$/;"	c
+Path	./lib/svg_document.rb	/^  class Path < Base$/;"	c	class:SvgDocument
 PhysicalCircle	./lib/physical_circle.rb	/^class PhysicalCircle$/;"	c
 PhysicalFactory	./lib/physical_factory.rb	/^class PhysicalFactory$/;"	c
 PhysicalPoly	./lib/physical_poly.rb	/^class PhysicalPoly$/;"	c
+Picture	./lib/picture.rb	/^class Picture$/;"	c
+PictureFactory	./lib/picture_factory.rb	/^class PictureFactory$/;"	c
 PowerTractorController	./lib/power_tractor_controller.rb	/^class PowerTractorController$/;"	c
 Publisher	./vendor/gems/publisher/lib/publisher.rb	/^module Publisher$/;"	m
 RainController	./lib/rain_controller.rb	/^class RainController$/;"	c
+Rect	./lib/svg_document.rb	/^  class Rect < Base$/;"	c	class:SvgDocument
 ScreenInfo	./lib/screen_info.rb	/^class ScreenInfo$/;"	c
 SimpleBarrier	./lib/simple_barrier.rb	/^class SimpleBarrier$/;"	c
+Simulation	./lib/simulation.rb	/^class Simulation$/;"	c
 SpaceHolder	./lib/space_holder.rb	/^class SpaceHolder$/;"	c
+SvgDocument	./lib/svg_document.rb	/^class SvgDocument$/;"	c
 SvgRectangleLoader	./lib/svg_rectangle_loader.rb	/^class SvgRectangleLoader $/;"	c
 SystemContext	./lib/system_context.rb	/^class SystemContext$/;"	c
 Tractor	./lib/tractor.rb	/^class Tractor$/;"	c
 TractorController	./lib/tractor_controller.rb	/^class TractorController$/;"	c
 Truck	./lib/truck.rb	/^class Truck$/;"	c
 TruckController	./lib/truck_controller.rb	/^class TruckController$/;"	c
+TruckControls	./lib/truck_controls.rb	/^class TruckControls$/;"	c
 TruckFactory	./lib/truck_factory.rb	/^class TruckFactory$/;"	c
 UpdateInfo	./lib/update_info.rb	/^class UpdateInfo$/;"	c
 VehicleFactory	./lib/vehicle_factory.rb	/^class VehicleFactory$/;"	c
 Viewport	./lib/viewport.rb	/^class Viewport$/;"	c
 ViewportController	./lib/viewport_controller.rb	/^class ViewportController$/;"	c
 WorkshopRoom	./lib/workshop_room.rb	/^class WorkshopRoom$/;"	c
+WorkshopSvgHolder	./lib/workshop_svg_holder.rb	/^class WorkshopSvgHolder$/;"	c
+WorkshopZonesController	./lib/workshop_zones_controller.rb	/^class WorkshopZonesController$/;"	c
 YardController	./lib/yard_controller.rb	/^class YardController$/;"	c
 YardGround	./lib/yard_ground.rb	/^class YardGround$/;"	c
 ZOrder	./lib/z_order.rb	/^module ZOrder$/;"	m
+Zone	./lib/workshop_zones_controller.rb	/^  class Zone$/;"	c	class:WorkshopZonesController
 _validate_constructor_args	./vendor/gems/constructor/lib/constructor.rb	/^        def _validate_constructor_args(args)$/;"	f	class:Class.constructor
 abort_level	./lib/level_mode.rb	/^  def abort_level$/;"	f	class:LevelMode
 accelerate	./lib/tractor.rb	/^  def accelerate$/;"	f	class:Tractor
-add_block	./lib/rain_controller.rb	/^  def add_block$/;"	f	class:RainController
+add	./lib/crate_factory.rb	/^    def add(crate)$/;"	f	class:CrateSet
+add_block	./lib/rain_controller.rb	/^  def add_block(point)$/;"	f	class:RainController
 add_item_if_needed	./lib/field_controller.rb	/^  def add_item_if_needed(info)$/;"	f
 add_self_to_space	./lib/debug_hail.rb	/^    def add_self_to_space(space)$/;"	f	class:DebugHail.Box
 add_to_loadpath	./config/environment.rb	/^def add_to_loadpath(dir)$/;"	f
 angle_delta	./lib/tractor.rb	/^  def angle_delta$/;"	f	class:Tractor
 as_arrays_of_tuples	./lib/svg_rectangle_loader.rb	/^  def as_arrays_of_tuples(fname)$/;"	f	class:SvgRectangleLoader
+assemble_vehicle	./lib/truck.rb	/^  def assemble_vehicle$/;"	f	class:Truck
 back_up	./lib/tractor.rb	/^  def back_up$/;"	f	class:Tractor
-brake	./lib/truck.rb	/^  def brake$/;"	f	class:Truck
-brake	./lib/truck_controller.rb	/^  def brake$/;"	f	class:TruckController
-bucket_left	./lib/truck_controller.rb	/^  def bucket_left$/;"	f	class:TruckController
-bucket_right	./lib/truck_controller.rb	/^  def bucket_right$/;"	f	class:TruckController
-build_and_add_shape	./lib/truck_controller.rb	/^    def build_and_add_shape(verts)$/;"	f	class:TruckController.Bucket
-build_and_add_shapes	./lib/truck_controller.rb	/^    def build_and_add_shapes(*vert_lists)$/;"	f	class:TruckController.Bucket
+build	./lib/picture_factory.rb	/^  def build(opts)$/;"	f	class:PictureFactory
+build_and_add_shape	./lib/truck.rb	/^    def build_and_add_shape(verts)$/;"	f	class:Truck.Bucket
+build_and_add_shapes	./lib/truck.rb	/^    def build_and_add_shapes(*vert_lists)$/;"	f	class:Truck.Bucket
 build_and_raise_construction_error	./vendor/gems/diy/lib/diy.rb	/^		def build_and_raise_construction_error(key, oops)$/;"	f
-build_bucket	./lib/truck_controller.rb	/^  def build_bucket$/;"	f	class:TruckController
+build_bucket	./lib/truck.rb	/^  def build_bucket$/;"	f	class:Truck
 build_chassis	./lib/power_tractor_controller.rb	/^  def build_chassis(pos)$/;"	f	class:PowerTractorController
 build_circle	./lib/physical_factory.rb	/^  def build_circle(opts)$/;"	f	class:PhysicalFactory
 build_classname	./vendor/gems/diy/lib/diy.rb	/^    def build_classname(name)$/;"	f	class:Namespace
+build_crate_set	./lib/crate_factory.rb	/^  def build_crate_set(crate_layer)$/;"	f	class:CrateFactory
 build_dump_truck	./lib/vehicle_factory.rb	/^  def build_dump_truck$/;"	f	class:VehicleFactory
 build_everything	./vendor/gems/diy/lib/diy.rb	/^		def build_everything$/;"	f
-build_floor	./lib/workshop_room.rb	/^  def build_floor$/;"	f	class:WorkshopRoom
 build_new_item	./lib/field_model.rb	/^  def build_new_item(x,y)$/;"	f	class:FieldModel
 build_parts	./lib/truck.rb	/^  def build_parts$/;"	f	class:Truck
+build_picture	./lib/crate_factory.rb	/^  def build_picture(g, game_class, z)$/;"	f
 build_poly	./lib/physical_factory.rb	/^  def build_poly(opts)$/;"	f	class:PhysicalFactory
-build_shapes	./lib/truck_controller.rb	/^  def build_shapes$/;"	f	class:TruckController
 build_speed_and_location	./lib/debug_controller.rb	/^  def build_speed_and_location$/;"	f	class:DebugController
 build_static_shape	./lib/yard_ground.rb	/^  def build_static_shape(polygon_points)$/;"	f	class:YardGround
+build_terrain	./lib/workshop_room.rb	/^  def build_terrain$/;"	f	class:WorkshopRoom
 build_truck	./lib/truck_factory.rb	/^  def build_truck$/;"	f	class:TruckFactory
 build_wheel	./lib/power_tractor_controller.rb	/^  def build_wheel(pos,wheel_radius)$/;"	f	class:PowerTractorController
 button_down	./lib/base_mode.rb	/^  def button_down(id,update_info); end$/;"	f	class:BaseMode
@@ -115,18 +136,27 @@ button_down	./lib/main_menu_mode.rb	/^  def button_down(id,info)$/;"	f	class:Mai
 button_down	./lib/main_window.rb	/^  def button_down(id)$/;"	f	class:MainWindow
 button_down	./lib/mode.rb	/^  def button_down(id,update_info)$/;"	f	class:Mode
 button_down?	./lib/update_info.rb	/^  def button_down?(id)$/;"	f	class:UpdateInfo
+button_id_to_char	./lib/update_info.rb	/^  def button_id_to_char(id)$/;"	f	class:UpdateInfo
 button_up	./lib/base_mode.rb	/^  def button_up(id,update_info); end$/;"	f	class:BaseMode
 button_up	./lib/main_window.rb	/^  def button_up(id)$/;"	f	class:MainWindow
 button_up	./lib/mode.rb	/^  def button_up(id,update_info)$/;"	f	class:Mode
 caching	./lib/media_loader.rb	/^  def caching(filename)$/;"	f	class:MediaLoader
+calc_edges_and_center	./lib/svg_document.rb	/^    def calc_edges_and_center$/;"	f	class:SvgDocument.Bounds
 camelize	./vendor/gems/diy/lib/diy.rb	/^    def self.camelize(lower_case_and_underscored_word) $/;"	F	class:Infl
+center_point	./lib/crate.rb	/^  def center_point$/;"	f	class:Crate
 center_viewport	./lib/power_tractor_controller.rb	/^  def center_viewport$/;"	f	class:PowerTractorController
+char_to_button_id	./lib/update_info.rb	/^  def char_to_button_id(char)$/;"	f	class:UpdateInfo
 check_for_done	./lib/field_controller.rb	/^  def check_for_done$/;"	f
+clear	./lib/truck_controls.rb	/^  def clear$/;"	f	class:TruckControls
 clear_blocks	./lib/rain_controller.rb	/^  def clear_blocks$/;"	f	class:RainController
-close_bucket	./lib/truck.rb	/^  def close_bucket$/;"	f	class:Truck
+cold_drop	./lib/physical_circle.rb	/^  def cold_drop(loc)$/;"	f	class:PhysicalCircle
+cold_drop	./lib/physical_poly.rb	/^  def cold_drop(loc)$/;"	f	class:PhysicalPoly
+cold_drop	./lib/truck.rb	/^    def cold_drop(loc)$/;"	f	class:Truck.Bucket
+cold_drop	./lib/truck.rb	/^  def cold_drop(point)$/;"	f	class:Truck
 collect_items_near_tractor	./lib/field_controller.rb	/^  def collect_items_near_tractor$/;"	f
 collect_object_and_subcontext_defs	./vendor/gems/diy/lib/diy.rb	/^    def collect_object_and_subcontext_defs(context_hash)$/;"	f
 complete_level	./lib/level_mode.rb	/^  def complete_level$/;"	f	class:LevelMode
+configure_space	./lib/simulation.rb	/^  def configure_space$/;"	f	class:Simulation
 construct_and_add	./lib/yard_ground.rb	/^  def construct_and_add(polygon_points)$/;"	f	class:YardGround
 construct_factory	./vendor/gems/diy/lib/diy/factory.rb	/^    def construct_factory(key)$/;"	f	class:DIY.Context
 construct_method	./vendor/gems/diy/lib/diy.rb	/^    def construct_method(key)$/;"	f
@@ -135,80 +165,101 @@ constructor	./vendor/gems/constructor/lib/constructor.rb	/^  def constructor(*at
 constructor_block	./vendor/gems/constructor/lib/constructor.rb	/^  def constructor_block #:nodoc:#$/;"	f	class:Class
 constructor_keys	./vendor/gems/constructor/lib/constructor.rb	/^  def constructor_keys; @_ctor_keys ||=[]; end$/;"	f	class:Class
 contains_object	./vendor/gems/diy/lib/diy.rb	/^		def contains_object(obj_name)$/;"	f
+contains_point?	./lib/workshop_zones_controller.rb	/^    def contains_point?(loc)$/;"	f	class:WorkshopZonesController.Zone
 count_up	./lib/heads_up.rb	/^  def count_up$/;"	f	class:HeadsUp
 create	./vendor/gems/diy/lib/diy/factory.rb	/^    def create *args$/;"	f	class:DIY.FactoryFactory
-create_barrier	./lib/workshop_room.rb	/^  def create_barrier(opts)$/;"	f	class:WorkshopRoom
 create_shape	./lib/simple_barrier.rb	/^  def create_shape$/;"	f	class:SimpleBarrier
-create_shapes	./lib/truck_controller.rb	/^    def create_shapes$/;"	f	class:TruckController.Bucket
+create_shapes	./lib/truck.rb	/^    def create_shapes$/;"	f	class:Truck.Bucket
 debug_cycle_image	./lib/tractor.rb	/^  def debug_cycle_image$/;"	f	class:Tractor
+debugger	./config/environment.rb	/^    def debugger$/;"	f
+do_space_steps	./lib/simulation.rb	/^  def do_space_steps(info)$/;"	f	class:Simulation
 drag_down_velocity	./lib/tractor.rb	/^  def drag_down_velocity$/;"	f	class:Tractor
 draw	./lib/ball_controller.rb	/^    def draw(window)$/;"	f	class:BallController.Ball
 draw	./lib/base_mode.rb	/^  def draw(update_info); end$/;"	f	class:BaseMode
 draw	./lib/corn.rb	/^  def draw$/;"	f	class:Corn
+draw	./lib/crate.rb	/^  def draw(info)$/;"	f	class:Crate
 draw	./lib/debug_hail.rb	/^    def draw$/;"	f	class:DebugHail.Box
 draw	./lib/hay.rb	/^  def draw$/;"	f	class:Hay
 draw	./lib/item_counter.rb	/^  def draw(count_string)$/;"	f	class:ItemCounter
 draw	./lib/main_menu_mode.rb	/^  def draw(info)$/;"	f	class:MainMenuMode
 draw	./lib/main_window.rb	/^  def draw$/;"	f	class:MainWindow
 draw	./lib/mode.rb	/^  def draw(update_info)$/;"	f	class:Mode
-draw	./lib/rain_controller.rb	/^    def draw(window)$/;"	f	class:RainController.Block
-draw	./lib/simple_barrier.rb	/^  def draw(window)$/;"	f	class:SimpleBarrier
+draw	./lib/picture.rb	/^  def draw(info)$/;"	f	class:Picture
+draw	./lib/rain_controller.rb	/^    def draw(info)$/;"	f	class:RainController.Block
+draw	./lib/simple_barrier.rb	/^  def draw(info)$/;"	f	class:SimpleBarrier
 draw	./lib/tractor.rb	/^  def draw$/;"	f	class:Tractor
-draw	./lib/truck.rb	/^  def draw$/;"	f	class:Truck
-draw	./lib/truck_controller.rb	/^    def draw(window)$/;"	f	class:TruckController.Bucket
-draw	./lib/workshop_room.rb	/^  def draw(window)$/;"	f	class:WorkshopRoom
+draw	./lib/truck.rb	/^    def draw(info)$/;"	f	class:Truck.Bucket
+draw	./lib/truck.rb	/^  def draw(info)$/;"	f	class:Truck
+draw	./lib/workshop_zones_controller.rb	/^    def draw(info)$/;"	f	class:WorkshopZonesController.Zone
 draw	./lib/yard_ground.rb	/^  def draw$/;"	f	class:YardGround
-draw_background	./lib/workshop_room.rb	/^  def draw_background(window)$/;"	f	class:WorkshopRoom
-draw_body	./lib/truck_controller.rb	/^  def draw_body(window)$/;"	f	class:TruckController
-draw_bucket_image	./lib/truck_controller.rb	/^    def draw_bucket_image$/;"	f	class:TruckController.Bucket
+draw_background	./lib/workshop_room.rb	/^  def draw_background(info)$/;"	f	class:WorkshopRoom
+draw_body	./lib/truck.rb	/^  def draw_body(info)$/;"	f	class:Truck
+draw_bucket_image	./lib/truck.rb	/^    def draw_bucket_image(info)$/;"	f	class:Truck.Bucket
 draw_chassis_and_wheels	./lib/power_tractor_controller.rb	/^  def draw_chassis_and_wheels$/;"	f	class:PowerTractorController
 draw_circle	./lib/ball_controller.rb	/^    def draw_circle(window, x,y,ang,r,color,z=0,mode=:default,circle_step=10)$/;"	f	class:BallController.Ball
 draw_circle	./lib/debug_drawing.rb	/^  def draw_circle(opts)$/;"	f	class:DebugDrawing
+draw_crates	./lib/crates_controller.rb	/^  def draw_crates(info)$/;"	f	class:CratesController
 draw_cross_at_vec2	./lib/debug_drawing.rb	/^  def draw_cross_at_vec2(window, pt, color=0xffff0000)$/;"	f	class:DebugDrawing
 draw_notice	./lib/heads_up.rb	/^  def draw_notice(info)$/;"	f	class:HeadsUp
-draw_poly	./lib/truck_controller.rb	/^    def draw_poly(window, local_verts)$/;"	f	class:TruckController.Bucket
-draw_polygons	./lib/truck_controller.rb	/^    def draw_polygons(window)$/;"	f	class:TruckController.Bucket
+draw_poly	./lib/truck.rb	/^    def draw_poly(window, local_verts)$/;"	f	class:Truck.Bucket
+draw_polygons	./lib/truck.rb	/^    def draw_polygons$/;"	f	class:Truck.Bucket
 draw_speed_and_location	./lib/debug_controller.rb	/^  def draw_speed_and_location$/;"	f	class:DebugController
 draw_terrain	./lib/moon_terrain_controller.rb	/^  def draw_terrain$/;"	f	class:MoonTerrainController
-draw_wheel	./lib/truck_controller.rb	/^  def draw_wheel(window,circle)$/;"	f	class:TruckController
-drive_left	./lib/truck.rb	/^  def drive_left$/;"	f	class:Truck
-drive_left	./lib/truck_controller.rb	/^  def drive_left$/;"	f	class:TruckController
-drive_right	./lib/truck.rb	/^  def drive_right$/;"	f	class:Truck
-drive_right	./lib/truck_controller.rb	/^  def drive_right$/;"	f	class:TruckController
-each_edge	./lib/array_ext.rb	/^  def each_edge$/;"	f	class:Array
+draw_terrain	./lib/workshop_room.rb	/^  def draw_terrain(info)$/;"	f	class:WorkshopRoom
+draw_wheel	./lib/truck.rb	/^  def draw_wheel(info, wheel)$/;"	f	class:Truck
+drop_fruit	./lib/crates_controller.rb	/^  def drop_fruit(name)$/;"	f	class:CratesController
+each	./lib/crate_factory.rb	/^    def each(&block)$/;"	f	class:CrateSet
+each_edge	./lib/array_ext.rb	/^  def each_edge(&block)$/;"	f	class:Array
+each_segment	./lib/array_ext.rb	/^  def each_segment(&block)$/;"	f	class:Array
 ensure_valid	./vendor/gems/publisher/lib/publisher.rb	/^		def ensure_valid(event) #:nodoc:#$/;"	f	class:Publisher.InstanceMethods
 extra_inputs_has	./vendor/gems/diy/lib/diy.rb	/^		def extra_inputs_has(key)$/;"	f
+find_group_by_label	./lib/svg_document.rb	/^  def find_group_by_label(label)$/;"	f	class:SvgDocument
 fire	./vendor/gems/publisher/lib/publisher.rb	/^		def fire(event, *args) #:nod$/;"	f	class:Publisher.InstanceMethods
+follow_the_target	./lib/viewport_controller.rb	/^  def follow_the_target$/;"	f	class:ViewportController
 from_file	./vendor/gems/diy/lib/diy.rb	/^		def self.from_file(fname, extra_inputs={})$/;"	F
 from_yaml	./vendor/gems/diy/lib/diy.rb	/^		def self.from_yaml(io_or_string, extra_inputs={})$/;"	F
 fullscreen	./lib/main_window.rb	/^  def fullscreen; false; end$/;"	f	class:MainWindow
+game_class	./lib/svg_document.rb	/^    def game_class$/;"	f	class:SvgDocument.Base
+game_handle	./lib/svg_document.rb	/^    def game_handle$/;"	f	class:SvgDocument.Base
 generate_debug_image	./lib/yard_ground.rb	/^  def generate_debug_image(polygon_points)$/;"	f	class:YardGround
+get	./lib/crate_factory.rb	/^    def get(handle)$/;"	f	class:CrateSet
 get_app_starter	./lib/system_context.rb	/^  def get_app_starter$/;"	f	class:SystemContext
 get_class_for_name_with_module_delimeters	./vendor/gems/diy/lib/diy.rb	/^		def get_class_for_name_with_module_delimeters(class_name)$/;"	f
 get_defs_from	./vendor/gems/diy/lib/diy.rb	/^    def get_defs_from(hash, namespace=nil)$/;"	f
+get_layer	./lib/workshop_svg_holder.rb	/^  def get_layer(label)$/;"	f	class:WorkshopSvgHolder
 get_main_window	./lib/system_context.rb	/^  def get_main_window$/;"	f	class:SystemContext
 get_object	./vendor/gems/diy/lib/diy.rb	/^		def get_object(obj_name)$/;"	f
 get_workshop	./lib/level_factory.rb	/^  def get_workshop$/;"	f	class:LevelFactory
 goal_description	./lib/field_model.rb	/^  def goal_description$/;"	f	class:FieldModel
 gosu_letter	./lib/gosu_char_id_map.rb	/^  def gosu_letter$/;"	f	class:Fixnum
+group	./lib/svg_document.rb	/^    def group(opts={})$/;"	f	class:SvgDocument.Group
+groups	./lib/svg_document.rb	/^    def groups(opts={})$/;"	f	class:SvgDocument.Group
 has_any_event	./vendor/gems/publisher/lib/publisher.rb	/^	def has_any_event$/;"	f	class:Publisher
 has_events	./vendor/gems/publisher/lib/publisher.rb	/^	def has_events(*args)$/;"	f	class:Publisher
 height	./lib/main_window.rb	/^  def height; 768; end$/;"	f	class:MainWindow
+image	./lib/svg_document.rb	/^    def image(opts={})$/;"	f	class:SvgDocument.Group
 image_from_text	./lib/media_loader.rb	/^  def image_from_text(*args)$/;"	f	class:MediaLoader
+images	./lib/svg_document.rb	/^    def images(opts={})$/;"	f	class:SvgDocument.Group
 initialize	./lib/ball_controller.rb	/^    def initialize(circle)$/;"	f	class:BallController.Ball
 initialize	./lib/ball_controller.rb	/^    def initialize(map)$/;"	f	class:BallController.ControlAdapter
 initialize	./lib/corn.rb	/^  def initialize(media_loader)$/;"	f	class:Corn
+initialize	./lib/crate_factory.rb	/^    def initialize$/;"	f	class:CrateSet
 initialize	./lib/debug_hail.rb	/^    def initialize(media_loader, viewport)$/;"	f	class:DebugHail.Box
 initialize	./lib/game_config.rb	/^  def initialize$/;"	f	class:GameConfig
 initialize	./lib/hay.rb	/^  def initialize(media_loader)$/;"	f	class:Hay
-initialize	./lib/main_window.rb	/^  def initialize$/;"	f	class:MainWindow
+initialize	./lib/main_window.rb	/^  def initialize(opts)$/;"	f	class:MainWindow
 initialize	./lib/physical_circle.rb	/^  def initialize(opts)$/;"	f	class:PhysicalCircle
 initialize	./lib/physical_poly.rb	/^  def initialize(opts)$/;"	f	class:PhysicalPoly
 initialize	./lib/rain_controller.rb	/^    def initialize(space, image)$/;"	f	class:RainController.Block
 initialize	./lib/simple_barrier.rb	/^  def initialize(opts={})$/;"	f	class:SimpleBarrier
 initialize	./lib/space_holder.rb	/^  def initialize$/;"	f	class:SpaceHolder
-initialize	./lib/update_info.rb	/^  def initialize(mw)$/;"	f	class:UpdateInfo
+initialize	./lib/svg_document.rb	/^    def initialize(node)$/;"	f	class:SvgDocument.Base
+initialize	./lib/svg_document.rb	/^    def initialize(node)$/;"	f	class:SvgDocument.Image
+initialize	./lib/svg_document.rb	/^    def initialize(node)$/;"	f	class:SvgDocument.Rect
+initialize	./lib/svg_document.rb	/^    def initialize(x,y,width,height)$/;"	f	class:SvgDocument.Bounds
+initialize	./lib/svg_document.rb	/^  def initialize(xml_string)$/;"	f	class:SvgDocument
 initialize	./lib/viewport.rb	/^  def initialize$/;"	f	class:Viewport
+initialize	./lib/workshop_zones_controller.rb	/^    def initialize(rect)$/;"	f	class:WorkshopZonesController.Zone
 initialize	./vendor/gems/constructor/lib/constructor.rb	/^      def initialize(args=nil)$/;"	f	class:Class.constructor
 initialize	./vendor/gems/constructor/lib/constructor.rb	/^  def initialize(missing,rejected=[])$/;"	f	class:ConstructorArgumentError
 initialize	./vendor/gems/diy/lib/diy.rb	/^		def initialize(context_hash, extra_inputs={})$/;"	f	class:DIY
@@ -219,29 +270,42 @@ initialize	./vendor/gems/diy/lib/diy.rb	/^    def initialize(opts)$/;"	f	class:M
 initialize	./vendor/gems/diy/lib/diy.rb	/^    def initialize(str)$/;"	f	class:Namespace
 initialize	./vendor/gems/diy/lib/diy/factory.rb	/^    def initialize(clazz)$/;"	f	class:DIY.FactoryFactory
 initialize	./vendor/gems/diy/lib/diy/factory.rb	/^    def initialize(opts)$/;"	f	class:DIY.FactoryDef
-inner_pin_point	./lib/truck_controller.rb	/^    def inner_pin_point$/;"	f	class:TruckController.Bucket
+inner_pin_point	./lib/truck.rb	/^    def inner_pin_point$/;"	f	class:Truck.Bucket
+inspect	./lib/main_window.rb	/^    def inspect$/;"	f	class:MainWindow.Instantaneous
+inst_from_xpath	./lib/svg_document.rb	/^    def inst_from_xpath(xpr, clazz, opts={})$/;"	f	class:SvgDocument.Group
 ivar	./lib/debug_controller.rb	/^  def ivar(obj, var_name)$/;"	f	class:DebugController
 join_wheels_to_chassis	./lib/power_tractor_controller.rb	/^  def join_wheels_to_chassis$/;"	f	class:PowerTractorController
 keys	./vendor/gems/diy/lib/diy.rb	/^		def keys$/;"	f
+layout_parts	./lib/truck.rb	/^  def layout_parts$/;"	f	class:Truck
 letter_down?	./lib/update_info.rb	/^  def letter_down?(str)$/;"	f	class:UpdateInfo
+load_crates	./lib/crates_controller.rb	/^  def load_crates$/;"	f	class:CratesController
 load_default_font	./lib/media_loader.rb	/^  def load_default_font(height)$/;"	f	class:MediaLoader
 load_graphics_and_sounds	./lib/tractor.rb	/^  def load_graphics_and_sounds$/;"	f	class:Tractor
 load_image	./lib/media_loader.rb	/^  def load_image(filename,hard_edge=false)$/;"	f	class:MediaLoader
 load_rectangles_from_svg	./lib/yard_ground.rb	/^  def load_rectangles_from_svg$/;"	f	class:YardGround.build_static_shape
+load_resources	./lib/truck.rb	/^  def load_resources$/;"	f	class:Truck
 load_sample	./lib/media_loader.rb	/^  def load_sample(filename)$/;"	f	class:MediaLoader
 load_song	./lib/media_loader.rb	/^  def load_song(filename)$/;"	f	class:MediaLoader
+load_svg_document	./lib/media_loader.rb	/^  def load_svg_document(filename)$/;"	f	class:MediaLoader
+load_zones	./lib/workshop_zones_controller.rb	/^  def load_zones$/;"	f	class:WorkshopZonesController
 local_vertices	./lib/physical_poly.rb	/^  def local_vertices$/;"	f	class:PhysicalPoly
+location	./lib/truck.rb	/^  def location$/;"	f	class:Truck
 main_context	./lib/system_context.rb	/^	def main_context$/;"	f	class:SystemContext
+make_pin_joint	./lib/truck.rb	/^  def make_pin_joint(a,b, anchor_a, anchor_b)$/;"	f	class:Truck
+map_from_xpath	./lib/svg_document.rb	/^    def map_from_xpath(xpr, opts={})$/;"	f	class:SvgDocument.Group
 milliseconds	./lib/update_info.rb	/^  def milliseconds$/;"	f	class:UpdateInfo
 mode=	./lib/main_window.rb	/^  def mode=(mode)$/;"	f	class:MainWindow
 mode_wrangler=	./lib/base_mode.rb	/^  def mode_wrangler=(mode_wrangler)$/;"	f	class:BaseMode
 move	./lib/tractor.rb	/^  def move$/;"	f	class:Tractor
+move_parts	./lib/truck.rb	/^  def move_parts(point)$/;"	f	class:Truck
+offset_point	./lib/viewport.rb	/^  def offset_point(pt)$/;"	f	class:Viewport
 offset_x	./lib/viewport.rb	/^  def offset_x(x)$/;"	f	class:Viewport
 offset_y	./lib/viewport.rb	/^  def offset_y(y)$/;"	f	class:Viewport
-open_bucket	./lib/truck.rb	/^  def open_bucket$/;"	f	class:Truck
 parse_namespace	./vendor/gems/diy/lib/diy.rb	/^    def parse_namespace(str)$/;"	f
+path	./lib/svg_document.rb	/^    def path(opts={})$/;"	f	class:SvgDocument.Group
+paths	./lib/svg_document.rb	/^    def paths(opts={})$/;"	f	class:SvgDocument.Group
 perform_acceleration	./lib/tractor.rb	/^  def perform_acceleration$/;"	f	class:Tractor
-pin_point	./lib/truck_controller.rb	/^    def pin_point$/;"	f	class:TruckController.Bucket
+pin_point	./lib/truck.rb	/^    def pin_point$/;"	f	class:Truck.Bucket
 ping	./lib/debug_server.rb	/^  def ping$/;"	f	class:DebugServer
 place_cold	./lib/debug_hail.rb	/^    def place_cold(x,y)$/;"	f	class:DebugHail.Box
 place_in_screen_center	./lib/tractor.rb	/^  def place_in_screen_center$/;"	f	class:Tractor
@@ -259,8 +323,11 @@ published_events	./vendor/gems/publisher/lib/publisher.rb	/^  def published_even
 push	./lib/mode_wrangler.rb	/^  def push(mode)$/;"	f	class:ModeWrangler
 push_mode	./lib/base_mode.rb	/^  def push_mode(mode)$/;"	f	class:BaseMode
 radians_to_vec2	./lib/chipmunk_numeric_ext.rb	/^  def radians_to_vec2$/;"	f	class:Numeric
+rect	./lib/svg_document.rb	/^    def rect(opts={})$/;"	f	class:SvgDocument.Group
+rects	./lib/svg_document.rb	/^    def rects(opts={})$/;"	f	class:SvgDocument.Group
 remove_from_space	./lib/physical_poly.rb	/^  def remove_from_space$/;"	f	class:PhysicalPoly
 remove_from_space	./lib/rain_controller.rb	/^    def remove_from_space$/;"	f	class:RainController.Block
+remove_from_space	./lib/truck.rb	/^  def remove_from_space$/;"	f	class:Truck
 remove_self_from_space	./lib/debug_hail.rb	/^    def remove_self_from_space$/;"	f	class:DebugHail.Box
 reposition	./lib/tractor.rb	/^  def reposition$/;"	f	class:Tractor
 rmagick_to_gosu_image	./lib/media_loader.rb	/^  def rmagick_to_gosu_image(rmagick_image, hard_edge=false)$/;"	f	class:MediaLoader
@@ -272,14 +339,16 @@ screen_height	./lib/screen_info.rb	/^  def screen_height$/;"	f	class:ScreenInfo
 screen_height	./lib/update_info.rb	/^  def screen_height$/;"	f	class:UpdateInfo
 screen_width	./lib/screen_info.rb	/^  def screen_width$/;"	f	class:ScreenInfo
 screen_width	./lib/update_info.rb	/^  def screen_width$/;"	f	class:UpdateInfo
+set_bounds_from_attributes	./lib/svg_document.rb	/^    def set_bounds_from_attributes$/;"	f	class:SvgDocument.HasBounds
 set_instance_variables	./lib/initializer.rb	/^  def set_instance_variables(defaults, inputs, options={})$/;"	f	class:Initializer
 set_object	./vendor/gems/diy/lib/diy.rb	/^		def set_object(obj_name,obj)$/;"	f
-setup	./lib/truck_controller.rb	/^    def setup$/;"	f	class:TruckController.Bucket
+setup	./lib/truck.rb	/^    def setup$/;"	f	class:Truck.Bucket
 setup_art_and_body	./lib/yard_ground.rb	/^  def setup_art_and_body$/;"	f	class:YardGround
 setup_boxes	./lib/debug_hail.rb	/^  def setup_boxes$/;"	f	class:DebugHail
 setup_chassis_and_wheels	./lib/power_tractor_controller.rb	/^  def setup_chassis_and_wheels$/;"	f	class:PowerTractorController
 setup_graph_paper	./lib/yard_ground.rb	/^  def setup_graph_paper$/;"	f	class:YardGround
 setup_terrain	./lib/moon_terrain_controller.rb	/^  def setup_terrain$/;"	f	class:MoonTerrainController
+setup_tracking	./lib/truck.rb	/^  def setup_tracking$/;"	f	class:Truck
 show_notice	./lib/heads_up.rb	/^  def show_notice(text,time=3.0, &block)$/;"	f	class:HeadsUp
 singleton?	./vendor/gems/diy/lib/diy.rb	/^    def singleton?$/;"	f	class:ObjectDef
 stamp_gosu_image	./lib/yard_ground.rb	/^  def stamp_gosu_image$/;"	f	class:YardGround
@@ -296,6 +365,11 @@ stop	./lib/tractor.rb	/^  def stop$/;"	f	class:Tractor
 stop_vehicle	./lib/power_tractor_controller.rb	/^  def stop_vehicle$/;"	f	class:PowerTractorController
 subscribe	./vendor/gems/publisher/lib/publisher.rb	/^		def subscribe(event, &block)$/;"	f	class:Publisher.InstanceMethods
 terrain_data	./lib/moon_terrain_controller.rb	/^  def terrain_data$/;"	f	class:MoonTerrainController
+track_joint	./lib/truck.rb	/^  def track_joint(joint)$/;"	f	class:Truck
+track_physical	./lib/truck.rb	/^  def track_physical(phys)$/;"	f	class:Truck
+translate	./lib/svg_document.rb	/^    def translate(vec)$/;"	f	class:SvgDocument.Bounds
+translate	./lib/svg_document.rb	/^    def translate(vec)$/;"	f	class:SvgDocument.HasBounds
+translation	./lib/svg_document.rb	/^    def translation$/;"	f	class:SvgDocument.HasTranslation
 turn_left	./lib/tractor.rb	/^  def turn_left$/;"	f	class:Tractor
 turn_right	./lib/tractor.rb	/^  def turn_right$/;"	f	class:Tractor
 underscore	./vendor/gems/diy/lib/diy.rb	/^    def self.underscore(camel_cased_word)$/;"	F	class:Infl
@@ -307,11 +381,20 @@ update	./lib/main_window.rb	/^  def update$/;"	f	class:MainWindow
 update	./lib/mode.rb	/^  def update(update_info)$/;"	f	class:Mode
 update_velocity_vector	./lib/tractor.rb	/^  def update_velocity_vector$/;"	f	class:Tractor
 update_wheels	./lib/power_tractor_controller.rb	/^  def update_wheels(info)$/;"	f	class:PowerTractorController
+update_zone_inclusions	./lib/workshop_zones_controller.rb	/^  def update_zone_inclusions$/;"	f	class:WorkshopZonesController
 use_class_directly?	./vendor/gems/diy/lib/diy.rb	/^    def use_class_directly?$/;"	f	class:ObjectDef
-verts_for_rect	./lib/truck_controller.rb	/^  def verts_for_rect(width,height)$/;"	f	class:TruckController
+use_manual_control	./lib/viewport_controller.rb	/^  def use_manual_control$/;"	f	class:ViewportController
+vertices	./lib/svg_document.rb	/^    def vertices$/;"	f	class:SvgDocument.Path
+verts_for_rect	./lib/truck.rb	/^  def verts_for_rect(width,height)$/;"	f	class:Truck
+view_point	./lib/update_info.rb	/^  def view_point(pt)$/;"	f	class:UpdateInfo
+view_x	./lib/update_info.rb	/^  def view_x(x)$/;"	f	class:UpdateInfo
+view_y	./lib/update_info.rb	/^  def view_y(y)$/;"	f	class:UpdateInfo
+watch	./lib/workshop_zones_controller.rb	/^  def watch(object)$/;"	f	class:WorkshopZonesController
 width	./lib/main_window.rb	/^  def width; 1024; end$/;"	f	class:MainWindow
 window	./lib/update_info.rb	/^  def window$/;"	f	class:UpdateInfo
 within	./vendor/gems/diy/lib/diy.rb	/^		def within(sub_context_name)$/;"	f
+world_end_point	./lib/simple_barrier.rb	/^  def world_end_point$/;"	f	class:SimpleBarrier
+world_start_point	./lib/simple_barrier.rb	/^  def world_start_point$/;"	f	class:SimpleBarrier
 world_vertices	./lib/physical_poly.rb	/^  def world_vertices$/;"	f	class:PhysicalPoly
 x	./lib/simple_barrier.rb	/^  def x$/;"	f	class:SimpleBarrier
 y	./lib/simple_barrier.rb	/^  def y$/;"	f	class:SimpleBarrier
