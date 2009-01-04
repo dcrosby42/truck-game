@@ -14,6 +14,12 @@ class CratesController
       if info.button_down?(Gosu::Button::KbA)
         drop_fruit "apple"
       end
+      if info.button_down?(Gosu::Button::KbB)
+        drop_fruit "banana"
+      end
+      if info.button_down?(Gosu::Button::KbS)
+        drop_fruit "strawberry"
+      end
 #      elsif info.button_down?(Button:KbB)
 #        drop_block_from @crate_index["bannana"]
 #      elsif info.button_down?(Button:KbS)
