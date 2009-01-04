@@ -29,6 +29,9 @@ class TruckController
       if info.button_down?(Button::KbX)
         @truck_controls.close_bucket = true
       end
+      if info.button_down?(Button::KbC)
+        @truck_controls.lock_bucket = true
+      end
     end
 
     @simulation.on :button_down do |id,info|

@@ -27,6 +27,25 @@ class SvgDocument
       calc_edges_and_center
     end
 
+    def recenter_on_zero
+      @x = @x - @center_point.x
+      @y = @y - @center_point.y
+      calc_edges_and_center
+    end
+
+    def vertices
+      @vertices ||= [
+        vec2( @left,  @top    ),
+        vec2( @left,  @bottom ),
+        vec2( @right, @bottom ),
+        vec2( @right, @top    ),
+      ]
+    end
+
+    def dup
+      Bounds.new(@x,@y,@width,@height)
+    end
+
     private
     def calc_edges_and_center
       @left = @x
@@ -34,6 +53,7 @@ class SvgDocument
       @right = @left + @width
       @bottom = @top + @height
       @center_point = vec2(@left + @width/2.0, @top + @height/2.0)
+      @vertices = nil
     end
   end
 

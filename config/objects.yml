@@ -111,6 +111,12 @@ game_config:
       - media_loader
       - workshop_svg_holder
 
+#  attachment_experiment:
+#    compose:
+#      - space_holder
+#      - simulation
+#      - workshop_svg_holder
+
   +dump_truck:
     truck_controls:
 

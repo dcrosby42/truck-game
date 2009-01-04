@@ -1,5 +1,5 @@
 class TruckControls
-  attr_accessor :drive_left, :drive_right, :brake, :close_bucket, :open_bucket, :help_jump
+  attr_accessor :drive_left, :drive_right, :brake, :close_bucket, :open_bucket, :help_jump, :lock_bucket
 
   def clear
     @drive_left = false
@@ -7,6 +7,7 @@ class TruckControls
     @brake = false
     @open_bucket = false
     @close_bucket = false
+    @lock_bucket = false
     @help_jump = false
   end
 end

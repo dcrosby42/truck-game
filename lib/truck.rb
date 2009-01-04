@@ -9,6 +9,7 @@ class Truck
     setup_tracking
     build_parts
     assemble_vehicle
+    lock_bucket
     load_resources
 
     @simulation.on :update_space do |info|
@@ -26,11 +27,14 @@ class Truck
         @back_wheel.body.w = 0
       end
       if @truck_controls.open_bucket
+        unlock_bucket
         @bucket.body.apply_impulse vec2(-30_000*info.dt,0), ZeroVec2
 #        @bucket.body.apply_force vec2(-30_000*info.dt,0), ZeroVec2
       elsif @truck_controls.close_bucket
         @bucket.body.apply_impulse vec2(10_000*info.dt,0), vec2(0,-150)
 #        @bucket.body.apply_force vec2(10_000*info.dt,0), vec2(0,-150)
+      elsif @truck_controls.lock_bucket
+        lock_bucket
       else
         @bucket.body.reset_forces
       end
@@ -49,6 +53,20 @@ class Truck
   def cold_drop(point)
     layout_parts
     move_parts point
+  end
+
+  def unlock_bucket
+    if @bucket_locked
+      @space_holder.space.remove_joint(@bucket_lock_joint)
+      @bucket_locked = false
+    end
+  end
+
+  def lock_bucket
+    unless @bucket_locked
+      @space_holder.space.add_joint(@bucket_lock_joint)
+      @bucket_locked = true
+    end
   end
 
   def remove_from_space
@@ -97,6 +115,7 @@ class Truck
     @front_axle = vec2(35,20)
     @back_axle = vec2(-35,20)
     @bucket_hinge_point = vec2(-40, -10)
+    @bucket_lock_point = vec2(20, 0)
 
     track_physical @front_wheel
     track_physical @back_wheel
@@ -107,9 +126,10 @@ class Truck
 
   def assemble_vehicle
     layout_parts
-    make_pin_joint(@front_wheel.body, @frame.body, ZeroVec2, @front_axle)
-    make_pin_joint(@back_wheel.body, @frame.body, ZeroVec2, @back_axle)
-    make_pin_joint(@bucket.body, @frame.body, @bucket.inner_pin_point, @bucket_hinge_point)
+    make_pivot_joint(@front_wheel.body, @frame.body, @front_axle)
+    make_pivot_joint(@back_wheel.body, @frame.body, @back_axle)
+    make_pivot_joint(@bucket.body, @frame.body, @bucket_hinge_point)
+    @bucket_lock_joint = Joint::Pivot.new(@bucket.body, @frame.body, @bucket_lock_point)
   end
 
   def layout_parts
@@ -127,7 +147,14 @@ class Truck
   end
 
   def make_pin_joint(a,b, anchor_a, anchor_b)
-    joint = Joint::Pin.new(a, b, anchor_a, anchor_b)
+    add_and_track_joint Joint::Pin.new(a, b, anchor_a, anchor_b)
+  end
+
+  def make_pivot_joint(a,b, loc)
+    add_and_track_joint Joint::Pivot.new(a, b, loc)
+  end
+
+  def add_and_track_joint(joint)
     @space_holder.space.add_joint(joint)
     track_joint joint
     joint

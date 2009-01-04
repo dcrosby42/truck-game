@@ -40,6 +40,7 @@ require 'array_ext'
 require 'chipmunk_numeric_ext'
 require 'debug_drawing'
 
+require 'initializer'
 
 DEBUG_SERVER_PORT = 51515
 
