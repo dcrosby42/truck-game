@@ -1,6 +1,7 @@
 class Fruit
   include Gosu
   include CP
+  attr_reader :body
 
   def initialize(opts={})
     @space = opts[:space]

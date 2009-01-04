@@ -12,19 +12,14 @@ class CratesController
 
     @simulation.on :update_frame do |info|
       if info.button_down?(Gosu::Button::KbA)
-        drop_fruit "apple"
+        drop_fruit info, "apple"
       end
       if info.button_down?(Gosu::Button::KbB)
-        drop_fruit "banana"
+        drop_fruit info, "banana"
       end
       if info.button_down?(Gosu::Button::KbS)
-        drop_fruit "strawberry"
+        drop_fruit info, "strawberry"
       end
-#      elsif info.button_down?(Button:KbB)
-#        drop_block_from @crate_index["bannana"]
-#      elsif info.button_down?(Button:KbS)
-#        drop_block_from @crate_index["strawberry"]
-#      end
     end
 
     @simulation.on :draw_frame do |info|
@@ -47,12 +42,19 @@ class CratesController
     end
   end
 
-  def drop_fruit(name)
+  def drop_fruit(info, name)
     crate = @crate_set[name]
     fruit = @fruit_factory.send("build_#{name}")
     fruit.move_to(crate.center_point + vec2(0,50))
     fruit.location.x += rand(20) - 10
+    if info.button_down?(Gosu::Button::KbRightShift)
+      fruit.body.apply_impulse(vec2(0,-600),vec2(-15,-5))
+    end
     @fruits << fruit
+
+    while @fruits.size > 400
+      @fruits.shift.remove_from_space
+    end
   end
 
   def draw_fruits(info)
@@ -63,8 +65,7 @@ class CratesController
 
   def clear_fruits
     while !@fruits.empty?
-      f = @fruits.shift
-      f.remove_from_space
+      @fruits.shift.remove_from_space
     end
   end
 
