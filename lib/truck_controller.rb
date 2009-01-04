@@ -23,10 +23,10 @@ class TruckController
       if info.button_down?(Button::KbDown)
         @truck_controls.brake = true
       end
-      if info.button_down?(Button::KbA)
+      if info.button_down?(Button::KbZ)
         @truck_controls.open_bucket = true
       end
-      if info.button_down?(Button::KbD)
+      if info.button_down?(Button::KbX)
         @truck_controls.close_bucket = true
       end
     end
