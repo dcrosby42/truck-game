@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:game="http://crosby/gosu/truck"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2823"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="fruit.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs2825">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2831" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="396.42857"
+     inkscape:cy="785.71429"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="834"
+     inkscape:window-height="701"
+     inkscape:window-x="119"
+     inkscape:window-y="42" />
+  <metadata
+     id="metadata2828">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="fruit"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="display:inline"
+       id="g5992"
+       game:class="fruit"
+       game:handle="apple"
+       transform="translate(404.1303,419.23457)">
+      <image
+         xlink:href="apple_small.png"
+         sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/apple_small.png"
+         width="25"
+         height="25"
+         id="image5984"
+         x="-11.435029"
+         y="-9.3137083" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 6.8059075,11.893142 L 11.048547,4.4685209 L 6.9826775,-3.0444891 L -2.4748825,-2.8677121 L -6.4523525,4.7336859 L -2.2097025,11.716365"
+         id="path6007"
+         sodipodi:nodetypes="cccccc" />
+    </g>
+    <g
+       style="display:inline"
+       id="g6088"
+       game:class="fruit"
+       game:handle="banana"
+       transform="translate(373.1303,423.23457)">
+      <image
+         xlink:href="banana_small.png"
+         sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/banana_small.png"
+         width="35"
+         height="26"
+         id="image6082"
+         x="-13.792893"
+         y="-12.585787" />
+      <path
+         id="path6086"
+         d="M -11.667262,8.9208698 L 19.445436,8.213763 L -9.0156118,-8.7567998 L -11.667262,8.9208698 z"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <g
+       style="display:inline"
+       id="g6171"
+       game:class="fruit"
+       game:handle="strawberry"
+       transform="translate(373.1303,383.23457)">
+      <image
+         xlink:href="strawberry_small.png"
+         sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/strawberry_small.png"
+         width="20"
+         height="23"
+         id="image6165"
+         x="-6.9947958"
+         y="-12.301848" />
+      <path
+         sodipodi:nodetypes="ccccccc"
+         id="path6169"
+         d="M -3.8890873,7.5066558 L 0.88388348,9.0976461 L 7.0710675,3.7943452 L 8.1317278,-3.365111 L -0.17677667,-6.9890332 L -4.9497475,-1.8625091 L -3.8890873,7.5066558 z"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       style="display:inline"
+       id="g2819"
+       game:class="fruit"
+       game:handle="lettuce"
+       transform="translate(373.1303,383.23457)">
+      <image
+         xlink:href="lettuce_small.png"
+         sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+         width="35"
+         height="30"
+         id="image2810"
+         x="49.675144"
+         y="-12.089538" />
+      <path
+         id="path2816"
+         d="M 60.582738,13.17087 L 75.889087,12.317317 L 82.945436,4.963763 L 77.339912,-4.8965184 L 67.734388,-9.0067998 L 59.283563,-3.5429649 L 54.170857,4.2604938 L 60.582738,13.17087 z"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         sodipodi:nodetypes="cccccccc" />
+    </g>
+  </g>
+</svg>

@@ -1,7 +1,7 @@
 require 'fruit'
 
 class FruitFactory
-  constructor :space_holder, :media_loader, :workshop_svg_holder, :physical_factory, :svg_shape_parser
+  constructor :space_holder, :media_loader, :svg_loader, :physical_factory, :svg_shape_parser
   def setup
     @templates = {}
   end
@@ -21,7 +21,7 @@ class FruitFactory
     template = @templates[kind]
     if template.nil?
       # Find the fruit definition in the svg layout
-      fruit_layer = @workshop_svg_holder.get_layer("fruits")
+      fruit_layer = @svg_loader.get_layer_from_file("fruit.svg", "fruit")
       g = fruit_layer.group("game:handle" => kind)
       raise "Can't find a fruit for kind=#{kind}" if g.nil?
 

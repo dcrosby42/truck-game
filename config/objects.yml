@@ -6,6 +6,9 @@ viewport:
 media_loader:
   compose: main_window
 
+svg_loader:
+  compose: media_loader
+
 screen_info:
   compose: main_window
 
@@ -33,6 +36,24 @@ game_master:
   compose: mode_wrangler, level_factory, game_config
 
 game_config:
+
+svg_shape_parser:
+
++truck_level_1:
+  mode:
+    class: LevelMode
+
+  simulation:
+    compose:
+      - mode
+      - space_holder
+
+  space_holder:
+
+  viewport_controller:
+    compose:
+      - simulation
+      - viewport
 
 +workshop:
   mode:
@@ -65,11 +86,10 @@ game_config:
       - media_loader
       - workshop_svg_holder
 
-  svg_shape_parser:
 
   workshop_svg_holder:
     compose:
-      - media_loader
+      - svg_loader
 
   physical_factory:
     compose:
@@ -112,7 +132,7 @@ game_config:
     compose:
       - space_holder
       - media_loader
-      - workshop_svg_holder
+      - svg_loader
       - physical_factory
       - svg_shape_parser
 
