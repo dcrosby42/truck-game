@@ -2,20 +2,16 @@ class AttachmentExperiment
   constructor :workshop_svg_holder, :space_holder, :simulation do
     build_bodies
     @simulation.on :draw_frame do |info|
-      @top_box.draw info
-      @bottom_box.draw info
+      @sliding_door.draw info
     end
 
     @simulation.on :update_space do |info|
       if info.button_down?(Gosu::Button::KbO)
-        @top_box.body.apply_impulse vec2(200,-600), vec2(-10,0)
+        @sliding_door.body.apply_impulse vec2(-400,0), vec2(0,0)
       end
       if info.button_down?(Gosu::Button::KbP)
-        @bottom_box.body.apply_impulse vec2(-200,-600), vec2(10,0)
+        @sliding_door.body.apply_impulse vec2(400,0), vec2(0,0)
       end
-#      if info.letter_down?("]")
-#        @top_box.body.apply_impulse vec2(200,200)
-#      end
     end
   end
 
@@ -34,9 +30,9 @@ class AttachmentExperiment
 #    @top_box = build_box(top_svg_rect)
 #    @bottom_box = build_box(bottom_svg_rect)
 
-    top = -15
-    bottom = 15
+    top = -10
     left = -100
+    bottom = 10
     right = 100
     verts = [
       vec2(left,top),
@@ -44,56 +40,64 @@ class AttachmentExperiment
       vec2(right,bottom),
       vec2(right,top),
     ]
-    @top_box = new_poly_body(verts)
-    @bottom_box = new_poly_body(verts)
+    @sliding_door = new_poly_body(:verts => verts, :group => :terrain)
 
-    # Layout and attach
-    @top_box.move_to(ZeroVec2)
-    @bottom_box.move_to(vec2(0,30))
-    
-#    @joint_a = CP::Joint::Pin.new(
-#      @top_box.body,@bottom_box.body,
-#      vec2(-80,15), vec2(-80,-15)
-#    )
-    @joint_a = CP::Joint::Pivot.new(
-      @top_box.body,@bottom_box.body,
-      vec2(-80,15)
+    top = -10
+    left = -110
+    bottom = 0
+    right = -100
+    verts = [
+      vec2(left,top),
+      vec2(left,bottom),
+      vec2(right,bottom),
+      vec2(right,top),
+    ]
+    moment_of_inertia,mass = Float::Infinity,Float::Infinity
+    @foundation_body = CP::Body.new(mass,moment_of_inertia)
+    @foundation_shape = CP::Shape::Poly.new(@foundation_body, verts, ZeroVec2)
+    @foundation_shape.group = :terrain
+    @space_holder.space.add_shape(@foundation_shape)
+
+    @joint_a = CP::Joint::Groove.new(
+      @foundation_body,          @sliding_door.body,
+      vec2(-300,0),vec2(-100,0), vec2(-100,0)
     )
     @space_holder.space.add_joint(@joint_a)
 
-    @joint_b = CP::Joint::Pivot.new(
-      @top_box.body,@bottom_box.body, 
-      vec2(100,-5)
-      vec2(80,15)
+    @joint_b = CP::Joint::Groove.new(
+      @foundation_body,         @sliding_door.body,
+      vec2(-100,0),vec2(100,0), vec2(100,0)
     )
+    @space_holder.space.add_joint(@joint_b)
+
 #    @joint_b = CP::Joint::Slide.new(
 #      @top_box.body,@bottom_box.body,
 #      vec2(80,20), vec2(80,-10),
 #      0,20
 #    )
-    @space_holder.space.add_joint(@joint_b)
+#    @space_holder.space.add_joint(@joint_b)
 
     # Move them back into play
 #    move = orig_top_center
-    move = vec2(800,250)
-    @top_box.move_by move
-    @bottom_box.move_by move
+    move = vec2(8240,355)
+    @sliding_door.body.p += move
+    @foundation_body.p += move
   end
 
-  def build_box(rect)
-    bounds =  rect.bounds.dup
-    bounds.recenter_on_zero
-    verts = bounds.vertices
-    new_poly_body(verts)
-  end
+#  def build_box(rect)
+#    bounds = rect.bounds.dup
+#    bounds.recenter_on_zero
+#    verts = bounds.vertices
+#    new_poly_body(:verts => verts)
+#  end
 
-  def new_poly_body(verts)
-    PolyBody.new(
+  def new_poly_body(opts)
+    data = {
       :space => @space_holder.space,
-      :verts => verts,
       :draw_polygon => true,
       :mass => 50,
-      :group => :two_boxes
-    )
+      :group => :slider_assembly
+    }.merge(opts)
+    PolyBody.new(data)
   end
 end

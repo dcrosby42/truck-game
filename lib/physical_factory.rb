@@ -1,5 +1,6 @@
 require 'physical_circle'
 require 'physical_poly'
+require 'image_poly'
 
 class PhysicalFactory
   constructor :space_holder
@@ -12,5 +13,11 @@ class PhysicalFactory
     PhysicalPoly.new(opts.merge(:space => @space_holder.space))
   end
 
-end
+  def build_image_poly(opts)
+    image = opts.delete(:image)
+    z = opts.delete(:z_order) || 0
+    poly = build_poly(opts)
+    ImagePoly.new(:physical_poly => poly, :image => image, :z_order => z)
+  end
 
+end

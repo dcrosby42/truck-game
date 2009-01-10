@@ -44,9 +44,9 @@ class CratesController
 
   def drop_fruit(info, name)
     crate = @crate_set[name]
-    fruit = @fruit_factory.send("build_#{name}")
-    fruit.move_to(crate.center_point + vec2(0,50))
-    fruit.location.x += rand(20) - 10
+    fruit = @fruit_factory.new_fruit(name)
+    x = rand(20) - 10
+    fruit.move_to(crate.center + vec2(x,50))
     if info.button_down?(Gosu::Button::KbRightShift)
       fruit.body.apply_impulse(vec2(0,-600),vec2(-15,-5))
     end

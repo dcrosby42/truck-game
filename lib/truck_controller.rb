@@ -50,7 +50,7 @@ class TruckController
   def lookup_truck_start_position
     layer = @workshop_svg_holder.get_layer("positions")
     img = layer.image("game:handle" => "truck_start")
-    img.bounds.center_point
+    img.bounds.center
   end
 
 end

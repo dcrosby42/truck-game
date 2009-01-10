@@ -1,39 +1,41 @@
 class PhysicalPoly
-  attr_reader :body, :shape, :mass
+  include Initializer
+  attr_reader :body, :shape, :mass, :polygon
 
   Defaults = {
+    :space => nil,
+
     # Body stuff
     :location => ZeroVec2,
-    :mass => 50,
+    :mass => 10,
     :angle => 0.0,
+
     # Shape stuff
-    :vertices => [],
+    :polygon => nil,
     :friction => 0.7,
-    :elast => 0.1,
+    :elasticity => 0.1,
     :z_order => 1,
-    :radius => 10,
-    :collision_type => :poly,
+    :collision_type => :physical_poly,
+    :group => nil,
+    :layers => nil
   }
 
   def initialize(opts)
-    opts = Defaults.merge(opts)
-    @vertices = opts[:vertices]
-    @mass = opts[:mass]
-    @group = opts[:group]
+    set_instance_variables(Defaults,opts, :required => [ :space, :polygon ])
+    @vertices = @polygon.vertices
 
     moment_of_inertia = CP::moment_for_poly(@mass, @vertices, vec2(0,0))
     @body =  CP::Body.new(@mass, moment_of_inertia)
-    @body.p = opts[:location]
-    @body.a = opts[:angle]
+    @body.p = @location
+    @body.a = @angle
 
     @shape = CP::Shape::Poly.new(@body, @vertices, vec2(0,0))
-    @shape.collision_type = opts[:collision_type]
-    @shape.group = opts[:group] if opts[:group]
-    @shape.layers = opts[:layers] if opts[:layers]
-    @shape.e = opts[:elast]
-    @shape.u = opts[:friction]
+    @shape.collision_type = @collision_type
+    @shape.group = @group if @group
+    @shape.layers = @layers if @layers
+    @shape.e = @elasticity
+    @shape.u = @friction
 
-    @space = opts[:space]
     @space.add_body(@body)
     @space.add_shape(@shape)
   end
@@ -50,10 +52,26 @@ class PhysicalPoly
   end
 
   def cold_drop(loc)
+    move_to loc
     @body.reset_forces
-    @body.p = loc
     @body.a = 0
     @body.w = 0
     @body.v = ZeroVec2
+  end
+
+  def location
+    @body.p
+  end
+
+  def angle_radians
+    @body.a
+  end
+
+  def move_to(point)
+    @body.p = point
+  end
+
+  def move_by(vec)
+    @body.p += vec
   end
 end

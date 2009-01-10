@@ -14,50 +14,6 @@ class SvgDocument
     Group.new(g)
   end
 
-  class Bounds
-    attr_reader :x, :y, :width, :height, :left, :right, :top, :bottom, :center_point
-    def initialize(x,y,width,height)
-      @x,@y,@width,@height = x,y,width,height
-      calc_edges_and_center
-    end
-
-    def translate(vec)
-      @x += vec.x
-      @y += vec.y
-      calc_edges_and_center
-    end
-
-    def recenter_on_zero
-      @x = @x - @center_point.x
-      @y = @y - @center_point.y
-      calc_edges_and_center
-    end
-
-    def vertices
-      @vertices ||= [
-        vec2( @left,  @top    ),
-        vec2( @left,  @bottom ),
-        vec2( @right, @bottom ),
-        vec2( @right, @top    ),
-      ]
-    end
-
-    def dup
-      Bounds.new(@x,@y,@width,@height)
-    end
-
-    private
-    def calc_edges_and_center
-      @left = @x
-      @top = @y
-      @right = @left + @width
-      @bottom = @top + @height
-      @center_point = vec2(@left + @width/2.0, @top + @height/2.0)
-      @vertices = nil
-    end
-  end
-
-
   module HasBounds
     attr_accessor :bounds
 
@@ -72,7 +28,7 @@ class SvgDocument
       y = @node.attributes["y"].to_f
       width = @node.attributes["width"].to_f
       height = @node.attributes["height"].to_f
-      @bounds = Bounds.new(x,y,width,height)
+      @bounds = Rectangle.new(x,y,width,height)
     end
   end
 

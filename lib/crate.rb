@@ -6,7 +6,7 @@ class Crate
     @icon_picture.draw info
   end
 
-  def center_point
-    @bounds.center_point
+  def center
+    @bounds.center
   end
 end

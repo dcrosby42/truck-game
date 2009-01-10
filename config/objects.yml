@@ -65,6 +65,8 @@ game_config:
       - media_loader
       - workshop_svg_holder
 
+  svg_shape_parser:
+
   workshop_svg_holder:
     compose:
       - media_loader
@@ -111,12 +113,14 @@ game_config:
       - space_holder
       - media_loader
       - workshop_svg_holder
+      - physical_factory
+      - svg_shape_parser
 
-#  attachment_experiment:
-#    compose:
-#      - space_holder
-#      - simulation
-#      - workshop_svg_holder
+  attachment_experiment:
+    compose:
+      - space_holder
+      - simulation
+      - workshop_svg_holder
 
   +dump_truck:
     truck_controls:

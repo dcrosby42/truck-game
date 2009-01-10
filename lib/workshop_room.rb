@@ -41,6 +41,7 @@ class WorkshopRoom
       seg.collision_type = :terrain
       seg.e = elasticity
       seg.u = friction
+      seg.group = :terrain
       @space_holder.space.add_shape(seg)
     end
   end

@@ -98,14 +98,14 @@ class Truck
     wheel_opts = {
       :radius => 30, 
       :mass => 30,
-      :friction => 1,
+      :friction => 1.1,
       :layers => WheelLayer
     }
     @front_wheel = @physical_factory.build_circle(wheel_opts)
     @back_wheel = @physical_factory.build_circle(wheel_opts)
 
     @frame = @physical_factory.build_poly(
-      :vertices => verts_for_rect(80, 20),
+      :polygon => Polygon.new(verts_for_rect(80, 20)),
       :mass => 10,
       :layers => TruckBodyLayer
     )

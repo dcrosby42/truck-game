@@ -59,6 +59,10 @@ class PolyBody
     @body.p
   end
 
+  def angle_radians
+    @body.a
+  end
+
   def move_to(point)
     @body.p = point
   end

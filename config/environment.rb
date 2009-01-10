@@ -38,9 +38,14 @@ require 'gosu_char_id_map'
 
 require 'array_ext'
 require 'chipmunk_numeric_ext'
+require 'chipmunk_vec2_ext'
 require 'debug_drawing'
 
 require 'initializer'
+
+require 'polygon'
+require 'rectangle'
+require 'circle'
 
 DEBUG_SERVER_PORT = 51515
 
