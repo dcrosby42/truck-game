@@ -14,6 +14,7 @@ class Rectangle
     @x += vec.x
     @y += vec.y
     calc_edges_and_center
+    self
   end
 
   def to_polygon
@@ -24,9 +25,9 @@ class Rectangle
         vec2( @right, @bottom ),
         vec2( @right, @top    ),
       ])
-      @polygon.freeze
+      @polygon
     end
-    @polygon
+    @polygon.dup
   end
 
   def dup

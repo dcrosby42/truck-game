@@ -20,6 +20,9 @@ class CratesController
       if info.button_down?(Gosu::Button::KbS)
         drop_fruit info, "strawberry"
       end
+      if info.button_down?(Gosu::Button::KbL)
+        drop_fruit info, "lettuce"
+      end
     end
 
     @simulation.on :draw_frame do |info|

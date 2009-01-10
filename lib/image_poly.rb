@@ -4,7 +4,7 @@ class ImagePoly
   constructor :physical_poly, :image, :z_order
 
   extend Forwardable
-  def_delegators :@physical_poly, :body, :shape, :mass, :world_vertices, :location, :angle_radians, :move_to, :move_by, :cold_drop, :remove_from_space
+  def_delegators :@physical_poly, :body, :shape, :mass, :world_vertices, :location, :angle_radians, :move_to, :move_by, :translate, :cold_drop, :remove_from_space
 
   def draw(info)
     if @image

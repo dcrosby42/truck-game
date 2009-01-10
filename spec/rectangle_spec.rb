@@ -45,6 +45,10 @@ describe Rectangle do
     @rect.center.should == vec2(62,88)
   end
 
+  it "returns self when translated" do
+    @rect.translate(vec2(4,5)).should equal(@rect)
+  end
+
   it "can be duplicated" do
     r = @rect.dup
     r.should_not equal(@rect)
@@ -57,5 +61,16 @@ describe Rectangle do
   it "can be frozen" do
     @rect.freeze
     assert_raise_frozen { @rect.translate(ZeroVec2) }
+  end
+
+  it "can generate a polygon" do
+    polygon = @rect.to_polygon
+    polygon.vertices[0].should == vec2(@rect.left,@rect.top)
+    polygon.vertices[1].should == vec2(@rect.left,@rect.bottom)
+    polygon.vertices[2].should == vec2(@rect.right,@rect.bottom)
+    polygon.vertices[3].should == vec2(@rect.right,@rect.top)
+  end
+  it "won't freeze the generated polygon" do
+    @rect.to_polygon.translate(vec2(2,2))
   end
 end

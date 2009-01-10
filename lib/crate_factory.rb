@@ -9,7 +9,6 @@ class CrateFactory
     crate_layer.groups("game:class" => "crate").each do |g|
       box_picture = build_picture(g, "box", ZOrder::Crate)
       icon_picture = build_picture(g, "icon", ZOrder::CrateIcon)
-
       c = Crate.new(
         :handle => g.game_handle,
         :bounds => box_picture.bounds,

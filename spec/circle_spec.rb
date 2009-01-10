@@ -63,6 +63,10 @@ describe Circle do
     @circle.bounds.center.y.should == -8
   end
 
+  it "returns self when translated" do
+    @circle.translate(vec2(3,4)).should equal(@circle)
+  end
+
   it "can be converted to a polygon" do
     poly = @circle.to_polygon
     poly.should_not be_nil

@@ -116,11 +116,31 @@ game_config:
       - physical_factory
       - svg_shape_parser
 
-  attachment_experiment:
+#  attachment_experiment:
+#    compose:
+#      - space_holder
+#      - simulation
+#      - workshop_svg_holder
+
+  sliders_controller:
+    compose:
+      - simulation
+      - slider_source
+
+  slider_source:
+    compose: 
+      - slider_factory
+      - workshop_svg_holder
+
+  slider_factory:
+    compose:
+      - joint_factory
+      - physical_factory
+      - media_loader
+  
+  joint_factory:
     compose:
       - space_holder
-      - simulation
-      - workshop_svg_holder
 
   +dump_truck:
     truck_controls:

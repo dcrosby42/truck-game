@@ -15,6 +15,7 @@ class Polygon
     end
     freeze_vertices
     calc_bounds_and_center
+    self
   end
 
   def to_polygon

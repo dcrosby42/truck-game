@@ -65,7 +65,7 @@ class WorkshopRoom
         b.x,b.y, top_color,
         a.x,bottom, bottom_color, 
         b.x,bottom, bottom_color, 
-        ZOrder::Background)
+        ZOrder::Terrain)
     end
   end
 

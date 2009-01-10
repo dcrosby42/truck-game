@@ -9,6 +9,7 @@ class PhysicalPoly
     :location => ZeroVec2,
     :mass => 10,
     :angle => 0.0,
+    :as_anchor => false,
 
     # Shape stuff
     :polygon => nil,
@@ -24,7 +25,14 @@ class PhysicalPoly
     set_instance_variables(Defaults,opts, :required => [ :space, :polygon ])
     @vertices = @polygon.vertices
 
-    moment_of_inertia = CP::moment_for_poly(@mass, @vertices, vec2(0,0))
+    moment_of_inertia = nil
+    if @as_anchor
+      moment_of_inertia = Float::Infinity
+      @mass = Float::Infinity
+      @layers = 0
+    else
+      moment_of_inertia = CP::moment_for_poly(@mass, @vertices, vec2(0,0))
+    end
     @body =  CP::Body.new(@mass, moment_of_inertia)
     @body.p = @location
     @body.a = @angle
@@ -36,7 +44,7 @@ class PhysicalPoly
     @shape.e = @elasticity
     @shape.u = @friction
 
-    @space.add_body(@body)
+    @space.add_body(@body) unless @as_anchor
     @space.add_shape(@shape)
   end
 
@@ -74,4 +82,5 @@ class PhysicalPoly
   def move_by(vec)
     @body.p += vec
   end
+  alias_method :translate, :move_by
 end

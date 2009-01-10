@@ -73,6 +73,10 @@ describe Polygon do
     b.bottom.should == 10
   end
 
+  it "returns self when translated" do
+    @poly.translate(vec2(4,5)).should equal(@poly)
+  end
+
   it "returns a self duplicate for to_polygon" do
     p2 = @poly.to_polygon
     p2.vertices.should == @poly.vertices

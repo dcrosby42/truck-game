@@ -13,6 +13,7 @@ class Circle
   def translate(vec)
     @center += vec
     calc_bounds
+    self
   end
   
   def to_polygon(segments=10)
