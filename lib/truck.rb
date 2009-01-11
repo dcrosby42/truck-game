@@ -5,7 +5,7 @@ class Truck
 
   attr_reader :truck_controls
 
-  constructor :main_window, :space_holder, :media_loader, :physical_factory, :simulation, :truck_controls do
+  constructor :space_holder, :media_loader, :physical_factory, :simulation, :truck_controls do
     setup_tracking
     build_parts
     assemble_vehicle
@@ -85,8 +85,6 @@ class Truck
     draw_body info
 
     @bucket.draw info
-
-#    draw_joints
   end
 
   private
@@ -171,20 +169,11 @@ class Truck
     @body_image.draw_rot(loc.x, loc.y, ZOrder::Truck, angle)
   end
 
-#  def draw_joints
-#    draw_cross_at_vec2(@main_window, @frame.body.local2world(@back_axle))
-#    draw_cross_at_vec2(@main_window, @frame.body.local2world(@front_axle))
-#    draw_cross_at_vec2(@main_window, @frame.body.local2world(@bucket_hinge_point))
-#  end
-
   def draw_wheel(info, wheel)
     loc = info.view_point(wheel.body.p)
     ang = radians_to_gosu(wheel.body.a)
     x = loc.x
     y = loc.y
-#    draw_circle(window, x, y, ang, circle.radius)
-#    draw_radius(window, circle)
-
     @wheel_image.draw_rot(x,y,ZOrder::TruckTire, ang)
   end
 
@@ -236,14 +225,14 @@ class Truck
       draw_bucket_image info
     end
 
-    def draw_polygons
-      draw_poly window, @bed_verts
-      draw_poly window, @gate_verts
-      draw_poly window, @gate_top_verts
-      draw_poly window, @front_verts
-      draw_poly window, @top_verts
-      draw_cross_at_vec2(@main_window, pin_point, 0xffff0000)
-    end
+#    def draw_polygons
+#      draw_poly window, @bed_verts
+#      draw_poly window, @gate_verts
+#      draw_poly window, @gate_top_verts
+#      draw_poly window, @front_verts
+#      draw_poly window, @top_verts
+#      draw_cross_at_vec2(@main_window, pin_point, 0xffff0000)
+#    end
 
     def draw_bucket_image(info)
       ang = 270+ radians_to_gosu(@body.a)

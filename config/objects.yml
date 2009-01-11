@@ -6,8 +6,6 @@ viewport:
 media_loader:
   compose: main_window
 
-svg_loader:
-  compose: media_loader
 
 screen_info:
   compose: main_window
@@ -38,6 +36,13 @@ game_master:
 game_config:
 
 svg_shape_parser:
+
+svg_loader:
+  compose: media_loader
+
+picture_factory:
+  compose:
+    - media_loader
 
 +truck_level_1:
   mode:
@@ -103,15 +108,6 @@ svg_shape_parser:
       - workshop_zones_controller
       - workshop_svg_holder
 
-  truck_factory:
-    object_context: this_context
-  
-  rain_controller:
-    compose:
-      - simulation
-      - space_holder
-      - media_loader
-
   crates_controller:
     compose:
       - simulation
@@ -119,14 +115,9 @@ svg_shape_parser:
       - crate_factory
       - fruit_factory
 
-
   crate_factory:
     compose:
       - picture_factory
-
-  picture_factory:
-    compose:
-      - media_loader
 
   fruit_factory:
     compose:
@@ -135,12 +126,6 @@ svg_shape_parser:
       - svg_loader
       - physical_factory
       - svg_shape_parser
-
-#  attachment_experiment:
-#    compose:
-#      - space_holder
-#      - simulation
-#      - workshop_svg_holder
 
   sliders_controller:
     compose:
@@ -162,13 +147,15 @@ svg_shape_parser:
     compose:
       - space_holder
 
+  truck_factory:
+    object_context: this_context
+
   +dump_truck:
     truck_controls:
 
     truck:
       compose:
         - simulation
-        - main_window
         - space_holder
         - media_loader
         - physical_factory
