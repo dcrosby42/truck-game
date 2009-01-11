@@ -1,11 +1,7 @@
 require 'chipmunk'
 
 class SpaceHolder
-  attr_reader :space
-
-  def initialize
-    @space = CP::Space.new
-  end
+  attr_accessor :space
 
   def step(dt=TICK)
     @space.step dt

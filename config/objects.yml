@@ -44,9 +44,12 @@ picture_factory:
   compose:
     - media_loader
 
+space_holder:
+
 +truck_level_1:
   mode:
-    class: LevelMode
+    class: PhysicsLevelMode
+    compose: space_holder
 
   simulation:
     compose:
@@ -62,9 +65,9 @@ picture_factory:
 
 +workshop:
   mode:
-    class: LevelMode
+    class: PhysicsLevelMode
+    compose: space_holder
 
-  space_holder:
 
   viewport_controller:
     compose:

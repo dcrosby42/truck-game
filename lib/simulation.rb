@@ -21,13 +21,10 @@ class Simulation
   extend Publisher
   can_fire :update_frame, :draw_frame, :update_space, :button_down, :button_up, :starting, :started, :stopping, :stopped
 
-  GRAVITY = 900
-  DAMPING = 0.7 
   SUBSTEPS = 3 # how many space updates per main gosu tick
   DT = MainWindow::TICK / SUBSTEPS # time accounted for by a single space update
 
   constructor :mode, :space_holder do
-    configure_space
 
     @mode.on :start do
       fire :starting
@@ -60,13 +57,6 @@ class Simulation
 
   private
     
-  def configure_space
-    space = @space_holder.space
-    space.iterations = 5
-    space.damping = DAMPING
-    space.gravity = vec2(0,GRAVITY)
-  end
-
   # Fire a series of space updates.
   # "info.dt" will be temporarily set to the correct size
   # for these micro updates.

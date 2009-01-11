@@ -1,4 +1,3 @@
-
 class BaseMode
   def start; end
   def button_down(id,update_info); end

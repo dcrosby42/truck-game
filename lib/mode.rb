@@ -1,3 +1,5 @@
+require 'base_mode'
+
 class Mode < BaseMode
   extend Publisher
   can_fire :start, :stop
