@@ -2,6 +2,10 @@ class Rectangle
   attr_reader :x, :y, :width, :height, :left, :right, :top, :bottom, :center
 
   def initialize(x,y,width,height)
+    set x,y,width,height
+  end
+
+  def set(x,y,width,height)
     @x,@y,@width,@height = x,y,width,height
     calc_edges_and_center
   end

@@ -4,7 +4,7 @@ class TerrainFactory
   constructor :svg_loader, :space_holder
 
   def load_from_file(file,layer="ground")
-    g = @svg_loader.get_layer_from_file("terrain_proto.svg", "ground")
+    g = @svg_loader.get_layer_from_file(file, "ground")
     build_from_vertices(g.path.vertices)
   end
 

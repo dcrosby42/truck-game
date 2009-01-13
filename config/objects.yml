@@ -106,6 +106,19 @@ crate_factory:
       - mode
       - space_holder
 
+  truck_level_1_setup:
+    compose:
+      - mode
+      - simulation
+      - terrain_factory
+      - background_factory
+      - dump_truck_factory
+      - crate_factory
+      - viewport_controller
+      - svg_loader
+      - media_loader
+      - physical_factory
+
   viewport_controller:
     compose:
       - simulation
@@ -143,23 +156,6 @@ crate_factory:
       - simulation
       - media_loader
       - svg_loader
-
-# XXX
-#  truck_controller:
-#    compose:
-#      - simulation
-#      - truck_factory
-#      - viewport_controller
-#      - workshop_zones_controller
-#      - svg_loader
-
-#  XXX
-#  crates_controller:
-#    compose:
-#      - simulation
-#      - svg_loader
-#      - crate_factory
-#      - fruit_factory
 
   sliders_controller:
     compose:

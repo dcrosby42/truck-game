@@ -11,4 +11,14 @@ class LevelFactory
     end
   end
 
+  def get_truck_level_1
+    @system_context.within :truck_level_1 do |sub_context|
+      mode = sub_context[:mode]
+      mode.setup_level
+      sub_context.build_everything
+      @debug_server.level_context = sub_context
+      mode
+    end
+  end
+
 end 

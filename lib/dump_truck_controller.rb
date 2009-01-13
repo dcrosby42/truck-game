@@ -2,27 +2,30 @@ class DumpTruckController
   include Gosu
 
   constructor :simulation, :dump_truck, :viewport_controller do
-    @truck_controls = @dump_truck.dump_truck_controls
+    @dump_truck_controls = @dump_truck.dump_truck_controls
 
     @simulation.on :update_frame do |info|
-      @truck_controls.clear
+      @dump_truck_controls.clear
       if info.button_down?(Button::KbLeft)
-        @truck_controls.drive_left = true
+        @dump_truck_controls.drive_left = true
+      end
+      if info.button_down?(Button::KbV)
+        @dump_truck_controls.boost = true
       end
       if info.button_down?(Button::KbRight)
-        @truck_controls.drive_right = true
+        @dump_truck_controls.drive_right = true
       end
       if info.button_down?(Button::KbDown)
-        @truck_controls.brake = true
+        @dump_truck_controls.brake = true
       end
       if info.button_down?(Button::KbZ)
-        @truck_controls.open_bucket = true
+        @dump_truck_controls.open_bucket = true
       end
       if info.button_down?(Button::KbX)
-        @truck_controls.close_bucket = true
+        @dump_truck_controls.close_bucket = true
       end
       if info.button_down?(Button::KbC)
-        @truck_controls.lock_bucket = true
+        @dump_truck_controls.lock_bucket = true
       end
     end
 

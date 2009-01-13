@@ -21,6 +21,10 @@ class SvgDocument
       @bounds.translate(vec) if @bounds
     end
 
+    def center
+      @bounds.center if @bounds
+    end
+
     protected
 
     def set_bounds_from_attributes

@@ -15,6 +15,9 @@ class DumpTruck
 
   def update_space(info)
     power = 60 * info.dt
+    if @dump_truck_controls.boost
+      @frame.body.apply_impulse vec2(100_000*info.dt,0), ZeroVec2
+    end
     if @dump_truck_controls.drive_left
       @front_wheel.body.w -= power
       @back_wheel.body.w -= power
