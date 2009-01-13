@@ -12,4 +12,12 @@ class SvgShapeParser
 
     Polygon.new(verts)
   end
+
+  def path_to_unclosed_polygon(path)
+    if path.nil? or path.vertices.nil?
+      raise "Can't convert SVG path to Polygon: #{path.inspect}"
+    end
+    Polygon.new(path.vertices)
+  end
+
 end

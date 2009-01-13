@@ -1,6 +1,5 @@
 class CratesController
-  constructor :simulation, :workshop_svg_holder, :crate_factory, :fruit_factory do
-    load_crates
+  constructor :simulation, :crate_set, :fruit_factory do
     @fruits = []
     
     @simulation.on :button_down do |id,info|
@@ -33,11 +32,6 @@ class CratesController
   end
 
   private
-
-  def load_crates
-    layer = @workshop_svg_holder.get_layer("crates")
-    @crate_set = @crate_factory.build_crate_set(layer)
-  end
 
   def draw_crates(info)
     @crate_set.each do |img|

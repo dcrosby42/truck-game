@@ -1,5 +1,5 @@
 class SliderSource
-  constructor :workshop_svg_holder, :slider_factory
+  constructor :svg_loader, :slider_factory
 
   def get(name)
     g = sliders_layer.group("game:handle" => "slider1")
@@ -17,6 +17,6 @@ class SliderSource
   end
 
   def sliders_layer
-    @sliders_layer ||= @workshop_svg_holder.get_layer("sliders")
+    @sliders_layer ||= @svg_loader.get_layer_from_file("terrain_proto.svg", "sliders")
   end
 end

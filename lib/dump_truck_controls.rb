@@ -1,4 +1,4 @@
-class TruckControls
+class DumpTruckControls
   attr_accessor :drive_left, :drive_right, :brake, :close_bucket, :open_bucket, :help_jump, :lock_bucket
 
   def clear

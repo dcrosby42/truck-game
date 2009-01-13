@@ -1,17 +1,57 @@
-require 'simple_barrier'
 
 class WorkshopRoom
-  include Gosu
-  include CP
+  constructor :mode, :simulation, :terrain_factory, :background_factory, :dump_truck_factory, :viewport_controller, :workshop_zones_controller, :svg_loader, :crate_factory do
 
-  constructor :mode, :screen_info, :main_window, :space_holder, :media_loader, :workshop_svg_holder do
-    build_terrain
+    @draw_targets = []
+    @update_space_targets = []
+    @update_frame_targets = []
+
+    @terrain = @terrain_factory.load_from_file("terrain_proto.svg")
+    add_to_simulation @terrain
+
+    @background = @background_factory.build(:image_name => "sky.png")
+    add_to_simulation @background
+
+    @dump_truck = @dump_truck_factory.build_dump_truck
+    add_to_simulation @dump_truck
+
+    @dump_truck_controller = @dump_truck_factory.build_controller(
+      :simulation => @simulation,
+      :dump_truck => @dump_truck,
+      :viewport_controller => @viewport_controller
+    )
+
+    @viewport_controller.follow_target = @dump_truck
+    @viewport_controller.follow_the_target
+
+    put_dump_truck_in_start_position
     
-    @sky = @media_loader.load_image("sky.png")
+    @workshop_zones_controller.watch(@dump_truck)
 
-    @mode.on :draw do |info|
-      draw_background info
-      draw_terrain info
+    @crate_controller = @crate_factory.build_controller(
+      @simulation,
+      @svg_loader.get_layer_from_file("terrain_proto.svg", "crates")
+    )
+
+    #
+    # Event dispatching
+    #
+    @simulation.on :update_frame do |info|
+      @update_frame_targets.each do |t|
+        t.update_frame info
+      end
+    end
+
+    @simulation.on :update_space do |info|
+      @update_space_targets.each do |t|
+        t.update_space info
+      end
+    end
+
+    @simulation.on :draw_frame do |info|
+      @draw_targets.each do |t|
+        t.draw info
+      end
     end
 
     # Level control
@@ -24,55 +64,29 @@ class WorkshopRoom
       end
     end
   end
-
-  private
-
-  def build_terrain
-    g = @workshop_svg_holder.get_layer("ground")
-    @terrain_verts = g.path.vertices
-    
-    moment_of_inertia,mass = Float::Infinity,Float::Infinity
-    elasticity = 0.1
-    friction = 0.7
-    thickness = 0.5
-    @terrain_body = Body.new(mass,moment_of_inertia)
-    @terrain_verts.each_segment do |a,b|
-      seg = Shape::Segment.new(@terrain_body, a,b, thickness)
-      seg.collision_type = :terrain
-      seg.e = elasticity
-      seg.u = friction
-      seg.group = :terrain
-      @space_holder.space.add_shape(seg)
+  
+  def add_to_simulation(obj)
+    if obj.respond_to?(:add_to_simulation)
+      obj.add_to_simulation(@simulation)
+    else
+      if obj.respond_to?(:draw)
+        @draw_targets << obj
+      end
+      if obj.respond_to?(:update_space)
+        @update_space_targets << obj
+      end
+      if obj.respond_to?(:update_frame)
+        @update_frame_targets << obj
+      end
     end
   end
 
-  def draw_terrain(info)
-    color = 0xff336633
-    top_color = color
-    bottom_color = 0xff333300
-
-    bottom = 800
-    @terrain_verts.each_segment do |a,b|
-      a = info.view_point(a)
-      b = info.view_point(b)
-
-#      info.window.draw_line(
-#        a.x, a.y, color, 
-#        b.x, b.y, color, 
-#        ZOrder::Debug)
-      info.window.draw_quad(
-        a.x,a.y, top_color,
-        b.x,b.y, top_color,
-        a.x,bottom, bottom_color, 
-        b.x,bottom, bottom_color, 
-        ZOrder::Terrain)
-    end
+  def put_dump_truck_in_start_position
+    layer = @svg_loader.get_layer_from_file("terrain_proto.svg", "positions")
+    img = layer.image("game:handle" => "truck_start")
+    start_position = img.bounds.center
+  
+    @dump_truck.cold_drop start_position
   end
 
-  def draw_background(info)
-    h = info.screen_height
-    w = info.screen_width
-    color = 0xffffffff
-    @sky.draw_as_quad(0,0,color, w,0,color, 0,800,color, w,800,color, ZOrder::Background)
-  end
 end

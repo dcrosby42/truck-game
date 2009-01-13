@@ -1,7 +1,8 @@
 require 'crate'
+require 'crates_controller'
 
 class CrateFactory
-  constructor :picture_factory
+  constructor :picture_factory, :fruit_factory
 
   def build_crate_set(crate_layer)
     crate_set = CrateSet.new
@@ -25,6 +26,14 @@ class CrateFactory
     svg_image = g.image("game:class" => game_class)
     svg_image.translate g.translation
     @picture_factory.build(:svg_image => svg_image, :z_order => z)
+  end
+
+  def build_controller(simulation, crate_layer)
+    CratesController.new(
+      :crate_set => build_crate_set(crate_layer),
+      :simulation => simulation,
+      :fruit_factory => @fruit_factory
+    )
   end
 
   class CrateSet

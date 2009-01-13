@@ -1,49 +1,51 @@
-class Truck
+class DumpTruck
   include Gosu
   include CP
   include DebugDrawing
 
-  attr_reader :truck_controls
+  attr_reader :dump_truck_controls
 
-  constructor :space_holder, :media_loader, :physical_factory, :simulation, :truck_controls do
+  constructor :space_holder, :media_loader, :physical_factory, :dump_truck_controls do
     setup_tracking
     build_parts
     assemble_vehicle
     lock_bucket
     load_resources
+  end
 
-    @simulation.on :update_space do |info|
-      power = 60 * info.dt
-      if @truck_controls.drive_left
-        @front_wheel.body.w -= power
-        @back_wheel.body.w -= power
-      end
-      if @truck_controls.drive_right
-        @front_wheel.body.w += power
-        @back_wheel.body.w += power
-      end
-      if @truck_controls.brake
-        @front_wheel.body.w = 0
-        @back_wheel.body.w = 0
-      end
-      if @truck_controls.open_bucket
-        unlock_bucket
-        @bucket.body.apply_impulse vec2(-30_000*info.dt,0), ZeroVec2
+  def update_space(info)
+    power = 60 * info.dt
+    if @dump_truck_controls.drive_left
+      @front_wheel.body.w -= power
+      @back_wheel.body.w -= power
+    end
+    if @dump_truck_controls.drive_right
+      @front_wheel.body.w += power
+      @back_wheel.body.w += power
+    end
+    if @dump_truck_controls.brake
+      @front_wheel.body.w = 0
+      @back_wheel.body.w = 0
+    end
+    if @dump_truck_controls.open_bucket
+      unlock_bucket
+      @bucket.body.apply_impulse vec2(-30_000*info.dt,0), ZeroVec2
 #        @bucket.body.apply_force vec2(-30_000*info.dt,0), ZeroVec2
-      elsif @truck_controls.close_bucket
-        @bucket.body.apply_impulse vec2(10_000*info.dt,0), vec2(0,-150)
+    elsif @dump_truck_controls.close_bucket
+      @bucket.body.apply_impulse vec2(10_000*info.dt,0), vec2(0,-150)
 #        @bucket.body.apply_force vec2(10_000*info.dt,0), vec2(0,-150)
-      elsif @truck_controls.lock_bucket
-        lock_bucket
-      else
-        @bucket.body.reset_forces
-      end
-
+    elsif @dump_truck_controls.lock_bucket
+      lock_bucket
+    else
+      @bucket.body.reset_forces
     end
+  end
 
-    @simulation.on :draw_frame do |info|
-      draw info
-    end
+  def draw(info)
+    draw_wheel info, @front_wheel
+    draw_wheel info, @back_wheel
+    draw_body info
+    @bucket.draw info
   end
 
   def location
@@ -78,14 +80,6 @@ class Truck
     end
   end
 
-  def draw(info)
-    draw_wheel info, @front_wheel
-    draw_wheel info, @back_wheel
-
-    draw_body info
-
-    @bucket.draw info
-  end
 
   private
 

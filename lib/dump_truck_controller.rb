@@ -1,16 +1,8 @@
-class TruckController
+class DumpTruckController
   include Gosu
 
-  constructor :simulation, :truck_factory, :viewport_controller, :workshop_zones_controller, :workshop_svg_holder do
-
-    @truck = @truck_factory.build_truck
-    @truck_controls = @truck.truck_controls
-    @truck.cold_drop lookup_truck_start_position
-
-    @viewport_controller.follow_target = @truck
-    @viewport_controller.follow_the_target
-
-    @workshop_zones_controller.watch(@truck)
+  constructor :simulation, :dump_truck, :viewport_controller do
+    @truck_controls = @dump_truck.dump_truck_controls
 
     @simulation.on :update_frame do |info|
       @truck_controls.clear
@@ -38,19 +30,13 @@ class TruckController
       case id
       when Button::KbTab
         if info.button_down?(Button::KbRightShift)
-          @truck.cold_drop @truck.location + vec2(100,-100)
+          @dump_truck.cold_drop @dump_truck.location + vec2(100,-100)
         else
-          @truck.cold_drop @truck.location + vec2(0,-100)
+          @dump_truck.cold_drop @dump_truck.location + vec2(0,-100)
         end
       end
     end
 
-  end
-
-  def lookup_truck_start_position
-    layer = @workshop_svg_holder.get_layer("positions")
-    img = layer.image("game:handle" => "truck_start")
-    img.bounds.center
   end
 
 end

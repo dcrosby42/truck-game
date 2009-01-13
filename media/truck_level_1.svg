@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:game="http://crosby/gosu/truck"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10000"
+   height="768"
+   id="svg2865"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="truck_level_1.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs2867">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2873" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="1631.974"
+     inkscape:cy="395.71429"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     inkscape:window-width="1386"
+     inkscape:window-height="741"
+     inkscape:window-x="6"
+     inkscape:window-y="22" />
+  <metadata
+     id="metadata2870">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="ground"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 11.313704,-4.1606069 L 37.045098,-4.177881 L 62.493368,-13.501787 L 85.128129,-21.59027 L 117.44677,-3.6193662 L 136.48149,68.702447 L 134.1029,187.17774 L 123.68045,299.79068 L 139.00534,381.06266 L 167.22392,424.39244 L 188.0681,457.14038 L 201.91198,476.42788 L 230.6891,497.58718 L 277.61,519.85261 L 341.89137,538.68239 L 406.75372,550.12375 L 512.54922,554.38618 L 688.16707,554.779 L 925.74935,555.31593 L 1136.5614,555.91087 L 1301.9117,557.22937 L 1415.1615,563.48098 L 1517.8832,573.01263 L 1591.5806,579.43694 L 1673.0099,566.35151 L 1768.6271,533.40801 L 1876.5288,492.2606 L 1966.0037,457.86375 L 2054.6216,436.11571 L 2154.017,430.72507 L 2272.7332,434.75686 L 2372.7058,443.66722 L 2459.0508,455.75401 L 2523.6514,471.34587 L 2579.586,491.08089 L 2619.3759,507.79062 L 2672.8635,519.09839 L 2758.1555,516.4098 L 2871.5367,503.1429 L 2971.3355,489.43369 L 3049.717,493.38141 L 3095.7669,508.47637 L 3127.0738,520.93645 L 3144.3022,528.86668 L 3173.4951,536.06897 L 3229.784,546.22527 L 3306.7176,556.92246 L 3374.2651,562.06337 L 3419.6373,543.34122 L 3440.2222,515.39859 L 3452.5778,492.14517 L 3457.4904,474.507 L 3463.4919,438.96432 L 3470.9334,364.40193 L 3473.9847,256.84844 L 3470.7018,160.56412 L 3445.2811,98.870146 L 3412.4265,73.08294 L 3386.2102,57.479047 L 3369.6754,52.137422 L 3351.3,52.405899 L 3331.5229,58.90865 L 3312.1041,72.50771 L 3294.8514,89.416517 L 3278.147,106.14805"
+       id="path2906"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccz" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="positions">
+    <image
+       style="display:inline"
+       y="282.23593"
+       x="149.43103"
+       id="image6192"
+       height="123"
+       width="165"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/art/truck_placeholder.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/art/truck_placeholder.png"
+       game:handle="truck_start" />
+  </g>
+</svg>

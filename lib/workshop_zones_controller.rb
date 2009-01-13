@@ -1,5 +1,5 @@
 class WorkshopZonesController
-  constructor :simulation, :media_loader, :workshop_svg_holder do
+  constructor :simulation, :media_loader, :svg_loader do
     load_zones
     @watched = []
 
@@ -20,7 +20,7 @@ class WorkshopZonesController
 
   private
   def load_zones
-    g = @workshop_svg_holder.get_layer("zones")
+    g = @svg_loader.get_layer_from_file("terrain_proto.svg", "zones")
     @zones = g.rects.map do |rect|
       Zone.new(rect)
     end

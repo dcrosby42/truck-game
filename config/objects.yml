@@ -46,6 +46,56 @@ picture_factory:
 
 space_holder:
 
+physical_factory:
+  compose:
+    - space_holder
+
+joint_factory:
+  compose:
+    - space_holder
+
+dump_truck_factory:
+  object_context: this_context
+
+terrain_factory:
+  compose:
+    - svg_loader
+    - space_holder
+
+background_factory:
+  compose:
+    - media_loader
+
+
+slider_factory:
+  compose:
+    - joint_factory
+    - physical_factory
+    - media_loader
+
+fruit_factory:
+  compose:
+    - space_holder
+    - media_loader
+    - svg_loader
+    - physical_factory
+    - svg_shape_parser
+
+crate_factory:
+  compose:
+    - picture_factory
+    - fruit_factory
+
++dump_truck:
+  dump_truck_controls:
+
+  dump_truck:
+    compose:
+      - space_holder
+      - media_loader
+      - physical_factory
+      - dump_truck_controls
+
 +truck_level_1:
   mode:
     class: PhysicsLevelMode
@@ -56,8 +106,6 @@ space_holder:
       - mode
       - space_holder
 
-  space_holder:
-
   viewport_controller:
     compose:
       - simulation
@@ -67,7 +115,6 @@ space_holder:
   mode:
     class: PhysicsLevelMode
     compose: space_holder
-
 
   viewport_controller:
     compose:
@@ -82,53 +129,37 @@ space_holder:
   workshop_room:
     compose:
       - mode
-      - screen_info
-      - main_window
-      - space_holder
-      - media_loader
-      - workshop_svg_holder
+      - simulation
+      - terrain_factory
+      - background_factory
+      - dump_truck_factory
+      - crate_factory
+      - viewport_controller
+      - workshop_zones_controller
+      - svg_loader
 
   workshop_zones_controller:
     compose:
       - simulation
       - media_loader
-      - workshop_svg_holder
-
-
-  workshop_svg_holder:
-    compose:
       - svg_loader
 
-  physical_factory:
-    compose:
-      - space_holder
+# XXX
+#  truck_controller:
+#    compose:
+#      - simulation
+#      - truck_factory
+#      - viewport_controller
+#      - workshop_zones_controller
+#      - svg_loader
 
-  truck_controller:
-    compose:
-      - simulation
-      - truck_factory
-      - viewport_controller
-      - workshop_zones_controller
-      - workshop_svg_holder
-
-  crates_controller:
-    compose:
-      - simulation
-      - workshop_svg_holder
-      - crate_factory
-      - fruit_factory
-
-  crate_factory:
-    compose:
-      - picture_factory
-
-  fruit_factory:
-    compose:
-      - space_holder
-      - media_loader
-      - svg_loader
-      - physical_factory
-      - svg_shape_parser
+#  XXX
+#  crates_controller:
+#    compose:
+#      - simulation
+#      - svg_loader
+#      - crate_factory
+#      - fruit_factory
 
   sliders_controller:
     compose:
@@ -138,28 +169,5 @@ space_holder:
   slider_source:
     compose: 
       - slider_factory
-      - workshop_svg_holder
+      - svg_loader
 
-  slider_factory:
-    compose:
-      - joint_factory
-      - physical_factory
-      - media_loader
-  
-  joint_factory:
-    compose:
-      - space_holder
-
-  truck_factory:
-    object_context: this_context
-
-  +dump_truck:
-    truck_controls:
-
-    truck:
-      compose:
-        - simulation
-        - space_holder
-        - media_loader
-        - physical_factory
-        - truck_controls
