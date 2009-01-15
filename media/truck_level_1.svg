@@ -34,6 +34,62 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 526.18109 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2517"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2584"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2673"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2740"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2807"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2874"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2941"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3014"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -45,11 +101,11 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="2905.5106"
-     inkscape:cy="479.22482"
+     inkscape:zoom="1"
+     inkscape:cx="952.60393"
+     inkscape:cy="476.64488"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer4"
      showgrid="false"
      inkscape:window-width="1386"
      inkscape:window-height="741"
@@ -72,86 +128,9 @@
      id="layer1">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 33.941128,165.54501 L 56.652855,221.77384 L 80.767953,278.4791 L 106.52415,334.94343 L 134.15919,390.4495 L 163.91079,444.27996 L 196.01669,495.71747 L 230.71461,544.04467 L 268.2423,588.54423 L 308.83748,628.49879 L 352.73788,663.19102 L 400.18124,691.90357 L 451.40529,713.91909 L 506.64776,728.52023 L 566.14638,734.98966 L 630.13888,732.61003 L 698.86299,720.66399 L 769.67255,718.96178 L 840.42075,716.63738 L 911.11395,713.7386 L 981.75852,710.31322 L 1052.3608,706.40907 L 1122.9272,702.07393 L 1193.464,697.35561 L 1263.9777,692.30192 L 1334.4745,686.96065 L 1404.9609,681.3796 L 1475.4432,675.60659 L 1545.9277,669.68941 L 1616.4209,663.67586 L 1686.929,657.61374 L 1757.4585,651.55087 L 1828.0157,645.53503 L 1903.4943,630.08366 L 1978.7692,619.08017 L 2053.8776,612.04473 L 2128.8566,608.49749 L 2203.7436,607.95862 L 2278.5757,609.94827 L 2353.3903,613.98659 L 2428.2245,619.59376 L 2503.1156,626.28992 L 2578.1008,633.59523 L 2653.2173,641.02986 L 2728.5025,648.11395 L 2803.9935,654.36768 L 2879.7276,659.31119 L 2955.742,662.46464 L 3032.0739,663.3482 L 3098.2072,670.42971 L 3163.2221,672.80441 L 3227.2712,671.02638 L 3290.5076,665.64973 L 3353.084,657.22853 L 3415.1532,646.31688 L 3476.8681,633.46887 L 3538.3815,619.23858 L 3599.8463,604.1801 L 3661.4153,588.84752 L 3723.2413,573.79494 L 3785.4772,559.57644 L 3848.2758,546.7461 L 3911.7899,535.85802 L 3976.1723,527.46629 L 4041.576,522.125 L 4103.192,516.48563 L 4164.294,516.69044 L 4224.9633,521.81472 L 4285.2809,530.93378 L 4345.328,543.12291 L 4405.1857,557.45741 L 4464.9351,573.01258 L 4524.6575,588.86371 L 4584.4338,604.08611 L 4644.3453,617.75507 L 4704.4731,628.94588 L 4764.8983,636.73385 L 4825.702,640.19428 L 4886.9654,638.40245 L 4948.7696,630.43368 L 5011.1958,615.36325 L 5078.098,596.0657 L 5141.9838,569.7225 L 5203.373,537.62212 L 5262.7854,501.05304 L 5320.7411,461.30372 L 5377.7599,419.66265 L 5434.3617,377.41831 L 5491.0663,335.85917 L 5548.3937,296.2737 L 5606.8638,259.95038 L 5666.9964,228.17769 L 5729.3115,202.2441 L 5794.3289,183.43809 L 5862.5686,173.04814 L 5934.5504,172.36272 L 6010.7942,182.6703 L 6074.1464,172.44996 L 6134.4114,170.25951 L 6191.7415,175.44722 L 6246.289,187.36132 L 6298.2062,205.35006 L 6347.6456,228.7617 L 6394.7593,256.94447 L 6439.6998,289.24663 L 6482.6194,325.01643 L 6523.6704,363.6021 L 6563.0052,404.35191 L 6600.776,446.6141 L 6637.1352,489.73691 L 6672.2352,533.0686 L 6706.2283,575.95741 L 6739.2668,617.75159 L 6814.3818,630.13732 L 6888.8511,634.8104 L 6962.7724,632.86881 L 7036.2433,625.41053 L 7109.3616,613.53356 L 7182.2248,598.33588 L 7254.9306,580.91549 L 7327.5768,562.37035 L 7400.2609,543.79848 L 7473.0806,526.29784 L 7546.1335,510.96643 L 7619.5174,498.90223 L 7693.3299,491.20324 L 7767.6687,488.96743 L 7842.6314,493.29281 L 7918.3156,505.27734 L 7985.3682,509.81142 L 8052.4191,514.09789 L 8119.465,518.20591 L 8186.5027,522.20464 L 8253.5289,526.16323 L 8320.5404,530.15083 L 8387.5338,534.23661 L 8454.5059,538.4897 L 8521.4534,542.97927 L 8588.3732,547.77447 L 8655.2618,552.94446 L 8722.1161,558.55839 L 8788.9328,564.68542 L 8855.7086,571.39469 L 8922.4403,578.75537 L 8989.1246,586.83661 L 9042.0581,578.42926 L 9094.2433,566.96852 L 9145.781,553.00092 L 9196.772,537.07298 L 9247.3172,519.73124 L 9297.5173,501.52223 L 9347.4733,482.99247 L 9397.2859,464.68851 L 9447.0559,447.15686 L 9496.8843,430.94405 L 9546.8718,416.59663 L 9597.1193,404.66111 L 9647.7277,395.68404 L 9698.7976,390.21193 L 9750.4301,388.79132 L 9802.7258,391.96874 L 9811.7183,371.2191 L 9820.6924,350.24758 L 9829.5757,329.06605 L 9838.2964,307.6864 L 9846.7822,286.1205 L 9854.961,264.38023 L 9862.7607,242.47747 L 9870.1092,220.42408 L 9876.9343,198.23196 L 9883.1641,175.91297 L 9888.7263,153.47899 L 9893.5488,130.9419 L 9897.5596,108.31358 L 9900.6864,85.60591 L 9902.8573,62.830755 L 9904,39.999999 L 9980,37 L 10211,37"
-       id="path2393"
-       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer3"
-     inkscape:label="boxes">
-    <image
-       y="586.7843"
-       x="2997.0103"
-       id="image2481"
-       height="75"
-       width="75"
-       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
-       xlink:href="wood_box_75.png"
-       game:class="wood_box" />
-    <image
-       game:class="wood_box"
-       xlink:href="wood_box_75.png"
-       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
-       width="75"
-       height="75"
-       id="image2487"
-       x="2921.4709"
-       y="584.54169" />
-    <image
-       game:class="wood_box"
-       xlink:href="wood_box_75.png"
-       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
-       width="75"
-       height="75"
-       id="image2489"
-       x="2922.0569"
-       y="506.54166" />
-    <image
-       y="122.46139"
-       x="2931.3704"
-       id="image2491"
-       height="75"
-       width="75"
-       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
-       xlink:href="wood_box_75.png"
-       game:class="wood_box" />
-    <image
-       y="431.9559"
-       x="2921.873"
-       id="image2493"
-       height="75"
-       width="75"
-       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
-       xlink:href="wood_box_75.png"
-       game:class="wood_box" />
-    <image
-       game:class="wood_box"
-       xlink:href="wood_box_75.png"
-       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
-       width="75"
-       height="75"
-       id="image2495"
-       x="2939.613"
-       y="198.9782" />
-    <image
-       y="354.54169"
-       x="2929.3459"
-       id="image2497"
-       height="75"
-       width="75"
-       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
-       xlink:href="wood_box_75.png"
-       game:class="wood_box" />
-    <image
-       game:class="wood_box"
-       xlink:href="wood_box_75.png"
-       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
-       width="75"
-       height="75"
-       id="image2499"
-       x="2936.6008"
-       y="276.54169" />
+       d="M 6576,-444 L 6482.7521,-392.54619 L 6432.4823,-350.35327 L 6378,-288 L 6348.6811,-206.95136 L 6338.7094,-149.2716 L 6328.2315,-79.135709 L 6327.1392,30.215532 L 6307.2654,170.3243 L 6081.6142,196.79584 L 6034.2717,202.90229 L 5976,203.79899 L 5899.1287,202.7132 L 5822.2573,201.62742 L 5745.386,200.54163 L 5668.5147,199.45584 L 5591.6434,198.37006 L 5514.772,197.28427 L 5437.9007,196.19849 L 5365.0294,201.1127 L 5289.9264,215.15505 L 5213.6895,237.62283 L 5121.566,266.09043 L 5021.984,298.83442 L 4923.3711,334.13135 L 4834.1553,370.2578 L 4762.7645,405.49033 L 4623.8619,462.6974 L 4498.7304,492.61515 L 4380.5157,500.21513 L 4287.8191,493.29731 L 4196.9693,489.91441 L 4093.7521,495.67378 L 3955.0925,527.28454 L 3803.1707,564.68629 L 3680.663,573.53617 L 3498.6073,574.4974 L 3280.3918,575.85637 L 3049.4052,577.41421 L 2829.0357,578.97205 L 2642.6719,580.33102 L 2513.7021,581.29225 L 2465.5147,581.65685 L 2313.1209,557.94924 L 2187.0447,520.0553 L 2078.3368,473.14575 L 1978.0479,422.39131 L 1877.2287,372.96269 L 1766.9298,330.03061 L 1638.2019,298.7658 L 1482.0958,284.33896 L 1321.8477,284.46049 L 1163.1907,284.7809 L 1005.5942,285.23389 L 848.52814,285.75317 L 821.46205,382.27246 L 735.06294,425.38571 L 638.66384,422.49896 L 555.26474,360.61221 L 535.86563,284.72545 L 375.20854,287.04586 L 214.96047,287.16739 L 213.65432,227.21367 L 209.1943,158.83796 L 200.76806,86.987368 L 187.56321,16.609049 L 168.76742,-47.349865 L 143.5683,-99.942237 L 111.15351,-136.22093 L 70.710682,-151.23881 L -67.882251,-159.72409"
+       id="path2592"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -159,13 +138,104 @@
      inkscape:label="positions">
     <image
        style="display:inline"
-       y="451.57401"
-       x="3195.0176"
+       y="68.829712"
+       x="5917.4727"
        id="image6192"
        height="123"
        width="165"
        sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/art/truck_placeholder.png"
        xlink:href="/Users/crosby/svn/crosby/gosu/truck/art/truck_placeholder.png"
        game:handle="truck_start" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="crates">
+    <g
+       style="display:inline"
+       id="g2578"
+       game:class="crate"
+       game:handle="apple"
+       transform="translate(2883.4507,127.30248)">
+      <image
+         xlink:href="wood_box.png"
+         sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box.png"
+         width="150"
+         height="150"
+         id="image2479"
+         x="340.54932"
+         y="11.697517"
+         game:class="box" />
+      <image
+         xlink:href="apple_100.png"
+         sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/apple_100.png"
+         width="100"
+         height="100"
+         id="image2531"
+         x="364.68231"
+         y="36.697517"
+         game:class="icon" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="scenery">
+    <image
+       y="69.020195"
+       x="5615.6743"
+       id="image2586"
+       height="130"
+       width="118"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_arrow_sign_left.png"
+       xlink:href="wood_arrow_sign_left.png" />
+    <image
+       y="106.16784"
+       x="5665.7354"
+       id="image2675"
+       height="25"
+       width="25"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/apple_small.png"
+       xlink:href="apple_small.png" />
+    <image
+       y="456"
+       x="3134.5"
+       id="image2809"
+       height="130"
+       width="91"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_sign.png"
+       xlink:href="wood_sign.png" />
+    <image
+       y="464"
+       x="3159.5"
+       id="image2943"
+       height="50"
+       width="45"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/letter_a.png"
+       xlink:href="letter_a.png" />
+    <image
+       xlink:href="wood_arrow_sign_left.png"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_arrow_sign_left.png"
+       width="118"
+       height="130"
+       id="image2947"
+       x="2938.2305"
+       y="456.51471" />
+    <image
+       xlink:href="wood_sign.png"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_sign.png"
+       width="91"
+       height="130"
+       id="image2949"
+       x="870.5"
+       y="156" />
+    <image
+       y="164.73886"
+       x="895.7486"
+       id="image3016"
+       height="51"
+       width="43"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/letter_z.png"
+       xlink:href="letter_z.png" />
   </g>
 </svg>

@@ -1,5 +1,5 @@
 class TruckLevel1Setup
-  constructor :mode, :simulation, :terrain_factory, :background_factory, :dump_truck_factory, :viewport_controller, :svg_loader, :crate_factory, :physical_factory, :media_loader do
+  constructor :mode, :simulation, :terrain_factory, :background_factory, :dump_truck_factory, :viewport_controller, :svg_loader, :crate_factory, :physical_factory, :media_loader, :scenery_factory do
 
     @draw_targets = []
     @update_space_targets = []
@@ -27,13 +27,13 @@ class TruckLevel1Setup
 
     put_dump_truck_in_start_position
     
-    setup_boxes
+#    setup_boxes
+    
 #    @workshop_zones_controller.watch(@dump_truck)
 
-#    @crate_controller = @crate_factory.build_controller(
-#      @simulation,
-#      @svg_loader.get_layer_from_file(@level_config_svg, "crates")
-#    )
+    setup_crates
+
+    setup_scenery
 
     #
     # Event dispatching
@@ -84,17 +84,23 @@ class TruckLevel1Setup
   end
 
   def put_dump_truck_in_start_position
-    layer = @svg_loader.get_layer_from_file(@level_config_svg, "positions")
+    layer = get_layer("positions")
     img = layer.image("game:handle" => "truck_start")
     start_position = img.bounds.center
   
     @dump_truck.cold_drop start_position
   end
 
+  def setup_crates
+    @crates_controller = @crate_factory.build_controller(
+      @simulation,
+      get_layer("crates")
+    )
+  end
+
   def setup_boxes
     @boxes = []
-    layer = @svg_loader.get_layer_from_file(@level_config_svg, "boxes")
-    box_svgs = layer.images("game:class" => "wood_box")
+    box_svgs = get_layer("boxes").images("game:class" => "wood_box")
     box_svgs.each do |box_def|
       loc = box_def.center
       bounds = box_def.bounds.dup
@@ -113,6 +119,15 @@ class TruckLevel1Setup
     @boxes.each do |box|
       add_to_simulation box
     end
+  end
+
+  def setup_scenery
+    @scenery = @scenery_factory.build(get_layer("scenery"))
+    add_to_simulation @scenery
+  end
+
+  def get_layer(layer_name)
+    layer = @svg_loader.get_layer_from_file(@level_config_svg, layer_name)
   end
 
 end

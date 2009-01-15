@@ -86,6 +86,10 @@ crate_factory:
     - picture_factory
     - fruit_factory
 
+scenery_factory:
+  compose:
+    - picture_factory
+
 +dump_truck:
   dump_truck_controls:
 
@@ -118,6 +122,7 @@ crate_factory:
       - svg_loader
       - media_loader
       - physical_factory
+      - scenery_factory
 
   viewport_controller:
     compose:

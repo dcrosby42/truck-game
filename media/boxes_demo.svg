@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:game="http://crosby/gosu/truck"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10000"
+   height="768"
+   id="svg2865"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="truck_level_1.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs2867">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2873" />
+    <inkscape:perspective
+       id="perspective2479"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="2905.5106"
+     inkscape:cy="479.22482"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer3"
+     showgrid="false"
+     inkscape:window-width="1386"
+     inkscape:window-height="741"
+     inkscape:window-x="6"
+     inkscape:window-y="22" />
+  <metadata
+     id="metadata2870">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="ground"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 33.941128,165.54501 L 56.652855,221.77384 L 80.767953,278.4791 L 106.52415,334.94343 L 134.15919,390.4495 L 163.91079,444.27996 L 196.01669,495.71747 L 230.71461,544.04467 L 268.2423,588.54423 L 308.83748,628.49879 L 352.73788,663.19102 L 400.18124,691.90357 L 451.40529,713.91909 L 506.64776,728.52023 L 566.14638,734.98966 L 630.13888,732.61003 L 698.86299,720.66399 L 769.67255,718.96178 L 840.42075,716.63738 L 911.11395,713.7386 L 981.75852,710.31322 L 1052.3608,706.40907 L 1122.9272,702.07393 L 1193.464,697.35561 L 1263.9777,692.30192 L 1334.4745,686.96065 L 1404.9609,681.3796 L 1475.4432,675.60659 L 1545.9277,669.68941 L 1616.4209,663.67586 L 1686.929,657.61374 L 1757.4585,651.55087 L 1828.0157,645.53503 L 1903.4943,630.08366 L 1978.7692,619.08017 L 2053.8776,612.04473 L 2128.8566,608.49749 L 2203.7436,607.95862 L 2278.5757,609.94827 L 2353.3903,613.98659 L 2428.2245,619.59376 L 2503.1156,626.28992 L 2578.1008,633.59523 L 2653.2173,641.02986 L 2728.5025,648.11395 L 2803.9935,654.36768 L 2879.7276,659.31119 L 2955.742,662.46464 L 3032.0739,663.3482 L 3098.2072,670.42971 L 3163.2221,672.80441 L 3227.2712,671.02638 L 3290.5076,665.64973 L 3353.084,657.22853 L 3415.1532,646.31688 L 3476.8681,633.46887 L 3538.3815,619.23858 L 3599.8463,604.1801 L 3661.4153,588.84752 L 3723.2413,573.79494 L 3785.4772,559.57644 L 3848.2758,546.7461 L 3911.7899,535.85802 L 3976.1723,527.46629 L 4041.576,522.125 L 4103.192,516.48563 L 4164.294,516.69044 L 4224.9633,521.81472 L 4285.2809,530.93378 L 4345.328,543.12291 L 4405.1857,557.45741 L 4464.9351,573.01258 L 4524.6575,588.86371 L 4584.4338,604.08611 L 4644.3453,617.75507 L 4704.4731,628.94588 L 4764.8983,636.73385 L 4825.702,640.19428 L 4886.9654,638.40245 L 4948.7696,630.43368 L 5011.1958,615.36325 L 5078.098,596.0657 L 5141.9838,569.7225 L 5203.373,537.62212 L 5262.7854,501.05304 L 5320.7411,461.30372 L 5377.7599,419.66265 L 5434.3617,377.41831 L 5491.0663,335.85917 L 5548.3937,296.2737 L 5606.8638,259.95038 L 5666.9964,228.17769 L 5729.3115,202.2441 L 5794.3289,183.43809 L 5862.5686,173.04814 L 5934.5504,172.36272 L 6010.7942,182.6703 L 6074.1464,172.44996 L 6134.4114,170.25951 L 6191.7415,175.44722 L 6246.289,187.36132 L 6298.2062,205.35006 L 6347.6456,228.7617 L 6394.7593,256.94447 L 6439.6998,289.24663 L 6482.6194,325.01643 L 6523.6704,363.6021 L 6563.0052,404.35191 L 6600.776,446.6141 L 6637.1352,489.73691 L 6672.2352,533.0686 L 6706.2283,575.95741 L 6739.2668,617.75159 L 6814.3818,630.13732 L 6888.8511,634.8104 L 6962.7724,632.86881 L 7036.2433,625.41053 L 7109.3616,613.53356 L 7182.2248,598.33588 L 7254.9306,580.91549 L 7327.5768,562.37035 L 7400.2609,543.79848 L 7473.0806,526.29784 L 7546.1335,510.96643 L 7619.5174,498.90223 L 7693.3299,491.20324 L 7767.6687,488.96743 L 7842.6314,493.29281 L 7918.3156,505.27734 L 7985.3682,509.81142 L 8052.4191,514.09789 L 8119.465,518.20591 L 8186.5027,522.20464 L 8253.5289,526.16323 L 8320.5404,530.15083 L 8387.5338,534.23661 L 8454.5059,538.4897 L 8521.4534,542.97927 L 8588.3732,547.77447 L 8655.2618,552.94446 L 8722.1161,558.55839 L 8788.9328,564.68542 L 8855.7086,571.39469 L 8922.4403,578.75537 L 8989.1246,586.83661 L 9042.0581,578.42926 L 9094.2433,566.96852 L 9145.781,553.00092 L 9196.772,537.07298 L 9247.3172,519.73124 L 9297.5173,501.52223 L 9347.4733,482.99247 L 9397.2859,464.68851 L 9447.0559,447.15686 L 9496.8843,430.94405 L 9546.8718,416.59663 L 9597.1193,404.66111 L 9647.7277,395.68404 L 9698.7976,390.21193 L 9750.4301,388.79132 L 9802.7258,391.96874 L 9811.7183,371.2191 L 9820.6924,350.24758 L 9829.5757,329.06605 L 9838.2964,307.6864 L 9846.7822,286.1205 L 9854.961,264.38023 L 9862.7607,242.47747 L 9870.1092,220.42408 L 9876.9343,198.23196 L 9883.1641,175.91297 L 9888.7263,153.47899 L 9893.5488,130.9419 L 9897.5596,108.31358 L 9900.6864,85.60591 L 9902.8573,62.830755 L 9904,39.999999 L 9980,37 L 10211,37"
+       id="path2393"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="boxes">
+    <image
+       y="586.7843"
+       x="2997.0103"
+       id="image2481"
+       height="75"
+       width="75"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
+       xlink:href="wood_box_75.png"
+       game:class="wood_box" />
+    <image
+       game:class="wood_box"
+       xlink:href="wood_box_75.png"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
+       width="75"
+       height="75"
+       id="image2487"
+       x="2921.4709"
+       y="584.54169" />
+    <image
+       game:class="wood_box"
+       xlink:href="wood_box_75.png"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
+       width="75"
+       height="75"
+       id="image2489"
+       x="2922.0569"
+       y="506.54166" />
+    <image
+       y="122.46139"
+       x="2931.3704"
+       id="image2491"
+       height="75"
+       width="75"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
+       xlink:href="wood_box_75.png"
+       game:class="wood_box" />
+    <image
+       y="431.9559"
+       x="2921.873"
+       id="image2493"
+       height="75"
+       width="75"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
+       xlink:href="wood_box_75.png"
+       game:class="wood_box" />
+    <image
+       game:class="wood_box"
+       xlink:href="wood_box_75.png"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
+       width="75"
+       height="75"
+       id="image2495"
+       x="2939.613"
+       y="198.9782" />
+    <image
+       y="354.54169"
+       x="2929.3459"
+       id="image2497"
+       height="75"
+       width="75"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
+       xlink:href="wood_box_75.png"
+       game:class="wood_box" />
+    <image
+       game:class="wood_box"
+       xlink:href="wood_box_75.png"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
+       width="75"
+       height="75"
+       id="image2499"
+       x="2936.6008"
+       y="276.54169" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="positions">
+    <image
+       style="display:inline"
+       y="451.57401"
+       x="3195.0176"
+       id="image6192"
+       height="123"
+       width="165"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/art/truck_placeholder.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/art/truck_placeholder.png"
+       game:handle="truck_start" />
+  </g>
+</svg>
