@@ -4,6 +4,8 @@ class TruckLevel1Setup
     @draw_targets = []
     @update_space_targets = []
     @update_frame_targets = []
+    @button_down_targets = []
+    @button_up_targets = []
 
     @level_config_svg = "truck_level_1.svg"
 
@@ -60,6 +62,18 @@ class TruckLevel1Setup
       end
     end
 
+    @simulation.on :button_down do |id,info|
+      @button_down_targets.each do |t|
+        t.button_down id, info
+      end
+    end
+
+    @simulation.on :button_up do |id,info|
+      @button_up_targets.each do |t|
+        t.button_up id, info
+      end
+    end
+    
     # Level control
     @mode.on :button_down do |id,info|
       case id
@@ -83,6 +97,12 @@ class TruckLevel1Setup
       end
       if obj.respond_to?(:update_frame)
         @update_frame_targets << obj
+      end
+      if obj.respond_to?(:button_down)
+        @button_down_targets << obj
+      end
+      if obj.respond_to?(:button_up)
+        @button_up_targets << obj
       end
     end
   end

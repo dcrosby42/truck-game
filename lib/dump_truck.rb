@@ -110,7 +110,8 @@ class DumpTruck
     @frame = @physical_factory.build_poly(
       :polygon => Polygon.new(verts_for_rect(80, 20)),
       :mass => 10,
-      :layers => TruckBodyLayer
+      :layers => TruckBodyLayer,
+      :collision_type => :dump_truck_frame
     )
 
     @bucket = build_bucket
@@ -133,6 +134,10 @@ class DumpTruck
     make_pivot_joint(@back_wheel.body, @frame.body, @back_axle)
     make_pivot_joint(@bucket.body, @frame.body, @bucket_hinge_point)
     @bucket_lock_joint = Joint::Pivot.new(@bucket.body, @frame.body, @bucket_lock_point)
+
+#    @space_holder.space.add_collision_func(:zdump_bucket, :dump_truck_frame) do
+#      puts "CLINK! #{Time.now}"
+#    end
   end
 
   def layout_parts
@@ -375,6 +380,7 @@ class DumpTruck
     def build_and_add_shape(verts)
       shape = Shape::Poly.new(@body, verts, vec2(0,0))
       shape.layers = TruckBodyLayer
+      shape.collision_type = :dump_bucket
       @space.add_shape(shape)
     end
 
