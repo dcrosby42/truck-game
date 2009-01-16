@@ -37,6 +37,8 @@ class TruckLevel1Setup
 
 #    setup_paddle_experiment
 
+#    setup_bg_music
+
     #
     # Event dispatching
     #
@@ -183,6 +185,14 @@ class TruckLevel1Setup
     @simulation.on :draw_frame do |info|
       puts box.body.f
       @shape_drawing.draw_physical_poly(info, box)
+    end
+  end
+
+  def setup_bg_music
+    @bg_music = @media_loader.load_song("04retrib.it")
+    @bg_music.volume = 0.5
+    @simulation.on :update_frame do |info|
+      @bg_music.play unless @bg_music.playing?
     end
   end
 
