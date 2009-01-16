@@ -9,7 +9,7 @@ class WorkshopRoom
     @terrain = @terrain_factory.load_from_file("terrain_proto.svg")
     add_to_simulation @terrain
 
-    @background = @background_factory.build(:image_name => "sky.png")
+    @background = @background_factory.build(:image_name => "repeating_sky.png")
     add_to_simulation @background
 
     @dump_truck = @dump_truck_factory.build_dump_truck

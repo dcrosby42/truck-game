@@ -1,7 +1,7 @@
 class UpdateInfo
   constructor :main_window, :viewport
 
-  attr_accessor :dt
+  attr_accessor :dt, :viewport
 
   def window
     @main_window
