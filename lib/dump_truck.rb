@@ -19,14 +19,17 @@ class DumpTruck
       @frame.body.apply_impulse vec2(100_000*info.dt,400), ZeroVec2
     end
     if @dump_truck_controls.drive_left
+      play_acceleration_sound
       @front_wheel.body.w -= power
       @back_wheel.body.w -= power
     end
     if @dump_truck_controls.drive_right
+      play_acceleration_sound
       @front_wheel.body.w += power
       @back_wheel.body.w += power
     end
     if @dump_truck_controls.brake
+      play_brake_sound
       @front_wheel.body.w = 0
       @back_wheel.body.w = 0
     end
@@ -44,6 +47,10 @@ class DumpTruck
     end
   end
 
+  def update_frame(info)
+    play_sounds
+  end
+
   def draw(info)
     draw_wheel info, @front_wheel
     draw_wheel info, @back_wheel
@@ -58,6 +65,7 @@ class DumpTruck
   def cold_drop(point)
     layout_parts
     move_parts point
+    @play_start_sound = true
   end
 
   def unlock_bucket
@@ -158,6 +166,10 @@ class DumpTruck
   def load_resources
     @wheel_image = @media_loader.load_image("truck_tire.png")
     @body_image = @media_loader.load_image("truck_cab.png")
+    @engine_idle_sound = @media_loader.load_sample("truck_idle.wav")
+    @acceleration_sound = @media_loader.load_sample("truck_accel_short.wav")
+    @brake_sound = @media_loader.load_sample("truck_air_brake.wav")
+    @start_sound = @media_loader.load_sample("truck_start.wav")
   end
 
   def draw_body(info)
@@ -198,6 +210,46 @@ class DumpTruck
       vec2( right, bottom ),
       vec2( right, top    ),
     ]
+  end
+
+  def play_acceleration_sound
+    @play_acceleration_sound = true
+  end
+
+  def play_brake_sound
+    if @frame.body.v.x.abs > 50
+      @play_brake_sound = true
+    end
+  end
+
+  def play_sounds
+    if @current_acceleration_sample and !@current_acceleration_sample.playing?
+      @current_acceleration_sample = nil
+    end
+    if @current_idle_sample and !@current_idle_sample.playing?
+      @current_idle_sample = nil
+    end
+    if @current_brake_sample and !@current_brake_sample.playing?
+      @current_brake_sample = nil
+    end
+
+    if @play_start_sound
+#      @current_brake_sample = @brake_sound.play unless @current_brake_sample
+      @start_sound.play
+      @play_start_sound = false
+    end
+    if @play_brake_sound
+      @current_brake_sample = @brake_sound.play unless @current_brake_sample
+      @play_brake_sound = false
+    end
+
+    if @play_acceleration_sound 
+      @current_acceleration_sample = @acceleration_sound.play unless @current_acceleration_sample
+      @play_acceleration_sound = false
+    else
+      @current_acceleration_sample.stop if @current_acceleration_sample
+      @current_idle_sample = @engine_idle_sound.play(1,1) unless @current_idle_sample
+    end
   end
 
   def build_bucket
