@@ -90,6 +90,8 @@ scenery_factory:
   compose:
     - picture_factory
 
+shape_drawing:
+
 +dump_truck:
   dump_truck_controls:
 
@@ -123,6 +125,8 @@ scenery_factory:
       - media_loader
       - physical_factory
       - scenery_factory
+      - joint_factory
+      - shape_drawing
 
   viewport_controller:
     compose:

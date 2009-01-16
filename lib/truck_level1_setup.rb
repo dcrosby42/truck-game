@@ -1,5 +1,5 @@
 class TruckLevel1Setup
-  constructor :mode, :simulation, :terrain_factory, :background_factory, :dump_truck_factory, :viewport_controller, :svg_loader, :crate_factory, :physical_factory, :media_loader, :scenery_factory do
+  constructor :mode, :simulation, :terrain_factory, :background_factory, :dump_truck_factory, :viewport_controller, :svg_loader, :crate_factory, :physical_factory, :media_loader, :scenery_factory, :joint_factory, :shape_drawing do
 
     @draw_targets = []
     @update_space_targets = []
@@ -34,6 +34,8 @@ class TruckLevel1Setup
     setup_crates
 
     setup_scenery
+
+#    setup_paddle_experiment
 
     #
     # Event dispatching
@@ -128,6 +130,60 @@ class TruckLevel1Setup
 
   def get_layer(layer_name)
     layer = @svg_loader.get_layer_from_file(@level_config_svg, layer_name)
+  end
+
+  def setup_paddle_experiment
+    return
+    svg_rect = get_layer("proto").rect("game:handle" => "paddle")
+    polygon = svg_rect.bounds.to_polygon
+    loc = polygon.center
+    polygon.translate(-loc)
+    box = @physical_factory.build_poly(
+      :polygon => polygon, 
+      :location => loc, 
+      :mass => 10,
+      :group => :exp)
+    anchor = @physical_factory.build_poly(
+      :as_anchor => true, 
+      :polygon => Rectangle.new(-5,-5,10,10).to_polygon, 
+      :location => loc, 
+      :group => :exp)
+    pivot = @joint_factory.new_pivot(
+      :body_a => anchor.body,
+      :body_b => box.body,
+      :pivot_point => loc,
+      :auto_add => true
+    )
+
+    @simulation.on :button_down do |id,info|
+      case id
+      when Gosu::Button::KbP
+        puts "PUSH ON RIGHT"
+        box.body.apply_force(vec2(0,-100), vec2(50,0))
+      when Gosu::Button::KbU
+        puts "PUSH ON LEFT"
+        box.body.apply_force(vec2(0,-100), vec2(-50,0))
+      when Gosu::Button::KbY
+        puts "RESET"
+        box.body.reset_forces
+      end
+    end
+
+#    @simulation.on :update_space do |info|
+#      if info.button_down?(Gosu::Button::KbP)
+#        box.body.apply_force(vec2(0,-100), vec2(50,0))
+#      end
+#      if info.button_down?(Gosu::Button::KbU)
+#        box.body.apply_force(vec2(0,-100), vec2(-50,0))
+#      end
+#      if info.button_down?(Gosu::Button::KbY)
+#      end
+#    end
+
+    @simulation.on :draw_frame do |info|
+      puts box.body.f
+      @shape_drawing.draw_physical_poly(info, box)
+    end
   end
 
 end

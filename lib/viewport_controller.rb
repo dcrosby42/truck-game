@@ -31,7 +31,8 @@ class ViewportController
           @viewport.y -= 10
         end
       elsif @follow and @follow_target
-        pt = @follow_target.location + vec2(100,-200)
+#        pt = @follow_target.location + vec2(100,-200) # more space to the right
+        pt = @follow_target.location + vec2(0,-200) # h centered
         dest_x = pt.x - (@viewport.width / 2.0)
         dest_y = pt.y - (@viewport.height / 2.0)
         

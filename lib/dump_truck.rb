@@ -91,7 +91,7 @@ class DumpTruck
 
   def build_parts
     wheel_opts = {
-      :radius => 30, 
+      :radius => 27, 
       :mass => 30,
       :friction => 1.1,
       :layers => WheelLayer
