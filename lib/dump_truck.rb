@@ -20,6 +20,7 @@ class DumpTruck
     end
     if @dump_truck_controls.drive_left
       play_acceleration_sound
+      play_safety_beep
       @front_wheel.body.w -= power
       @back_wheel.body.w -= power
     end
@@ -49,6 +50,7 @@ class DumpTruck
 
   def update_frame(info)
     play_sounds
+    freefall if @frame.body.v.y > 1500
   end
 
   def draw(info)
@@ -91,8 +93,14 @@ class DumpTruck
     end
   end
 
-
   private
+
+  def freefall
+    unless @freefall
+      @freefall = true
+      @goofy = true
+    end
+  end
 
   WheelLayer     = 1 << 0
   TruckBodyLayer = 1 << 1
@@ -175,6 +183,8 @@ class DumpTruck
     @acceleration_sound = @media_loader.load_sample("truck_accel_short.wav")
     @brake_sound = @media_loader.load_sample("truck_air_brake.wav")
     @start_sound = @media_loader.load_sample("truck_start.wav")
+    @goofy_shriek = @media_loader.load_sample("goofyshriek.wav")
+    @safety_beep = @media_loader.load_sample("truck_beep.wav")
   end
 
   def draw_body(info)
@@ -227,9 +237,16 @@ class DumpTruck
     end
   end
 
+  def play_safety_beep
+    @play_safety_beep = true
+  end
+
   def play_sounds
     if @current_acceleration_sample and !@current_acceleration_sample.playing?
       @current_acceleration_sample = nil
+    end
+    if @current_safety_beep_sample and !@current_safety_beep_sample.playing?
+      @current_safety_beep_sample = nil
     end
     if @current_idle_sample and !@current_idle_sample.playing?
       @current_idle_sample = nil
@@ -254,6 +271,18 @@ class DumpTruck
     else
       @current_acceleration_sample.stop if @current_acceleration_sample
       @current_idle_sample = @engine_idle_sound.play(1,1) unless @current_idle_sample
+    end
+
+    if @play_safety_beep
+      @current_safety_beep_sample = @safety_beep.play unless @current_safety_beep_sample
+      @play_safety_beep = false
+    else
+      @current_safety_beep_sample.stop if @current_safety_beep_sample
+    end
+
+    if @goofy
+      @goofy_shriek.play
+      @goofy = false
     end
   end
 
@@ -310,6 +339,7 @@ class DumpTruck
       @body.w = 0
       @body.v = ZeroVec2
     end
+
 
     private
     def draw_poly(window, local_verts)
