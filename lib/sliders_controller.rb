@@ -1,43 +1,33 @@
+require 'slider_machine'
+
 class SlidersController
-  constructor :simulation, :slider_source do
+  constructor :simulation, :slider_source, :media_loader do
     load_sliders
 
     @simulation.on :draw_frame do |info|
       @slider1.draw info
     end
 
+    @simulation.on :button_down do |id,info|
+      if id == Gosu::Button::Kb0
+        @slider_machine1.close_hatch
+      end
+      if id == Gosu::Button::Kb9
+        @slider_machine1.open_hatch
+      end
+    end
+
     @simulation.on :update_space do |info|
-      if info.button_down?(Gosu::Button::KbP)
-#        @slider1.lock_closed
-      end
-      if info.button_down?(Gosu::Button::KbO)
-        @slider1.close
-      end
-      if info.button_down?(Gosu::Button::KbI)
-        @slider1.open
-      end
-#      if info.button_down?(Gosu::Button::KbU)
-#        @slider1.lock_open
-#      end
-#      @closer1.update_space(info)
+      @slider_machine1.update_space(info)
     end
   end
 
-#  @simulation.on :button_down do |id,info|
-#    case id
-#    when Gosu::Button::KbO
-#      @closer1.close
-#    end
-#  end
-
   def load_sliders
     @slider1 = @slider_source.get("slider1")
-#    @closer1 = SliderCloser.new(@simulation, @slider1)
+
+    move_sound = @media_loader.load_sample("slider_servo.wav")
+    lock_sound = @media_loader.load_sample("clunk.wav")
+    @slider_machine1 = SliderMachine.new(:slider => @slider1, :move_sound => move_sound, :lock_sound => lock_sound)
   end
 
-#  def SliderCloser
-#    def initialize(slider)
-#      @slider = slider
-#    end
-#  end
 end

@@ -170,6 +170,7 @@ shape_drawing:
     compose:
       - simulation
       - slider_source
+      - media_loader
 
   slider_source:
     compose: 

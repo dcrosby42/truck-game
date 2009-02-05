@@ -57,16 +57,19 @@ class SliderFactory
       :body_b => anchor.body,
       :pivot_point => right_pt
     )
-#    open_latch = @joint_factory.new_pivot(
-#      :body_a => slider_door.body,
-#      :body_b => anchor.body,
-#      :pivot_point => left_pt
-#    )
 
+    slider_door.translate(vec2(-200,0))
+    open_latch = @joint_factory.new_pivot(
+      :body_a => slider_door.body,
+      :body_b => anchor.body,
+      :pivot_point => left_pt
+    )
+    slider_door.translate(vec2(200,0))
+    
     slider = Slider.new(
       :door => slider_door,
       :anchor => anchor,
-#      :open_latch => open_latch,
+      :open_latch => open_latch,
       :closed_latch => closed_latch,
       :grooves => [ groove_a, groove_b ]
     )
