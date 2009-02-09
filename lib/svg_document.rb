@@ -38,12 +38,19 @@ class SvgDocument
 
   module HasTranslation
     def translation
-      transform = @node.attributes["transform"]
-      if transform and transform =~ /translate\(\s*(.+?)\s*,\s*(.+?\)\s*)/
-        vec2($1.to_f, ty = $2.to_f)
-      else
-        ZeroVec2
+      unless @translation
+        transform = @node.attributes["transform"]
+        if transform and transform =~ /translate\(\s*(.+?)\s*,\s*(.+?\)\s*)/
+          @translation = vec2($1.to_f, ty = $2.to_f)
+        else
+          @translation = ZeroVec2
+        end
       end
+      @translation
+    end
+
+    def add_translation(trans)
+      @translation = translation + trans
     end
   end
 
@@ -91,10 +98,19 @@ class SvgDocument
     end
 
     def groups(opts={})
-      inst_from_xpath "g", Group, opts
+      if String === opts
+        opts = { "game:class" => opts }
+      end
+      inst_from_xpath("g", Group, opts)
+      inst_from_xpath("g", Group, opts).each do |g|
+        g.add_translation(self.translation)
+      end
     end
 
     def group(opts={})
+      if String === opts
+        opts = { "game:handle" => opts }
+      end
       groups(opts).first
     end
 

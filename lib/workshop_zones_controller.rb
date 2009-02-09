@@ -1,3 +1,4 @@
+require 'zone'
 class WorkshopZonesController
   constructor :simulation, :media_loader, :svg_loader do
     load_zones
@@ -36,30 +37,4 @@ class WorkshopZonesController
 #    end
   end
 
-  class Zone
-    def initialize(rect)
-      @rect = rect
-      @bounds = @rect.bounds
-      @center_x = @bounds.x + (@bounds.width / 2.0)
-      @center_y = @bounds.y + (@bounds.height / 2.0)
-      @radius = @bounds.width / 2.0
-    end
-
-    def contains_point?(loc)
-      Gosu::distance(@center_x,@center_y, loc.x, loc.y) <= @radius
-    end
-
-    def draw(info)
-      top = info.view_y(@bounds.y)
-      bottom = top + @bounds.height
-      left = info.view_x(@bounds.x)
-      right = left + @bounds.width
-      color = 0x660000ff
-      info.window.draw_quad(left,top,color,
-                            right,top,color,
-                            left,bottom,color,
-                            right,bottom,color,
-                            ZOrder::Debug)
-    end
-  end
 end

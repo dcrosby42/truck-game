@@ -11,8 +11,6 @@ class Background
     vwidth = viewport.width
     vtop = viewport.y * 0.33
     vheight = viewport.height
-#    bottom = top+viewport.height
-#    right = left+viewport.width
 
     
     x_ratio = (vwidth / @width)
@@ -27,19 +25,5 @@ class Background
       end
     end
 
-#    (1 + (vwidth / @width)).times do |i|
-#      x = -(vleft % @width)
-
-#    y = (vtop / @height
-    
-#    bottom = info.screen_height
-#    right = info.screen_width
-#    h = info.screen_height
-#    w = info.screen_width
-#    @image.draw_as_quad(0,0,color, 
-#                        w,0,color, 
-#                        0,800,color, 
-#                        w,800,color, 
-#                        ZOrder::Background)
   end
 end

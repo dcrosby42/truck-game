@@ -81,16 +81,31 @@ fruit_factory:
     - physical_factory
     - svg_shape_parser
 
+fruitiverse:
+
 crate_factory:
   compose:
     - picture_factory
     - fruit_factory
+    - fruitiverse
 
 scenery_factory:
   compose:
     - picture_factory
 
 shape_drawing:
+
+depot_factory:
+  compose:
+    - media_loader
+    - slider_factory
+    - fruitiverse
+    - picture_factory
+
+depot_collision_manager:
+  compose:
+    - space_holder
+    - fruitiverse
 
 +dump_truck:
   dump_truck_controls:
@@ -156,24 +171,8 @@ shape_drawing:
       - background_factory
       - dump_truck_factory
       - crate_factory
+      - depot_factory
+      - depot_collision_manager
       - viewport_controller
-      - workshop_zones_controller
-      - svg_loader
-
-  workshop_zones_controller:
-    compose:
-      - simulation
-      - media_loader
-      - svg_loader
-
-  sliders_controller:
-    compose:
-      - simulation
-      - slider_source
-      - media_loader
-
-  slider_source:
-    compose: 
-      - slider_factory
       - svg_loader
 

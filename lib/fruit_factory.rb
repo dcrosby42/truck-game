@@ -8,13 +8,19 @@ class FruitFactory
 
   def new_fruit(kind)
     template = get_template(kind)
-    @physical_factory.build_image_poly(
+    image_poly = @physical_factory.build_image_poly(
       :image => template.image,
       :z_order => ZOrder::Fruit,
       :polygon => template.polygon,
       :mass => 1,
-      :elasticity => 0.0
+      :elasticity => 0.0,
+      :collision_type => :fruit
     )
+    fruit = Fruit.new(
+      :kind => kind,
+      :image_poly => image_poly
+    )
+    fruit
   end
 
   def get_template(kind)

@@ -3,16 +3,19 @@ require 'slider'
 class SliderFactory
   constructor :physical_factory, :media_loader, :joint_factory
 
-  def build_slider(opts)
-    #:polygon, :image_name, :anchor_position
-    polygon = opts[:polygon]
-    home = polygon.center
+  def build_left_slider(slider_g)
+    svg_image = slider_g.image
+    image_name = svg_image.image_name
+    rect = svg_image.bounds
+    rect.translate(slider_g.translation)
+    polygon = rect.to_polygon
     
     # Recenter on 0,0
+    home = polygon.center
     polygon.translate(-home)
 
     # Slider door
-    image = @media_loader.load_image(opts[:image_name], true)
+    image = @media_loader.load_image(image_name, true)
     slider_door = @physical_factory.build_image_poly(
       :polygon => polygon,
       :image => image,
@@ -73,6 +76,7 @@ class SliderFactory
       :closed_latch => closed_latch,
       :grooves => [ groove_a, groove_b ]
     )
+    slider.lock_closed
 
     slider.translate(home)
     slider

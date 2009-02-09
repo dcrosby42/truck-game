@@ -1,6 +1,15 @@
 
 class WorkshopRoom
-  constructor :mode, :simulation, :terrain_factory, :background_factory, :dump_truck_factory, :viewport_controller, :workshop_zones_controller, :svg_loader, :crate_factory do
+  constructor :mode,
+    :simulation,
+    :terrain_factory,
+    :background_factory,
+    :dump_truck_factory,
+    :viewport_controller,
+    :svg_loader,
+    :depot_factory,
+    :depot_collision_manager,
+    :crate_factory do
 
     @draw_targets = []
     @update_space_targets = []
@@ -26,12 +35,20 @@ class WorkshopRoom
 
     put_dump_truck_in_start_position
     
-    @workshop_zones_controller.watch(@dump_truck)
-
     @crate_controller = @crate_factory.build_controller(
       @simulation,
       @svg_loader.get_layer_from_file("terrain_proto.svg", "crates")
     )
+
+    depots_layer = @svg_loader.get_layer_from_file("terrain_proto.svg", "depots")
+    depot = @depot_factory.build(
+      :depot_config => depots_layer.group("my_depot"),
+      :vehicle => @dump_truck
+    )
+#    @depot_collision_manager.manage(depot)
+    add_to_simulation depot
+
+
 
     #
     # Event dispatching

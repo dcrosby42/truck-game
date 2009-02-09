@@ -1,6 +1,5 @@
 class CratesController
-  constructor :simulation, :crate_set, :fruit_factory do
-    @fruits = []
+  constructor :simulation, :crate_set, :fruit_factory, :fruitiverse do
     
     @simulation.on :button_down do |id,info|
       case id
@@ -47,23 +46,16 @@ class CratesController
     if info.button_down?(Gosu::Button::KbRightShift)
       fruit.body.apply_impulse(vec2(0,-600),vec2(-15,-5))
     end
-    @fruits << fruit
-
-    while @fruits.size > 400
-      @fruits.shift.remove_from_space
-    end
+    @fruitiverse.add(fruit)
+    @fruitiverse.cap_size(400)
   end
 
   def draw_fruits(info)
-    @fruits.each do |fruit|
-      fruit.draw info
-    end
+    @fruitiverse.draw(info)
   end
 
   def clear_fruits
-    while !@fruits.empty?
-      @fruits.shift.remove_from_space
-    end
+    @fruitiverse.cap_size(0)
   end
 
 end

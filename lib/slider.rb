@@ -27,7 +27,11 @@ class Slider
     @open_latch.add_to_space
     @locked_open = true
   end
-#
+
+  def locked_open?
+    @locked_open == true
+  end
+
   def unlock_open
     @open_latch.remove_from_space
     @locked_open = false
@@ -38,6 +42,11 @@ class Slider
     @closed_latch.add_to_space
     @locked_closed = true
   end
+
+  def locked_closed?
+    @locked_closed == true
+  end
+
 
   def unlock_closed
     @closed_latch.remove_from_space

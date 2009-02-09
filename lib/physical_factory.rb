@@ -13,6 +13,14 @@ class PhysicalFactory
     PhysicalPoly.new(opts.merge(:space => @space_holder.space))
   end
 
+  def build_normalized_poly_in_place(opts)
+    polygon = opts[:polygon]
+    loc = polygon.center
+    polygon.translate(-loc)
+    opts[:location] ||= loc
+    build_poly(opts)
+  end
+
   def build_image_poly(opts)
     image = opts.delete(:image)
     z = opts.delete(:z_order) || 0
