@@ -13,7 +13,7 @@ class Fruitiverse
   end
 
   def cap_size(size)
-    while @fruits.size > 400
+    while @fruits.size > size
       @fruits.shift.remove_from_space
     end
   end

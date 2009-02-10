@@ -41,13 +41,15 @@ class WorkshopRoom
     )
 
     depots_layer = @svg_loader.get_layer_from_file("terrain_proto.svg", "depots")
-    depot = @depot_factory.build(
-      :depot_config => depots_layer.group("my_depot"),
-      :vehicle => @dump_truck
-    )
-#    @depot_collision_manager.manage(depot)
-    add_to_simulation depot
-
+    [ "lettuce", "apple", "strawberry", "banana" ].each do |fruit|
+      depot_g = depots_layer.group("#{fruit}_depot")
+      next unless depot_g
+      depot = @depot_factory.build(
+        :depot_config => depot_g,
+        :vehicle => @dump_truck
+      )
+      add_to_simulation depot
+    end
 
 
     #

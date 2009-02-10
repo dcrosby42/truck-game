@@ -64,11 +64,15 @@ class SvgDocument
     end
 
     def game_class
-      @node.attributes['game:class']
+      game_attribute :class
     end
 
     def game_handle
-      @node.attributes['game:handle']
+      game_attribute :handle
+    end
+
+    def game_attribute(attr)
+      @node.attributes["game:#{attr}"]
     end
   end
 

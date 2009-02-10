@@ -8214,6 +8214,20 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 526.18109 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective33754"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective33843"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -8266,7 +8280,10 @@
      inkscape:label="stuff">
     <g
        id="g11780"
-       transform="translate(-835.8455,-135.05682)">
+       transform="matrix(0.6113105,0,0,0.6113105,182.55053,222.82804)"
+       inkscape:export-filename="/Users/crosby/svn/crosby/gosu/truck/media/depot_sign.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
 			<g
    id="g11782">
 				<polygon
@@ -13464,7 +13481,7 @@
 		</g>
     <g
        id="g15110"
-       transform="translate(18.8675,129.08868)">
+       transform="translate(-583.1325,-33.91132)">
 			<g
    id="g15112">
 				<path
@@ -18644,5 +18661,135 @@
    style="fill:#4d321b" />
 
 		</g>
+    <image
+       y="909.36218"
+       x="170.5"
+       id="image33756"
+       height="30"
+       width="35"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png" />
+    <image
+       y="907.36218"
+       x="203.5"
+       id="image33760"
+       height="30"
+       width="35"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png" />
+    <image
+       y="898.36218"
+       x="140.5"
+       id="image33762"
+       height="38"
+       width="35"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png" />
+    <image
+       y="909.36218"
+       x="227.5"
+       id="image33764"
+       height="30"
+       width="35"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png" />
+    <image
+       y="886.86218"
+       x="189"
+       id="image33766"
+       height="30"
+       width="35"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png" />
+    <image
+       y="884.86218"
+       x="222"
+       id="image33768"
+       height="30"
+       width="35"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png" />
+    <image
+       y="875.86218"
+       x="159"
+       id="image33770"
+       height="38"
+       width="35"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png" />
+    <image
+       y="886.86218"
+       x="246"
+       id="image33772"
+       height="30"
+       width="35"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png" />
+    <image
+       y="713.14954"
+       x="-572.92981"
+       id="image33774"
+       height="30"
+       width="35"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       transform="matrix(0.6973744,-0.716707,0.716707,0.6973744,0,0)" />
+    <image
+       y="711.14954"
+       x="-539.92981"
+       id="image33776"
+       height="30"
+       width="35"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       transform="matrix(0.6973744,-0.716707,0.716707,0.6973744,0,0)" />
+    <image
+       y="702.14954"
+       x="-602.92981"
+       id="image33778"
+       height="38"
+       width="35"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       transform="matrix(0.6973744,-0.716707,0.716707,0.6973744,0,0)" />
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:0.40201005;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect34627"
+       width="125"
+       height="37"
+       x="426"
+       y="692.36218"
+       ry="11.628572"
+       inkscape:export-filename="/Users/crosby/svn/crosby/gosu/truck/media/depot_sign_placard.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="799.91705"
+       x="-205.68211"
+       id="image33780"
+       height="29.666132"
+       width="34.631332"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_small.png"
+       transform="matrix(0.6894464,-0.7243367,0.7089858,0.7052227,0,0)" />
+    <image
+       y="417.86218"
+       x="-91"
+       id="image33845"
+       height="55.25"
+       width="65"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_100.png"
+       xlink:href="/Users/crosby/svn/crosby/gosu/truck/media/lettuce_100.png" />
+    <text
+       xml:space="preserve"
+       style="font-size:30.09507561px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:100%;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Helvetica;-inkscape-font-specification:Helvetica"
+       x="470.40942"
+       y="720.98248"
+       id="text33853"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan33855"
+         x="470.40942"
+         y="720.98248">10/10</tspan></text>
   </g>
 </svg>

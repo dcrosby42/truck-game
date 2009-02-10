@@ -1,7 +1,7 @@
 require 'state_machine'
 
 class DepotPresenter
-  constructor :slider_machine, :depot_switch
+  constructor :slider_machine, :depot_switch, :depot_bucket, :depot_sign
 
   def setup
     @depot_switch.when :activated do
@@ -10,6 +10,9 @@ class DepotPresenter
       else
         @slider_machine.close_hatch
       end
+    end
+    @depot_bucket.when :fruit_count_changed do |num|
+      @depot_sign.set_fruit_count(num)
     end
   end
 
