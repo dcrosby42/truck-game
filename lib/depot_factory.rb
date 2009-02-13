@@ -39,7 +39,8 @@ class DepotFactory
 
     depot_switch = DepotPresenter::DepotSwitch.new(
       :switch_zone => switch_zone, 
-      :vehicle => vehicle
+      :vehicle => vehicle,
+      :depot_bucket => depot_bucket
     )
 
 
@@ -83,7 +84,6 @@ class DepotFactory
         @fruit_icon_picture
       ]
       @text_loc = @placard_picture.center + vec2(0,0)
-      puts @text_loc
       @counter_font_color = 0xffFFFFFF
       @fruit_count = 0
     end

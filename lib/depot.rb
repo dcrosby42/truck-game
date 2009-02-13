@@ -7,7 +7,8 @@ class Depot
 
   def update_frame(info)
     @depot_switch.update_frame(info)
-    @depot_bucket.update_frame(info)
+    #    @depot_bucket.update_frame(info) # Letting the DepotSwitch Occupied state determine when to update the bucket
+    #
   end
 
   def draw(info)

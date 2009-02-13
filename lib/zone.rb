@@ -4,6 +4,10 @@ class Zone
     @center_x = @rectangle.center.x
     @center_y = @rectangle.center.y
     @radius = @rectangle.width / 2.0
+    @left = @rectangle.left
+    @right = @rectangle.right
+    @top = @rectangle.top
+    @bottom = @rectangle.bottom
   end
 
   def contains?(thing)
@@ -11,7 +15,10 @@ class Zone
   end
 
   def contains_point?(loc)
-    Gosu::distance(@center_x,@center_y, loc.x, loc.y) <= @radius
+#    Gosu::distance(@center_x,@center_y, loc.x, loc.y) <= @radius
+    x = loc.x
+    y = loc.y
+    x >= @left and x <= @right and y >= @top and y <= @bottom
   end
 
   def draw(info)

@@ -19,13 +19,13 @@ class DepotPresenter
   class DepotSwitch
     extend Publisher
     include StateMachine
-    constructor :switch_zone, :vehicle
+    constructor :switch_zone, :vehicle, :depot_bucket
     can_fire :activated
     public :fire
 
     def setup
       init_state :empty, Empty.new
-      init_state :occupied, Occupied.new
+      init_state :occupied, Occupied.new(:depot_bucket => @depot_bucket)
       be :empty
     end
 
@@ -42,18 +42,21 @@ class DepotPresenter
     end
 
     class Occupied < State
-      def initialize
+      constructor :depot_bucket
+      def setup
         @trigger = ButtonDownTrigger.new(Gosu::Button::KbSpace) do
           machine.fire :activated
         end
       end
 
       def enter
-        # Show key indicator
+        # Show key indicator, eg, blinking "Space" or "Space Bar"
+        # Maybe this just goes in update_frame
       end
 
       def update_frame(info)
         @trigger.update(info)
+        @depot_bucket.update_frame(info)
         unless machine.contains_vehicle?
           machine.be :empty
         end
