@@ -1,5 +1,5 @@
 class DumpTruckControls
-  attr_accessor :drive_left, :drive_right, :brake, :close_bucket, :open_bucket, :help_jump, :lock_bucket, :boost
+  attr_accessor :drive_left, :drive_right, :brake, :close_bucket, :open_bucket, :help_jump, :lock_bucket, :boost, :honk
 
   def clear
     @drive_left = false
@@ -10,5 +10,6 @@ class DumpTruckControls
     @lock_bucket = false
     @help_jump = false
     @boost = false
+    @honk = false
   end
 end

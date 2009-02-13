@@ -46,6 +46,10 @@ class DumpTruck
     else
       @bucket.body.reset_forces
     end
+
+    if @dump_truck_controls.honk
+      @honk_sound.play
+    end
   end
 
   def update_frame(info)
@@ -185,6 +189,8 @@ class DumpTruck
     @start_sound = @media_loader.load_sample("truck_start.wav")
     @goofy_shriek = @media_loader.load_sample("goofyshriek.wav")
     @safety_beep = @media_loader.load_sample("truck_beep.wav")
+    honk = @media_loader.load_sample("honk.wav")
+    @honk_sound = SoundEffect.new(:sample => honk, :volume => 0.5)
   end
 
   def draw_body(info)
@@ -416,4 +422,16 @@ class DumpTruck
 
   end
 
+end
+
+class SoundEffect
+  constructor :sample, :volume
+  def setup
+    @volume ||= 1.0
+  end
+
+  def play
+    return if @current_sample and @current_sample.playing?
+    @current_sample = @sample.play(@volume)
+  end
 end

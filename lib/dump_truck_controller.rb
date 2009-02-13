@@ -27,6 +27,9 @@ class DumpTruckController
       if info.button_down?(Button::KbC)
         @dump_truck_controls.lock_bucket = true
       end
+      if info.button_down?(Button::KbSpace)
+        @dump_truck_controls.honk = true
+      end
     end
 
     @simulation.on :button_down do |id,info|
