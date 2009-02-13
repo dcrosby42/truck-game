@@ -6,6 +6,11 @@ class Viewport
     @y = 0.0
   end
 
+  def center_on(pt)
+    @x = pt.x - (@width / 2)
+    @y = pt.y - (@height / 2)
+  end
+
   def offset_x(x)
     x - @x
   end

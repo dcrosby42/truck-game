@@ -1,4 +1,5 @@
 module DebugDrawing
+  extend self
 
   def draw_cross_at_vec2(window, pt, color=0xffff0000)
     window.draw_line(pt.x,pt.y,color,

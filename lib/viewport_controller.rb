@@ -30,14 +30,15 @@ class ViewportController
         if info.letter_down? 'u'
           @viewport.y -= 10
         end
-      elsif @follow and @follow_target
-#        pt = @follow_target.location + vec2(100,-200) # more space to the right
-        pt = @follow_target.location + vec2(0,-200) # h centered
-        dest_x = pt.x - (@viewport.width / 2.0)
-        dest_y = pt.y - (@viewport.height / 2.0)
-        
-        @viewport.x = dest_x
-        @viewport.y = dest_y 
+      elsif @follow and @trailer
+        @trailer.update_frame(info)
+        @viewport.center_on @trailer.location + vec2(0,-200)
+      end
+    end
+
+    @simulation.on :draw_frame do |info|
+      if @follow and @trailer
+        @trailer.draw(info)
       end
     end
   end
@@ -51,7 +52,30 @@ class ViewportController
     if @follow_target
       @manual = false
       @follow = true
+      @trailer = Trailer.new(:follow_target => @follow_target, :viewport => @viewport)
     end
+  end
+
+  require 'debug_drawing'
+  class Trailer
+    constructor :follow_target, :viewport
+    attr_accessor :location
+    def setup
+      @location = ZeroVec2
+      @max_dist = 400
+    end
+
+    def update_frame(info)
+      full_v = @follow_target.location - @location
+      dist = full_v.length
+      move_v = full_v.normalize * [100,(dist*dist) * 0.001].min
+      @location += move_v
+    end
+
+    def draw(info)
+      DebugDrawing.draw_cross_at_vec2(info.window, @viewport.offset_point(@location))
+    end
+
   end
 
 end
