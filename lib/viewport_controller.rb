@@ -73,7 +73,7 @@ class ViewportController
     end
 
     def draw(info)
-      DebugDrawing.draw_cross_at_vec2(info.window, @viewport.offset_point(@location))
+#      DebugDrawing.draw_cross_at_vec2(info.window, @viewport.offset_point(@location))
     end
 
   end
