@@ -29,7 +29,7 @@ class TruckLevel1Setup
 
     put_dump_truck_in_start_position
     
-#    setup_boxes
+    setup_boxes
     
 #    @workshop_zones_controller.watch(@dump_truck)
 

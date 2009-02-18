@@ -80,16 +80,16 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.19361918"
-     inkscape:cx="8527.478"
-     inkscape:cy="380.25527"
+     inkscape:zoom="0.54763774"
+     inkscape:cx="10774.156"
+     inkscape:cy="535.1986"
      inkscape:document-units="px"
-     inkscape:current-layer="layer7"
+     inkscape:current-layer="layer6"
      showgrid="false"
      inkscape:window-width="1440"
      inkscape:window-height="776"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-x="26"
+     inkscape:window-y="42"
      showguides="false">
     <inkscape:grid
        type="xygrid"
@@ -132,6 +132,38 @@
        sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/art/truck_placeholder.png"
        xlink:href="/Users/crosby/svn/crosby/gosu/truck/art/truck_placeholder.png"
        game:handle="truck_start" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="boxes">
+    <image
+       game:class="wood_box"
+       xlink:href="wood_box_75.png"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
+       width="75"
+       height="75"
+       id="image2652"
+       x="9872.7773"
+       y="409.5589" />
+    <image
+       y="409.5589"
+       x="9950.7773"
+       id="image2654"
+       height="75"
+       width="75"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
+       xlink:href="wood_box_75.png"
+       game:class="wood_box" />
+    <image
+       game:class="wood_box"
+       xlink:href="wood_box_75.png"
+       sodipodi:absref="/Users/crosby/svn/crosby/gosu/truck/media/wood_box_75.png"
+       width="75"
+       height="75"
+       id="image2656"
+       x="9910.7773"
+       y="329.5589" />
   </g>
   <g
      inkscape:groupmode="layer"

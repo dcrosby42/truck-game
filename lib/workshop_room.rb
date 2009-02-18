@@ -9,6 +9,9 @@ class WorkshopRoom
     :svg_loader,
     :depot_factory,
     :depot_collision_manager,
+    :media_loader,
+    :physical_factory,
+    :shape_registry,
     :crate_factory do
 
     @draw_targets = []
@@ -51,6 +54,7 @@ class WorkshopRoom
       add_to_simulation depot
     end
 
+    setup_boxes
 
     #
     # Event dispatching
@@ -106,6 +110,31 @@ class WorkshopRoom
     start_position = img.bounds.center
   
     @dump_truck.cold_drop start_position
+  end
+
+  def setup_boxes
+    layer_g = @svg_loader.get_layer_from_file("terrain_proto.svg", "boxes")
+    @boxes = []
+    box_svgs = layer_g.images("game:class" => "wood_box")
+    box_svgs.each do |box_def|
+      loc = box_def.center
+      bounds = box_def.bounds.dup
+      bounds.set(bounds.x, bounds.y, bounds.width-2, bounds.height-2)
+      polygon = bounds.to_polygon
+      polygon.translate(-loc)
+      box = @physical_factory.build_image_poly(
+        :polygon => polygon,
+        :image => @media_loader.load_image(box_def.image_name, true),
+        :z_order => ZOrder::Box
+      )
+      box.move_to loc
+      @shape_registry.add(box.shape, box)
+      @boxes << box
+    end
+
+    @boxes.each do |box|
+      add_to_simulation box
+    end
   end
 
 end

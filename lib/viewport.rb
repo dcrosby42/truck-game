@@ -25,4 +25,8 @@ class Viewport
     pt - vec2(@x,@y)
   end
 
+  def to_world_point(pt)
+    pt + vec2(@x,@y)
+  end
+
 end

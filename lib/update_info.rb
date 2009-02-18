@@ -48,4 +48,12 @@ class UpdateInfo
     @viewport.offset_point(pt)
   end
 
+  def view_mouse_point
+    vec2(@main_window.mouse_x, @main_window.mouse_y)
+  end
+
+  def world_mouse_point
+    @viewport.to_world_point(view_mouse_point)
+  end
+
 end

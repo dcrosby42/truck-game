@@ -175,4 +175,16 @@ depot_collision_manager:
       - depot_collision_manager
       - viewport_controller
       - svg_loader
+      - media_loader
+      - physical_factory
+      - shape_registry
+
+  shape_registry:
+
+  mouse_controller:
+    compose: 
+      - simulation
+      - media_loader
+      - space_holder
+      - shape_registry
 
