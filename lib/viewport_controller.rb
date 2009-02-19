@@ -61,11 +61,13 @@ class ViewportController
     constructor :follow_target, :viewport
     attr_accessor :location
     def setup
-      @location = ZeroVec2
+      @location = @follow_target.location + vec2(0,-100) if @follow_target.location
+      @location ||= ZeroVec2 
       @max_dist = 400
     end
 
     def update_frame(info)
+      return unless @follow_target.location
       full_v = @follow_target.location - @location
       dist = full_v.length
       move_v = full_v.normalize * [100,(dist*dist) * 0.001].min

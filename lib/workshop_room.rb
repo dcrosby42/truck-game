@@ -11,6 +11,7 @@ class WorkshopRoom
     :media_loader,
     :physical_factory,
     :shape_registry,
+    :mouse_controller,
     :crate_factory do
 
     @draw_targets = []
@@ -31,10 +32,12 @@ class WorkshopRoom
       :dump_truck => @dump_truck
     )
 
+    put_dump_truck_in_start_position
     @viewport_controller.follow_target = @dump_truck
     @viewport_controller.follow_the_target
+#    @viewport_controller.follow_target = @mouse_controller.cursor
+#    @viewport_controller.follow_the_target
 
-    put_dump_truck_in_start_position
     
     @crate_controller = @crate_factory.build_controller(
       @simulation,
@@ -113,7 +116,9 @@ class WorkshopRoom
   def setup_boxes
     layer_g = @svg_loader.get_layer_from_file("terrain_proto.svg", "boxes")
     @boxes = []
-    box_svgs = layer_g.images("game:class" => "wood_box")
+    box_svgs = layer_g.images("game:class" => "wood_box") 
+    box_svgs += layer_g.images("game:class" => "steel_plate")
+    box_svgs += layer_g.images("game:class" => "board")
     box_svgs.each do |box_def|
       loc = box_def.center
       bounds = box_def.bounds.dup
@@ -123,9 +128,9 @@ class WorkshopRoom
       box = @physical_factory.build_image_poly(
         :polygon => polygon,
         :image => @media_loader.load_image(box_def.image_name, true),
-        :mass => 5,
-        :friction => 0.9,
-        :elasticty => 0.5,
+        :mass => 20,
+        :friction => 0.5,
+        :elasticty => 0.2,
         :z_order => ZOrder::Box
       )
       box.move_to loc

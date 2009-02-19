@@ -3,6 +3,7 @@ require 'debug_drawing'
 
 class MouseController
   constructor :simulation, :media_loader, :space_holder, :shape_registry
+  attr_reader :cursor
 
   def setup
     @cursor = Cursor.new(:icon => @media_loader.load_image("mouse_pointer.png"))
@@ -11,6 +12,7 @@ class MouseController
 
     @simulation.on :update_frame do |info|
       @cursor.screen_position = info.view_mouse_point
+      @cursor.location = info.world_mouse_point
 
       if info.button_down?(Gosu::Button::MsLeft)
         mpt = info.world_mouse_point
@@ -21,7 +23,7 @@ class MouseController
           start_dragging mpt
         end
       elsif @dragging
-        let_go mpt
+        let_go info.world_mouse_point
       end
     end
 
@@ -61,6 +63,8 @@ class MouseController
   end
 
   def let_go(pt)
+    vector = pt - @dragged.location + @dragging_offset
+    @dragged.body.apply_impulse(vector * (150.0),-@dragging_offset)
     @dragging = nil
     @drag_dest = nil
     @dragging_offset = ZeroVec2
@@ -70,7 +74,7 @@ class MouseController
 
   class Cursor
     constructor :icon 
-    attr_accessor :screen_position
+    attr_accessor :screen_position, :location
 
     def draw(info)
       @icon.draw(@screen_position.x, @screen_position.y, ZOrder::MousePointer)

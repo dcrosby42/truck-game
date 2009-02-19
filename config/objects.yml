@@ -176,6 +176,7 @@ depot_factory:
       - media_loader
       - physical_factory
       - shape_registry
+      - mouse_controller
 
 
   mouse_controller:
