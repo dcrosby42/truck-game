@@ -1,5 +1,5 @@
 class PhysicalCircle
-  attr_reader :body, :mass, :radius
+  attr_reader :body, :mass, :radius, :shape
 
   Defaults = {
     :location => ZeroVec2,
@@ -40,5 +40,13 @@ class PhysicalCircle
     @body.a = 0
     @body.w = 0
     @body.v = ZeroVec2
+  end
+
+  def location
+    @body.p
+  end
+
+  def move_to(pt)
+    @body.p = pt
   end
 end

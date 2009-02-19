@@ -56,6 +56,7 @@ joint_factory:
 
 dump_truck_factory:
   object_context: this_context
+  shape_registry: shape_registry 
 
 terrain_factory:
   compose:
@@ -82,6 +83,9 @@ fruit_factory:
     - svg_shape_parser
 
 fruitiverse:
+  compose: shape_registry
+
+shape_registry:
 
 crate_factory:
   compose:
@@ -101,11 +105,6 @@ depot_factory:
     - slider_factory
     - fruitiverse
     - picture_factory
-
-depot_collision_manager:
-  compose:
-    - space_holder
-    - fruitiverse
 
 +dump_truck:
   dump_truck_controls:
@@ -172,14 +171,12 @@ depot_collision_manager:
       - dump_truck_factory
       - crate_factory
       - depot_factory
-      - depot_collision_manager
       - viewport_controller
       - svg_loader
       - media_loader
       - physical_factory
       - shape_registry
 
-  shape_registry:
 
   mouse_controller:
     compose: 

@@ -1,7 +1,7 @@
 class DumpTruckController
   include Gosu
 
-  constructor :simulation, :dump_truck, :viewport_controller do
+  constructor :simulation, :dump_truck do
     @dump_truck_controls = @dump_truck.dump_truck_controls
 
     @simulation.on :update_frame do |info|

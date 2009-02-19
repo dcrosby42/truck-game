@@ -11,6 +11,10 @@ class ShapeRegistry
     @objects[shape.object_id] = object
   end
 
+  def remove(shape)
+    @objects.delete(shape.object_id)
+  end
+
   def lookup(shape)
     @objects[shape.object_id]
   end

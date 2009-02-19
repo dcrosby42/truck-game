@@ -8,7 +8,6 @@ class WorkshopRoom
     :viewport_controller,
     :svg_loader,
     :depot_factory,
-    :depot_collision_manager,
     :media_loader,
     :physical_factory,
     :shape_registry,
@@ -29,8 +28,7 @@ class WorkshopRoom
 
     @dump_truck_controller = @dump_truck_factory.build_controller(
       :simulation => @simulation,
-      :dump_truck => @dump_truck,
-      :viewport_controller => @viewport_controller
+      :dump_truck => @dump_truck
     )
 
     @viewport_controller.follow_target = @dump_truck
@@ -125,6 +123,9 @@ class WorkshopRoom
       box = @physical_factory.build_image_poly(
         :polygon => polygon,
         :image => @media_loader.load_image(box_def.image_name, true),
+        :mass => 5,
+        :friction => 0.9,
+        :elasticty => 0.5,
         :z_order => ZOrder::Box
       )
       box.move_to loc

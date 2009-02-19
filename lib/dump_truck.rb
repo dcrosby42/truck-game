@@ -88,6 +88,13 @@ class DumpTruck
     end
   end
 
+  def add_to_shape_registry(shape_registry)
+    shape_registry.add(@front_wheel.shape, @front_wheel)
+    shape_registry.add(@back_wheel.shape, @back_wheel)
+    shape_registry.add(@frame.shape, @frame)
+    @bucket.add_to_shape_registry(shape_registry)
+  end
+
   def remove_from_space
     @physicals.each do |p|
       p.remove_from_space
@@ -346,6 +353,26 @@ class DumpTruck
       @body.v = ZeroVec2
     end
 
+    def location
+      @body.p
+    end
+
+    def move_to(pt)
+      @body.p = pt
+    end
+
+    def add_to_shape_registry(shape_registry)
+      @my_shapes.each do |sh|
+        shape_registry.add(sh, self)
+      end
+    end
+    
+
+    def remove_from_shape_registry(shape_registry)
+      @my_shapes.each do |sh|
+        shape_registry.remove(sh)
+      end
+    end
 
     private
     def draw_poly(window, local_verts)
@@ -408,6 +435,7 @@ class DumpTruck
     end
 
     def build_and_add_shapes(*vert_lists)
+      @my_shapes = []
       vert_lists.each do |vl|
         build_and_add_shape vl
       end
@@ -417,6 +445,7 @@ class DumpTruck
       shape = Shape::Poly.new(@body, verts, vec2(0,0))
       shape.layers = TruckBodyLayer
       shape.collision_type = :dump_bucket
+      @my_shapes << shape
       @space.add_shape(shape)
     end
 

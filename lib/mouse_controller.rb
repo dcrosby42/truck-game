@@ -25,9 +25,15 @@ class MouseController
       end
     end
 
+    @simulation.on :update_space do |info|
+      if @dragging
+        drag2 info.dt
+      end
+    end
+
     @simulation.on :draw_frame do |info|
       @cursor.draw(info)
-      DebugDrawing.draw_cross_at_vec2(info.window, info.view_point(@clicked)) if @clicked
+#      DebugDrawing.draw_cross_at_vec2(info.window, info.view_point(@clicked)) if @clicked
     end
   end
 
@@ -39,17 +45,24 @@ class MouseController
         @space_holder.space.remove_body @dragged.body
         @dragging = pt
         @dragging_offset = obj.location - pt
-        puts "Got something"
       end
     end
   end
 
   def drag(pt)
-    @dragged.move_to(pt + @dragging_offset)
+    @drag_dest = pt + @dragging_offset
+  end
+
+  def drag2(dt)
+    return unless @drag_dest
+    @dragged.body.update_velocity(ZeroVec2,0,dt)
+    @dragged.move_to(@drag_dest)
+    @dragged.body.update_position(dt)
   end
 
   def let_go(pt)
     @dragging = nil
+    @drag_dest = nil
     @dragging_offset = ZeroVec2
     @space_holder.space.add_body @dragged.body
     @dragged = nil
