@@ -18,6 +18,10 @@ class ViewportController
 
     @simulation.on :update_frame do |info|
       if @manual
+        if info.view_mouse_point.x > @viewport.width
+          @viewport.x += 1
+        end
+
         if info.letter_down? 'p'
           @viewport.x += 10
         end
