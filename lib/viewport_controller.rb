@@ -1,4 +1,6 @@
 class ViewportController
+  MouseRange = 80
+  MouseScroll = 5
   attr_accessor :follow_target
 
   constructor :simulation, :viewport do 
@@ -18,17 +20,17 @@ class ViewportController
 
     @simulation.on :update_frame do |info|
       if @manual
-        if info.view_mouse_point.y > @viewport.height-50
-          @viewport.y += 10
+        if info.view_mouse_point.y > @viewport.height-MouseRange
+          @viewport.y += MouseScroll
         end
-        if info.view_mouse_point.y < 50
-          @viewport.y -= 10
+        if info.view_mouse_point.y < MouseRange
+          @viewport.y -= MouseScroll
         end
-        if info.view_mouse_point.x > @viewport.width-50
-          @viewport.x += 10
+        if info.view_mouse_point.x > @viewport.width-MouseRange
+          @viewport.x += MouseScroll
         end
-        if info.view_mouse_point.x < 50
-          @viewport.x -= 10
+        if info.view_mouse_point.x < MouseRange
+          @viewport.x -= MouseScroll
         end
 
         if info.letter_down? 'p'
