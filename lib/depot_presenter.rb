@@ -47,6 +47,9 @@ class DepotPresenter
         @trigger = ButtonDownTrigger.new(Gosu::Button::KbSpace) do
           machine.fire :activated
         end
+        @trigger = ButtonDownTrigger.new(Gosu::Button::GpButton3) do
+          machine.fire :activated
+        end
       end
 
       def enter
