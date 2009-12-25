@@ -47,7 +47,7 @@ class DepotPresenter
         @trigger = ButtonDownTrigger.new(Gosu::Button::KbSpace) do
           machine.fire :activated
         end
-        @trigger = ButtonDownTrigger.new(Gosu::Button::GpButton3) do
+        @trigger2 = ButtonDownTrigger.new(Gosu::Button::GpButton3) do
           machine.fire :activated
         end
       end
@@ -57,8 +57,12 @@ class DepotPresenter
         # Maybe this just goes in update_frame
       end
 
+      def exit
+      end
+
       def update_frame(info)
         @trigger.update(info)
+        @trigger2.update(info)
         @depot_bucket.update_frame(info)
         unless machine.contains_vehicle?
           machine.be :empty
