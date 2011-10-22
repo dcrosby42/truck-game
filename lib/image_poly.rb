@@ -9,7 +9,7 @@ class ImagePoly
   def draw(info)
     if @image
       loc = info.view_point(location)
-      @image.draw_rot(loc.x, loc.y, @z_order, -90 + Gosu::radians_to_gosu(angle_radians))
+      @image.draw_rot(loc.x, loc.y, @z_order, angle_radians.radians_to_degrees)
     end
 #    if @draw_polygon
 #      draw_poly info

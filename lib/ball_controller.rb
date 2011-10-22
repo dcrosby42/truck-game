@@ -63,8 +63,10 @@ class BallController
       x, y = @body.p.x, @body.p.y
       draw_circle(window, x,y, @body.a, @circle.radius, @color, @z_order)
 
-      ex = x + offset_x(radians_to_gosu(@body.a), @circle.radius)
-      ey = y + offset_y(radians_to_gosu(@body.a), @circle.radius)
+      # ex = x + offset_x(radians_to_gosu(@body.a), @circle.radius)
+      # ey = y + offset_y(radians_to_gosu(@body.a), @circle.radius)
+      ex = x + offset_x(@body.a.radians_to_gosu, @circle.radius)
+      ey = y + offset_y(@body.a.radians_to_gosu, @circle.radius)
       window.draw_line(x,y,@color, ex,ey,@color, @z_order)
     end
 
@@ -87,7 +89,7 @@ class BallController
     private
 
     def draw_circle(window, x,y,ang,r,color,z=0,mode=:default,circle_step=10)
-      ang = radians_to_gosu(ang)
+      ang = ang.radians_to_gosu
       0.step(360, circle_step) { |a1| 
         a1 += ang
         a2 = a1 + circle_step

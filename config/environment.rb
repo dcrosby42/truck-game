@@ -9,13 +9,13 @@ add_to_loadpath( APP_ROOT + "/lib" )
 #
 # Platform-specific loadpath setup for Gosu, Chipmunk, FMOD, etc
 # 
-binlib = APP_ROOT + "/binlib"
-case RUBY_PLATFORM
-when /win32/
-  add_to_loadpath( binlib + "/win32" )
-when /darwin/
-  add_to_loadpath( binlib + "/osx_intel" )
-end
+# binlib = APP_ROOT + "/binlib"
+# case RUBY_PLATFORM
+# when /win32/
+#   add_to_loadpath( binlib + "/win32" )
+# when /darwin/
+#   add_to_loadpath( binlib + "/osx_intel" )
+# end
 
 #
 # Ruby gems loadpath setup

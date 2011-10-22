@@ -67,7 +67,7 @@ class RainController
 
     def draw(info)
       loc = info.view_point(@body.p)
-      @image.draw_rot(loc.x, loc.y, 1, radians_to_gosu(@body.a))
+      @image.draw_rot(loc.x, loc.y, 1, @body.a.radians_to_gosu)
 #      @bounds.map { |v| @body.local2world(v) }.each_edge do |a,b|
 #        window.draw_line(a.x,a.y,@color,
 #                         b.x,b.y,@color)

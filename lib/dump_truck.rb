@@ -76,14 +76,16 @@ class DumpTruck
 
   def unlock_bucket
     if @bucket_locked
-      @space_holder.space.remove_joint(@bucket_lock_joint)
+      # @space_holder.space.remove_joint(@bucket_lock_joint)
+      @space_holder.space.remove_constraint(@bucket_lock_joint)
       @bucket_locked = false
     end
   end
 
   def lock_bucket
     unless @bucket_locked
-      @space_holder.space.add_joint(@bucket_lock_joint)
+      # @space_holder.space.add_joint(@bucket_lock_joint)
+      @space_holder.space.add_constraint(@bucket_lock_joint)
       @bucket_locked = true
     end
   end
@@ -100,7 +102,7 @@ class DumpTruck
       p.remove_from_space
     end
     @joints.each do |j|
-      @space_holder.space.remove_joint(j)
+      @space_holder.space.remove_constraint(j)
     end
   end
 
@@ -152,7 +154,8 @@ class DumpTruck
     make_pivot_joint(@front_wheel.body, @frame.body, @front_axle)
     make_pivot_joint(@back_wheel.body, @frame.body, @back_axle)
     make_pivot_joint(@bucket.body, @frame.body, @bucket_hinge_point)
-    @bucket_lock_joint = Joint::Pivot.new(@bucket.body, @frame.body, @bucket_lock_point)
+    #@bucket_lock_joint = Joint::Pivot.new(@bucket.body, @frame.body, @bucket_lock_point)
+    @bucket_lock_joint = Constraint::PivotJoint.new(@bucket.body, @frame.body, @bucket_lock_point, @bucket_lock_point)
 
 #    @space_holder.space.add_collision_func(:zdump_bucket, :dump_truck_frame) do
 #      puts "CLINK! #{Time.now}"
@@ -174,15 +177,17 @@ class DumpTruck
   end
 
   def make_pin_joint(a,b, anchor_a, anchor_b)
-    add_and_track_joint Joint::Pin.new(a, b, anchor_a, anchor_b)
+    add_and_track_joint Constraint::PivotJoint.new(a, b, anchor_a, anchor_b)
+    #add_and_track_joint Joint::Pin.new(a, b, anchor_a, anchor_b)
   end
 
   def make_pivot_joint(a,b, loc)
-    add_and_track_joint Joint::Pivot.new(a, b, loc)
+    add_and_track_joint Constraint::PivotJoint.new(a, b, loc, loc)
   end
 
   def add_and_track_joint(joint)
-    @space_holder.space.add_joint(joint)
+    # @space_holder.space.add_joint(joint)
+    @space_holder.space.add_constraint(joint)
     track_joint joint
     joint
   end
@@ -202,13 +207,15 @@ class DumpTruck
 
   def draw_body(info)
     loc = info.view_point(@frame.body.local2world(vec2(3,-12)))
-    angle = -90 + radians_to_gosu(@frame.body.a)
+    # angle = -90 + radians_to_gosu(@frame.body.a)
+    angle = @frame.body.a.radians_to_degrees
     @body_image.draw_rot(loc.x, loc.y, ZOrder::Truck, angle)
   end
 
   def draw_wheel(info, wheel)
     loc = info.view_point(wheel.body.p)
-    ang = radians_to_gosu(wheel.body.a)
+    # ang = radians_to_gosu(wheel.body.a)
+    ang = wheel.body.a.radians_to_gosu
     x = loc.x
     y = loc.y
     @wheel_image.draw_rot(x,y,ZOrder::TruckTire, ang)
@@ -331,7 +338,7 @@ class DumpTruck
 #    end
 
     def draw_bucket_image(info)
-      ang = 270+ radians_to_gosu(@body.a)
+      ang = 270+ @body.a.radians_to_gosu
       z = ZOrder::Truck
       loc = info.view_point(@body.p)
       @bucket_image.draw_rot(loc.x, loc.y, z, ang)

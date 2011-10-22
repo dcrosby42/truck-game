@@ -6,12 +6,14 @@ class JointWrapper
   end
 
   def add_to_space
-    @space.add_joint(@joint) unless @added
+    # @space.add_joint(@joint) unless @added
+    @space.add_constraint(@joint) unless @added
     @added = true
   end
 
   def remove_from_space
-    @space.remove_joint(@joint) if @added
+    # @space.remove_joint(@joint) if @added
+    @space.remove_constraint(@joint) if @added
     @added = false
   end
 
