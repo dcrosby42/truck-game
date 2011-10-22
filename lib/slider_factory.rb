@@ -55,17 +55,17 @@ class SliderFactory
       :auto_add => true
     )
 
-    closed_latch = @joint_factory.new_pivot(
+    closed_latch = @joint_factory.new_fastener(
       :body_a => slider_door.body,
       :body_b => anchor.body,
-      :pivot_point => right_pt
+      :fasten_at_world => right_pt
     )
 
     slider_door.translate(vec2(-200,0))
-    open_latch = @joint_factory.new_pivot(
+    open_latch = @joint_factory.new_fastener(
       :body_a => slider_door.body,
       :body_b => anchor.body,
-      :pivot_point => left_pt
+      :fasten_at_world => left_pt
     )
     slider_door.translate(vec2(200,0))
     
