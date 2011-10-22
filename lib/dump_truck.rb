@@ -37,10 +37,8 @@ class DumpTruck
     if @dump_truck_controls.open_bucket
       unlock_bucket
       @bucket.body.apply_impulse vec2(-30_000*info.dt,0), ZeroVec2
-#        @bucket.body.apply_force vec2(-30_000*info.dt,0), ZeroVec2
     elsif @dump_truck_controls.close_bucket
       @bucket.body.apply_impulse vec2(10_000*info.dt,0), vec2(0,-150)
-#        @bucket.body.apply_force vec2(10_000*info.dt,0), vec2(0,-150)
     elsif @dump_truck_controls.lock_bucket
       lock_bucket
     else
@@ -75,19 +73,17 @@ class DumpTruck
   end
 
   def unlock_bucket
-    if @bucket_locked
-      # @space_holder.space.remove_joint(@bucket_lock_joint)
-      @space_holder.space.remove_constraint(@bucket_lock_joint)
-      @bucket_locked = false
-    end
+    # if @bucket_locked
+    #   @space_holder.space.remove_constraint(@bucket_lock_joint)
+    #   @bucket_locked = false
+    # end
   end
 
   def lock_bucket
-    unless @bucket_locked
-      # @space_holder.space.add_joint(@bucket_lock_joint)
-      @space_holder.space.add_constraint(@bucket_lock_joint)
-      @bucket_locked = true
-    end
+    # unless @bucket_locked
+    #   @space_holder.space.add_constraint(@bucket_lock_joint)
+    #   @bucket_locked = true
+    # end
   end
 
   def add_to_shape_registry(shape_registry)
@@ -151,11 +147,17 @@ class DumpTruck
 
   def assemble_vehicle
     layout_parts
-    make_pivot_joint(@front_wheel.body, @frame.body, @front_axle)
-    make_pivot_joint(@back_wheel.body, @frame.body, @back_axle)
-    make_pivot_joint(@bucket.body, @frame.body, @bucket_hinge_point)
-    #@bucket_lock_joint = Joint::Pivot.new(@bucket.body, @frame.body, @bucket_lock_point)
-    @bucket_lock_joint = Constraint::PivotJoint.new(@bucket.body, @frame.body, @bucket_lock_point, @bucket_lock_point)
+
+    make_pivot_joint(@front_wheel.body, @frame.body, 
+                    ZeroVec2,           @front_axle)
+
+    make_pivot_joint(@back_wheel.body, @frame.body, 
+                    ZeroVec2,          @back_axle)
+
+    make_pivot_joint(@bucket.body,            @frame.body, 
+                     @bucket.inner_pin_point, @bucket_hinge_point)
+
+    #TODO @bucket_lock_joint = Constraint::PivotJoint.new(@bucket.body, @frame.body, @bucket_lock_point, @bucket_lock_point)
 
 #    @space_holder.space.add_collision_func(:zdump_bucket, :dump_truck_frame) do
 #      puts "CLINK! #{Time.now}"
@@ -181,8 +183,10 @@ class DumpTruck
     #add_and_track_joint Joint::Pin.new(a, b, anchor_a, anchor_b)
   end
 
-  def make_pivot_joint(a,b, loc)
-    add_and_track_joint Constraint::PivotJoint.new(a, b, loc, loc)
+  def make_pivot_joint(a,b, anchor_a, anchor_b)
+    # The docs say anchor a and anchor b are in world coords BUT I'm finding this not to be so...
+    # use body-relative points for anchoring. 
+    add_and_track_joint Constraint::PivotJoint.new(a, b, anchor_a, anchor_b)
   end
 
   def add_and_track_joint(joint)
@@ -410,7 +414,7 @@ class DumpTruck
         vec2(-50,15),
       ]
 
-      @pin_point = vec2(-30,30)
+      @pin_point = vec2(-30,30) # near bottom left
 
       @front_verts = [
         vec2(0,15),    # bottom left

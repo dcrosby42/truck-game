@@ -10,4 +10,4 @@ class Float
   Infinity = 1.0/0.0
 end
 
-ZeroVec2 = vec2(0,0)
+ZeroVec2 = CP::ZERO_VEC_2
