@@ -35,12 +35,13 @@ class MouseController
 
     @simulation.on :draw_frame do |info|
       @cursor.draw(info)
-#      DebugDrawing.draw_cross_at_vec2(info.window, info.view_point(@clicked)) if @clicked
+     # DebugDrawing.draw_cross_at_vec2(info.window, info.view_point(@clicked)) if @clicked
     end
   end
 
   def start_dragging(pt)
-    @space_holder.space.shape_point_query(pt) do |shape|
+    # @space_holder.space.shape_point_query(pt) do |shape|
+    @space_holder.space.point_query(pt) do |shape|
       obj = @shape_registry.lookup(shape)
       if obj
         @dragged = obj
