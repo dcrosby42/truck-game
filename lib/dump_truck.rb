@@ -160,21 +160,9 @@ class DumpTruck
     make_pivot_joint(@bucket.body,             @frame.body, 
                      bucket_local_hinge_point, @bucket_hinge_point)
 
-    # puts "@bucket.inner_pin_point #{@bucket.inner_pin_point}"
-    # puts "@bucket_hinge_point #{@bucket_hinge_point}"
-    # puts "@bucket.body.world2local(@bucket_hinge_point) #{@bucket.body.world2local(@bucket_hinge_point)}"
-# 
-#     puts "Frame body #{@frame.body.p}"
-#     puts "@bucket_lock_point #{@bucket_lock_point}"
-#     puts "@bucket_lock_point via @bucket.body.world2local#{bucket_local_lock_point}"
-#     puts "@bucket_lock_point via @frame.body.world2local#{@frame.body.world2local(@bucket_lock_point)}"
-# 
     @bucket_lock_joint = Constraint::PinJoint.new(@bucket.body,       @frame.body, 
                                                     bucket_local_lock_point, @bucket_lock_point)
     @bucket_lock_joint.dist = 0
-
-    # require 'pry'
-    # binding.pry
 #    @space_holder.space.add_collision_func(:zdump_bucket, :dump_truck_frame) do
 #      puts "CLINK! #{Time.now}"
 #    end
