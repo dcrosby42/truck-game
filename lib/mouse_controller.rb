@@ -40,15 +40,15 @@ class MouseController
   end
 
   def start_dragging(pt)
-    # @space_holder.space.shape_point_query(pt) do |shape|
+    obj = nil
     @space_holder.space.point_query(pt) do |shape|
       obj = @shape_registry.lookup(shape)
-      if obj
-        @dragged = obj
-        @space_holder.space.remove_body @dragged.body
-        @dragging = pt
-        @dragging_offset = obj.location - pt
-      end
+    end
+    if obj
+      @dragged = obj
+      @space_holder.space.remove_body @dragged.body
+      @dragging = pt
+      @dragging_offset = obj.location - pt
     end
   end
 
