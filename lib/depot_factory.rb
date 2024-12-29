@@ -95,7 +95,7 @@ class DepotFactory
 
     def draw(info)
       @drawables.each do |d| d.draw(info) end
-      @counter_font.draw_rel("#{@fruit_count}/10",
+      @counter_font.draw_text_rel("#{@fruit_count}/10",
                              info.view_x(@text_loc.x)+20, info.view_y(@text_loc.y), ZOrder::Scenery,
                              0.5, 0.5,
                              1,1,

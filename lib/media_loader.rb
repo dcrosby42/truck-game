@@ -1,36 +1,36 @@
 require 'svg_document'
 
 class MediaLoader
-  constructor :main_window
 
   def load_image(filename,hard_edge=false)
     caching filename do |f|
-      Gosu::Image.new(@main_window, f, hard_edge)
+      Gosu::Image.new(f, tileable: hard_edge)
     end
   end
 
-  def image_from_text(*args)
-    Gosu::Image.from_text(@main_window, *args)
+  def image_from_text(text,opts)
+    line_height = opts.delete(:line_height) || opts.delete(:size) || raise(":line_height option required")
+    Gosu::Image.from_text(text, line_height, opts)
   end
 
   def load_sample(filename)
     caching filename do |f|
-      Gosu::Sample.new(@main_window, f)
+      Gosu::Sample.new(f)
     end
   end
 
   def load_song(filename)
     caching filename do |f|
-      Gosu::Song.new(@main_window, f)
+      Gosu::Song.new(f)
     end
   end
 
   def load_default_font(height)
-    Gosu::Font.new(@main_window, Gosu::default_font_name, height)
+    Gosu::Font.new(height, name: Gosu::default_font_name)
   end
 
   def rmagick_to_gosu_image(rmagick_image, hard_edge=false)
-    Gosu::Image.new(@main_window, rmagick_image, hard_edge)
+    Gosu::Image.new(rmagick_image, tileable: hard_edge)
   end
 
   def load_svg_document(filename)

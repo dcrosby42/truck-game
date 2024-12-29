@@ -32,7 +32,12 @@ class DebugController
   def draw_speed_and_location
     size = 20
     spacing = 2
-    img = @media_loader.image_from_text(@text, Gosu::default_font_name, size, spacing, @screen_info.screen_width, :left)
+    img = @media_loader.image_from_text(@text, 
+      font: Gosu::default_font_name, 
+      line_height: size, 
+      spacing: spacing, 
+      width: @screen_info.screen_width, 
+      align: :left)
     img.draw(0,0,ZOrder::Debug,1,1, 0xffffff00, :default)
   end
 
