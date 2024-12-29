@@ -1,4 +1,4 @@
-source :gemcutter
+source 'https://rubygems.org'
 gem 'constructor'
 gem 'diy'
 gem 'publisher'
