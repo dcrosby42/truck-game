@@ -42,6 +42,7 @@ class MainWindow < Gosu::Window
   def width; 1024; end
   def height; 768; end
   def fullscreen; false; end
+  def needs_cursor?; false; end
 
   def update
     @update_info.dt = TICK
